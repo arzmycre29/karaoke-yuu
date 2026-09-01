@@ -1,0 +1,2404 @@
+[
+  {
+    "id": "song-local-1788280661895",
+    "title": "Future",
+    "artist": "Kohi Sekai",
+    "source": "local",
+    "mediaUrl": "http://localhost:3001/media/1788280652169-Future.mp4",
+    "isVideo": true,
+    "instrumentalUrl": "http://localhost:3001/media/1788280656180-Future__Instrumental_.mp3",
+    "instrumentalFileName": "Future (Instrumental).mp3",
+    "rawLyrics": "[00:23.30] Di persimpangan waktu ini\n[00:25.51] diriku sendiri\n[00:28.10] Memandang jauh tak tau apa yang\n[00:30.69] telah menungguku di depan\n[00:33.42] ♪ ~ Instrumental Break ~ ♪\n[00:43.89] Oh hari kelam yang kemarin\n[00:46.10] selalu terlintas\n[00:48.71] Berfikir ingin ku akhiri\n[00:51.67] hari-hariku sendiri\n[00:54.17] Namun, apa yang sedang ku pikirkan?\n[00:56.75] Tentang hari kemarin\n[00:59.42] Tak bisa tenang buatku terbayang-bayang\n[01:04.48] Hey, apakah diriku di masa depan itu\n[01:09.68] Tersenyum indah tak seperti dulu\n[01:14.84] Hari ini bukanlah,\n[01:17.43] sekedar pengulangan kisah\n[01:21.23] Ku yakin lebih berwarna\n[01:25.20] Kemarin hanyalah kisah yang kelam\n[01:27.79] Esok kan lebih terang\n[01:30.37] Masa depan yang kuimpikan\n[01:32.92] GO! GO! Mirai! Kohi Sekai 2x\n[01:37.56] Letsgo!\n[01:38.04] ♪ ~ Instrumental Break ~ ♪\n[01:48.34] Setelah semua berlalu, kemanakah lagi?\n[01:53.20] Pertanyaan itu pun terus\n[01:56.09] bernyanyi di dalam hatiku\n[01:58.73] Walau tak tahu jadi seperti apa\n[02:01.26] Semua pasti bermakna\n[02:03.84] Hanya bisa membayangkan dimasa depan\n[02:09.05] Hey, apakah diriku di masa depan itu\n[02:14.15] Tersenyum indah tak seperti dulu\n[02:19.33] Hari ini bukanlah,\n[02:21.96] sekedar pengulangan kisah\n[02:25.80] Ku yakin lebih berwarna\n[02:29.62] Kemarin hanyalah kisah yang kelam\n[02:32.43] Esok kan lebih terang\n[02:34.81] Masa depan yang kuimpikan\n[02:37.40] GO! GO! Mirai! Kohi Sekai\n[02:40.00] GO! GO! Mirai! Kohi Sekai\n[02:42.02] Letsgo!\n[02:42.56] ♪ ~ Instrumental Break ~ ♪\n[02:52.84] Hari ini ku harus lebih dari kemarin\n[02:57.96] Sperti fajar mengusir kegelapan\n[03:03.18] Walau terkadang ragu berbisik dalam hati\n[03:08.37] Akan kulewati semua hari yang lelah\n[03:16.12] ♪ ~ Instrumental Break ~ ♪\n[03:18.62] Hey, apakah diriku di masa depan itu\n[03:23.84] Tersenyum indah tak seperti dulu\n[03:28.75] ♪ ~ Instrumental Break ~ ♪\n[03:30.37] Hari ini bukanlah,\n[03:32.83] sekedar pengulangan kisah\n[03:36.75] Ku yakin lebih berwarna\n[03:40.65] Kemarin hanyalah kisah yang kelam\n[03:43.21] Esok kan lebih terang\n[03:45.75] Masa depan yang kuimpikan\n[03:48.40] GO! GO! Mirai! Kohi Sekai\n[03:51.06] GO! GO! Mirai! Kohi Sekai\n[03:53.00] Letsgo!\n[03:53.90] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "line-0-23.3",
+        "startTime": 23.3,
+        "endTime": 25.51,
+        "text": "Di persimpangan waktu ini"
+      },
+      {
+        "id": "line-1-25.51",
+        "startTime": 25.51,
+        "endTime": 28.1,
+        "text": "diriku sendiri"
+      },
+      {
+        "id": "line-2-28.1",
+        "startTime": 28.1,
+        "endTime": 30.69,
+        "text": "Memandang jauh tak tau apa yang"
+      },
+      {
+        "id": "line-3-30.69",
+        "startTime": 30.69,
+        "endTime": 33.42,
+        "text": "telah menungguku di depan"
+      },
+      {
+        "id": "line-4-33.42",
+        "startTime": 33.42,
+        "endTime": 41.42,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-5-43.89",
+        "startTime": 43.89,
+        "endTime": 46.1,
+        "text": "Oh hari kelam yang kemarin"
+      },
+      {
+        "id": "line-6-46.1",
+        "startTime": 46.1,
+        "endTime": 48.71,
+        "text": "selalu terlintas"
+      },
+      {
+        "id": "line-7-48.71",
+        "startTime": 48.71,
+        "endTime": 51.67,
+        "text": "Berfikir ingin ku akhiri"
+      },
+      {
+        "id": "line-8-51.67",
+        "startTime": 51.67,
+        "endTime": 54.17,
+        "text": "hari-hariku sendiri"
+      },
+      {
+        "id": "line-9-54.17",
+        "startTime": 54.17,
+        "endTime": 56.75,
+        "text": "Namun, apa yang sedang ku pikirkan?"
+      },
+      {
+        "id": "line-10-56.75",
+        "startTime": 56.75,
+        "endTime": 59.42,
+        "text": "Tentang hari kemarin"
+      },
+      {
+        "id": "line-11-59.42",
+        "startTime": 59.42,
+        "endTime": 64.48,
+        "text": "Tak bisa tenang buatku terbayang-bayang"
+      },
+      {
+        "id": "line-12-64.48",
+        "startTime": 64.48,
+        "endTime": 69.68,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-13-69.68",
+        "startTime": 69.68,
+        "endTime": 74.84,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-14-74.84",
+        "startTime": 74.84,
+        "endTime": 77.43,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-15-77.43",
+        "startTime": 77.43,
+        "endTime": 81.23,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-16-81.23",
+        "startTime": 81.23,
+        "endTime": 85.2,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-17-85.2",
+        "startTime": 85.2,
+        "endTime": 87.79,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-18-87.79",
+        "startTime": 87.79,
+        "endTime": 90.37,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-19-90.37",
+        "startTime": 90.37,
+        "endTime": 92.92,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-20-92.92",
+        "startTime": 92.92,
+        "endTime": 97.56,
+        "text": "GO! GO! Mirai! Kohi Sekai 2x"
+      },
+      {
+        "id": "line-21-97.56",
+        "startTime": 97.56,
+        "endTime": 98.04,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-22-98.04",
+        "startTime": 98.04,
+        "endTime": 106.04,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-23-108.34",
+        "startTime": 108.34,
+        "endTime": 113.2,
+        "text": "Setelah semua berlalu, kemanakah lagi?"
+      },
+      {
+        "id": "line-24-113.2",
+        "startTime": 113.2,
+        "endTime": 116.09,
+        "text": "Pertanyaan itu pun terus"
+      },
+      {
+        "id": "line-25-116.09",
+        "startTime": 116.09,
+        "endTime": 118.73,
+        "text": "bernyanyi di dalam hatiku"
+      },
+      {
+        "id": "line-26-118.73",
+        "startTime": 118.73,
+        "endTime": 121.26,
+        "text": "Walau tak tahu jadi seperti apa"
+      },
+      {
+        "id": "line-27-121.26",
+        "startTime": 121.26,
+        "endTime": 123.84,
+        "text": "Semua pasti bermakna"
+      },
+      {
+        "id": "line-28-123.84",
+        "startTime": 123.84,
+        "endTime": 129.05,
+        "text": "Hanya bisa membayangkan dimasa depan"
+      },
+      {
+        "id": "line-29-129.05",
+        "startTime": 129.05,
+        "endTime": 134.15,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-30-134.15",
+        "startTime": 134.15,
+        "endTime": 139.33,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-31-139.33",
+        "startTime": 139.33,
+        "endTime": 141.96,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-32-141.96",
+        "startTime": 141.96,
+        "endTime": 145.8,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-33-145.8",
+        "startTime": 145.8,
+        "endTime": 149.62,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-34-149.62",
+        "startTime": 149.62,
+        "endTime": 152.43,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-35-152.43",
+        "startTime": 152.43,
+        "endTime": 154.81,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-36-154.81",
+        "startTime": 154.81,
+        "endTime": 157.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-37-157.4",
+        "startTime": 157.4,
+        "endTime": 160,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-38-160",
+        "startTime": 160,
+        "endTime": 162.02,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-39-162.02",
+        "startTime": 162.02,
+        "endTime": 162.56,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-40-162.56",
+        "startTime": 162.56,
+        "endTime": 170.56,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-41-172.84",
+        "startTime": 172.84,
+        "endTime": 177.96,
+        "text": "Hari ini ku harus lebih dari kemarin"
+      },
+      {
+        "id": "line-42-177.96",
+        "startTime": 177.96,
+        "endTime": 183.18,
+        "text": "Sperti fajar mengusir kegelapan"
+      },
+      {
+        "id": "line-43-183.18",
+        "startTime": 183.18,
+        "endTime": 188.37,
+        "text": "Walau terkadang ragu berbisik dalam hati"
+      },
+      {
+        "id": "line-44-188.37",
+        "startTime": 188.37,
+        "endTime": 196.12,
+        "text": "Akan kulewati semua hari yang lelah"
+      },
+      {
+        "id": "line-45-196.12",
+        "startTime": 196.12,
+        "endTime": 198.62,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-46-198.62",
+        "startTime": 198.62,
+        "endTime": 203.84,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-47-203.84",
+        "startTime": 203.84,
+        "endTime": 208.75,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-48-208.75",
+        "startTime": 208.75,
+        "endTime": 210.37,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-49-210.37",
+        "startTime": 210.37,
+        "endTime": 212.83,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-50-212.83",
+        "startTime": 212.83,
+        "endTime": 216.75,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-51-216.75",
+        "startTime": 216.75,
+        "endTime": 220.65,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-52-220.65",
+        "startTime": 220.65,
+        "endTime": 223.21,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-53-223.21",
+        "startTime": 223.21,
+        "endTime": 225.75,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-54-225.75",
+        "startTime": 225.75,
+        "endTime": 228.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-55-228.4",
+        "startTime": 228.4,
+        "endTime": 231.06,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-56-231.06",
+        "startTime": 231.06,
+        "endTime": 233,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-57-233",
+        "startTime": 233,
+        "endTime": 233.9,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-58-233.9",
+        "startTime": 233.9,
+        "endTime": 238.9,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ],
+    "duration": 240
+  },
+  {
+    "id": "song-yt-fJuutbqiTtM-1788200795646",
+    "title": "Future (Instrumental)",
+    "artist": "Kohi Sekai",
+    "source": "youtube",
+    "youtubeId": "fJuutbqiTtM",
+    "duration": 254,
+    "coverArt": "https://i.ytimg.com/vi/fJuutbqiTtM/hq720.jpg",
+    "rawLyrics": "[00:23.30] Di persimpangan waktu ini\n[00:25.51] diriku sendiri\n[00:28.10] Memandang jauh tak tau apa yang\n[00:30.69] telah menungguku di depan\n[00:33.42] ♪ ~ Instrumental Break ~ ♪\n[00:43.89] Oh hari kelam yang kemarin\n[00:46.10] selalu terlintas\n[00:48.71] Berfikir ingin ku akhiri\n[00:51.67] hari-hariku sendiri\n[00:54.17] Namun, apa yang sedang ku pikirkan?\n[00:56.75] Tentang hari kemarin\n[00:59.42] Tak bisa tenang buatku terbayang-bayang\n[01:04.48] Hey, apakah diriku di masa depan itu\n[01:09.68] Tersenyum indah tak seperti dulu\n[01:14.84] Hari ini bukanlah,\n[01:17.43] sekedar pengulangan kisah\n[01:21.23] Ku yakin lebih berwarna\n[01:25.20] Kemarin hanyalah kisah yang kelam\n[01:27.79] Esok kan lebih terang\n[01:30.37] Masa depan yang kuimpikan\n[01:32.92] GO! GO! Mirai! Kohi Sekai 2x\n[01:37.56] Letsgo!\n[01:38.04] ♪ ~ Instrumental Break ~ ♪\n[01:48.34] Setelah semua berlalu, kemanakah lagi?\n[01:53.20] Pertanyaan itu pun terus\n[01:56.09] bernyanyi di dalam hatiku\n[01:58.73] Walau tak tahu jadi seperti apa\n[02:01.26] Semua pasti bermakna\n[02:03.84] Hanya bisa membayangkan dimasa depan\n[02:09.05] Hey, apakah diriku di masa depan itu\n[02:14.15] Tersenyum indah tak seperti dulu\n[02:19.33] Hari ini bukanlah,\n[02:21.96] sekedar pengulangan kisah\n[02:25.80] Ku yakin lebih berwarna\n[02:29.62] Kemarin hanyalah kisah yang kelam\n[02:32.43] Esok kan lebih terang\n[02:34.81] Masa depan yang kuimpikan\n[02:37.40] GO! GO! Mirai! Kohi Sekai\n[02:40.00] GO! GO! Mirai! Kohi Sekai\n[02:42.02] Letsgo!\n[02:42.56] ♪ ~ Instrumental Break ~ ♪\n[02:52.84] Hari ini ku harus lebih dari kemarin\n[02:57.96] Sperti fajar mengusir kegelapan\n[03:03.18] Walau terkadang ragu berbisik dalam hati\n[03:08.37] Akan kulewati semua hari yang lelah\n[03:16.12] ♪ ~ Instrumental Break ~ ♪\n[03:18.62] Hey, apakah diriku di masa depan itu\n[03:23.84] Tersenyum indah tak seperti dulu\n[03:28.75] ♪ ~ Instrumental Break ~ ♪\n[03:30.37] Hari ini bukanlah,\n[03:32.83] sekedar pengulangan kisah\n[03:36.75] Ku yakin lebih berwarna\n[03:40.65] Kemarin hanyalah kisah yang kelam\n[03:43.21] Esok kan lebih terang\n[03:45.75] Masa depan yang kuimpikan\n[03:48.40] GO! GO! Mirai! Kohi Sekai\n[03:51.06] GO! GO! Mirai! Kohi Sekai\n[03:53.00] Letsgo!\n[03:53.90] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "line-0-23.3",
+        "startTime": 23.3,
+        "endTime": 25.51,
+        "text": "Di persimpangan waktu ini"
+      },
+      {
+        "id": "line-1-25.51",
+        "startTime": 25.51,
+        "endTime": 28.1,
+        "text": "diriku sendiri"
+      },
+      {
+        "id": "line-2-28.1",
+        "startTime": 28.1,
+        "endTime": 30.69,
+        "text": "Memandang jauh tak tau apa yang"
+      },
+      {
+        "id": "line-3-30.69",
+        "startTime": 30.69,
+        "endTime": 33.42,
+        "text": "telah menungguku di depan"
+      },
+      {
+        "id": "line-4-33.42",
+        "startTime": 33.42,
+        "endTime": 41.42,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-5-43.89",
+        "startTime": 43.89,
+        "endTime": 46.1,
+        "text": "Oh hari kelam yang kemarin"
+      },
+      {
+        "id": "line-6-46.1",
+        "startTime": 46.1,
+        "endTime": 48.71,
+        "text": "selalu terlintas"
+      },
+      {
+        "id": "line-7-48.71",
+        "startTime": 48.71,
+        "endTime": 51.67,
+        "text": "Berfikir ingin ku akhiri"
+      },
+      {
+        "id": "line-8-51.67",
+        "startTime": 51.67,
+        "endTime": 54.17,
+        "text": "hari-hariku sendiri"
+      },
+      {
+        "id": "line-9-54.17",
+        "startTime": 54.17,
+        "endTime": 56.75,
+        "text": "Namun, apa yang sedang ku pikirkan?"
+      },
+      {
+        "id": "line-10-56.75",
+        "startTime": 56.75,
+        "endTime": 59.42,
+        "text": "Tentang hari kemarin"
+      },
+      {
+        "id": "line-11-59.42",
+        "startTime": 59.42,
+        "endTime": 64.48,
+        "text": "Tak bisa tenang buatku terbayang-bayang"
+      },
+      {
+        "id": "line-12-64.48",
+        "startTime": 64.48,
+        "endTime": 69.68,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-13-69.68",
+        "startTime": 69.68,
+        "endTime": 74.84,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-14-74.84",
+        "startTime": 74.84,
+        "endTime": 77.43,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-15-77.43",
+        "startTime": 77.43,
+        "endTime": 81.23,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-16-81.23",
+        "startTime": 81.23,
+        "endTime": 85.2,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-17-85.2",
+        "startTime": 85.2,
+        "endTime": 87.79,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-18-87.79",
+        "startTime": 87.79,
+        "endTime": 90.37,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-19-90.37",
+        "startTime": 90.37,
+        "endTime": 92.92,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-20-92.92",
+        "startTime": 92.92,
+        "endTime": 97.56,
+        "text": "GO! GO! Mirai! Kohi Sekai 2x"
+      },
+      {
+        "id": "line-21-97.56",
+        "startTime": 97.56,
+        "endTime": 98.04,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-22-98.04",
+        "startTime": 98.04,
+        "endTime": 106.04,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-23-108.34",
+        "startTime": 108.34,
+        "endTime": 113.2,
+        "text": "Setelah semua berlalu, kemanakah lagi?"
+      },
+      {
+        "id": "line-24-113.2",
+        "startTime": 113.2,
+        "endTime": 116.09,
+        "text": "Pertanyaan itu pun terus"
+      },
+      {
+        "id": "line-25-116.09",
+        "startTime": 116.09,
+        "endTime": 118.73,
+        "text": "bernyanyi di dalam hatiku"
+      },
+      {
+        "id": "line-26-118.73",
+        "startTime": 118.73,
+        "endTime": 121.26,
+        "text": "Walau tak tahu jadi seperti apa"
+      },
+      {
+        "id": "line-27-121.26",
+        "startTime": 121.26,
+        "endTime": 123.84,
+        "text": "Semua pasti bermakna"
+      },
+      {
+        "id": "line-28-123.84",
+        "startTime": 123.84,
+        "endTime": 129.05,
+        "text": "Hanya bisa membayangkan dimasa depan"
+      },
+      {
+        "id": "line-29-129.05",
+        "startTime": 129.05,
+        "endTime": 134.15,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-30-134.15",
+        "startTime": 134.15,
+        "endTime": 139.33,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-31-139.33",
+        "startTime": 139.33,
+        "endTime": 141.96,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-32-141.96",
+        "startTime": 141.96,
+        "endTime": 145.8,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-33-145.8",
+        "startTime": 145.8,
+        "endTime": 149.62,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-34-149.62",
+        "startTime": 149.62,
+        "endTime": 152.43,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-35-152.43",
+        "startTime": 152.43,
+        "endTime": 154.81,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-36-154.81",
+        "startTime": 154.81,
+        "endTime": 157.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-37-157.4",
+        "startTime": 157.4,
+        "endTime": 160,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-38-160",
+        "startTime": 160,
+        "endTime": 162.02,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-39-162.02",
+        "startTime": 162.02,
+        "endTime": 162.56,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-40-162.56",
+        "startTime": 162.56,
+        "endTime": 170.56,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-41-172.84",
+        "startTime": 172.84,
+        "endTime": 177.96,
+        "text": "Hari ini ku harus lebih dari kemarin"
+      },
+      {
+        "id": "line-42-177.96",
+        "startTime": 177.96,
+        "endTime": 183.18,
+        "text": "Sperti fajar mengusir kegelapan"
+      },
+      {
+        "id": "line-43-183.18",
+        "startTime": 183.18,
+        "endTime": 188.37,
+        "text": "Walau terkadang ragu berbisik dalam hati"
+      },
+      {
+        "id": "line-44-188.37",
+        "startTime": 188.37,
+        "endTime": 196.12,
+        "text": "Akan kulewati semua hari yang lelah"
+      },
+      {
+        "id": "line-45-196.12",
+        "startTime": 196.12,
+        "endTime": 198.62,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-46-198.62",
+        "startTime": 198.62,
+        "endTime": 203.84,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-47-203.84",
+        "startTime": 203.84,
+        "endTime": 208.75,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-48-208.75",
+        "startTime": 208.75,
+        "endTime": 210.37,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-49-210.37",
+        "startTime": 210.37,
+        "endTime": 212.83,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-50-212.83",
+        "startTime": 212.83,
+        "endTime": 216.75,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-51-216.75",
+        "startTime": 216.75,
+        "endTime": 220.65,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-52-220.65",
+        "startTime": 220.65,
+        "endTime": 223.21,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-53-223.21",
+        "startTime": 223.21,
+        "endTime": 225.75,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-54-225.75",
+        "startTime": 225.75,
+        "endTime": 228.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-55-228.4",
+        "startTime": 228.4,
+        "endTime": 231.06,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-56-231.06",
+        "startTime": 231.06,
+        "endTime": 233,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-57-233",
+        "startTime": 233,
+        "endTime": 233.9,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-58-233.9",
+        "startTime": 233.9,
+        "endTime": 238.9,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ]
+  },
+  {
+    "id": "song-yt-gqtaJuy3tI4-1788199817309",
+    "title": "GOCHIKARA - 'Dirimulah Alasanku' Official Music Video",
+    "artist": "Gochikara",
+    "source": "youtube",
+    "youtubeId": "gqtaJuy3tI4",
+    "duration": 318,
+    "coverArt": "https://i.ytimg.com/vi/gqtaJuy3tI4/hq720.jpg",
+    "rawLyrics": "[00:15.93] Mungkin tak selalu ku katakan\n[00:19.14] Betapa berartinya dirimu\n[00:22.44] Tapi di dalam hatiku selalu\n[00:25.53] Ada namamu tak terganti\n[00:29.33] ♪ ~ Instrumental Break ~ ♪\n[00:53.95] Langkah pertama penuh dengan ragu\n[00:59.03] Tak pernah terpikir 'kan\n[01:01.17] sampai sejauh ini\n[01:05.20] Namun suaramu menyalakan nyaliku\n[01:10.28] Kau buat semua ini berarti\n[01:15.15] Saat lelah hampir menahanku\n[01:20.46] Kau pun hadir\n[01:22.20] dengan cinta yang utuh\n[01:25.95] Setiap sorak, setiap cahaya\n[01:32.10] Adalah alasan ku tuk tetap ada\n[01:37.87] Tak ada kata kata yang\n[01:41.21] cukup untuk mengungkapkan\n[01:44.32] Betapa besarnya artimu\n[01:46.87] di dalam hidupku\n[01:48.81] Dirimulah alasanku\n[01:52.12] untuk selalu percaya\n[01:55.06] Ku takkan berhenti,\n[01:56.48] karena kau ada di sisiku\n[01:59.04] Jika suatu hari aku mencapai mimpi\n[02:04.67] Ku tahu (ku tahu)\n[02:06.12] Semua berkat dirimu\n[02:07.89] ♪ ~ Instrumental Break ~ ♪\n[02:18.50] Aku masih teringat hari itu\n[02:23.37] Saat langit mendung,\n[02:25.37] hujan pun perlahan turun\n[02:29.59] Kau coba yakinkan diriku pada saat\n[02:34.75] Ku tak yakin pada diri sendiri\n[02:39.66] Bahkan ketika dunia ini\n[02:44.93] Memalingkan wajahnya dari diriku\n[02:50.36] Namun kau pasti\n[02:53.25] Tetap hampiriku\n[02:56.62] Bagaikan seolah datang keajaiban\n[03:02.46] Tak terucap rasa ini dalam kata-kata\n[03:08.68] Engkaulah sebuah alasan ku\n[03:11.78] tetap di sini\n[03:13.37] Alasan yang membuatku tetap mau percaya\n[03:19.69] Itulah mengapa\n[03:21.03] hingga saat ini ku tak menyerah\n[03:23.52] Kau adalah alasan mengapa mimpi itu\n[03:29.27] Dirimu (dirimu)\n[03:30.62] Adalah alasanku\n[03:32.43] ♪ ~ Instrumental Break ~ ♪\n[03:54.16] Tak ada kata kata yang\n[03:57.68] cukup untuk mengungkapkan\n[04:00.52] Betapa besarnya artimu di dalam hidupku\n[04:05.15] Dirimulah alasanku untuk selalu percaya\n[04:11.59] Ku takkan berhenti\n[04:12.81] Karena kau ada di sisiku\n[04:16.07] Tak terucap rasa ini\n[04:19.82] dalam kata-kata\n[04:22.37] Engkaulah sebuah alasan ku\n[04:25.35] tetap di sini\n[04:26.87] Alasan yang membuatku tetap mau percaya\n[04:33.42] Itulah mengapa\n[04:34.64] hingga saat ini ku tak menyerah\n[04:37.68] Jika suatu hari aku mencapai mimpi\n[04:42.92] Ku tahu (ku tahu)\n[04:44.24] Karna kau disisiku",
+    "parsedLyrics": [
+      {
+        "id": "tapped-0-15.94",
+        "startTime": 15.94,
+        "endTime": 19.15,
+        "text": "Mungkin tak selalu ku katakan"
+      },
+      {
+        "id": "tapped-1-19.15",
+        "startTime": 19.15,
+        "endTime": 22.44,
+        "text": "Betapa berartinya dirimu"
+      },
+      {
+        "id": "tapped-2-22.44",
+        "startTime": 22.44,
+        "endTime": 25.54,
+        "text": "Tapi di dalam hatiku selalu"
+      },
+      {
+        "id": "tapped-3-25.54",
+        "startTime": 25.54,
+        "endTime": 29.34,
+        "text": "Ada namamu tak terganti"
+      },
+      {
+        "id": "tapped-4-29.34",
+        "startTime": 29.34,
+        "endTime": 53.95,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-5-53.95",
+        "startTime": 53.95,
+        "endTime": 59.04,
+        "text": "Langkah pertama penuh dengan ragu"
+      },
+      {
+        "id": "tapped-6-59.04",
+        "startTime": 59.04,
+        "endTime": 61.17,
+        "text": "Tak pernah terpikir 'kan"
+      },
+      {
+        "id": "tapped-7-61.17",
+        "startTime": 61.17,
+        "endTime": 65.21,
+        "text": "sampai sejauh ini"
+      },
+      {
+        "id": "tapped-8-65.21",
+        "startTime": 65.21,
+        "endTime": 70.28,
+        "text": "Namun suaramu menyalakan nyaliku"
+      },
+      {
+        "id": "tapped-9-70.28",
+        "startTime": 70.28,
+        "endTime": 75.15,
+        "text": "Kau buat semua ini berarti"
+      },
+      {
+        "id": "tapped-10-75.15",
+        "startTime": 75.15,
+        "endTime": 80.47,
+        "text": "Saat lelah hampir menahanku"
+      },
+      {
+        "id": "tapped-11-80.47",
+        "startTime": 80.47,
+        "endTime": 82.2,
+        "text": "Kau pun hadir"
+      },
+      {
+        "id": "tapped-12-82.2",
+        "startTime": 82.2,
+        "endTime": 85.95,
+        "text": "dengan cinta yang utuh"
+      },
+      {
+        "id": "tapped-13-85.95",
+        "startTime": 85.95,
+        "endTime": 92.11,
+        "text": "Setiap sorak, setiap cahaya"
+      },
+      {
+        "id": "tapped-14-92.11",
+        "startTime": 92.11,
+        "endTime": 97.87,
+        "text": "Adalah alasan ku tuk tetap ada"
+      },
+      {
+        "id": "tapped-15-97.87",
+        "startTime": 97.87,
+        "endTime": 101.22,
+        "text": "Tak ada kata kata yang"
+      },
+      {
+        "id": "tapped-16-101.22",
+        "startTime": 101.22,
+        "endTime": 104.33,
+        "text": "cukup untuk mengungkapkan"
+      },
+      {
+        "id": "tapped-17-104.33",
+        "startTime": 104.33,
+        "endTime": 106.88,
+        "text": "Betapa besarnya artimu"
+      },
+      {
+        "id": "tapped-18-106.88",
+        "startTime": 106.88,
+        "endTime": 108.82,
+        "text": "di dalam hidupku"
+      },
+      {
+        "id": "tapped-19-108.82",
+        "startTime": 108.82,
+        "endTime": 112.13,
+        "text": "Dirimulah alasanku"
+      },
+      {
+        "id": "tapped-20-112.13",
+        "startTime": 112.13,
+        "endTime": 115.06,
+        "text": "untuk selalu percaya"
+      },
+      {
+        "id": "tapped-21-115.06",
+        "startTime": 115.06,
+        "endTime": 116.48,
+        "text": "Ku takkan berhenti,"
+      },
+      {
+        "id": "tapped-22-116.48",
+        "startTime": 116.48,
+        "endTime": 119.05,
+        "text": "karena kau ada di sisiku"
+      },
+      {
+        "id": "tapped-23-119.05",
+        "startTime": 119.05,
+        "endTime": 124.67,
+        "text": "Jika suatu hari aku mencapai mimpi"
+      },
+      {
+        "id": "tapped-24-124.67",
+        "startTime": 124.67,
+        "endTime": 126.12,
+        "text": "Ku tahu (ku tahu)"
+      },
+      {
+        "id": "tapped-25-126.12",
+        "startTime": 126.12,
+        "endTime": 127.89,
+        "text": "Semua berkat dirimu"
+      },
+      {
+        "id": "tapped-26-127.89",
+        "startTime": 127.89,
+        "endTime": 138.51,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-27-138.51",
+        "startTime": 138.51,
+        "endTime": 143.37,
+        "text": "Aku masih teringat hari itu"
+      },
+      {
+        "id": "tapped-28-143.37",
+        "startTime": 143.37,
+        "endTime": 145.37,
+        "text": "Saat langit mendung,"
+      },
+      {
+        "id": "tapped-29-145.37",
+        "startTime": 145.37,
+        "endTime": 149.6,
+        "text": "hujan pun perlahan turun"
+      },
+      {
+        "id": "tapped-30-149.6",
+        "startTime": 149.6,
+        "endTime": 154.76,
+        "text": "Kau coba yakinkan diriku pada saat"
+      },
+      {
+        "id": "tapped-31-154.76",
+        "startTime": 154.76,
+        "endTime": 159.67,
+        "text": "Ku tak yakin pada diri sendiri"
+      },
+      {
+        "id": "tapped-32-159.67",
+        "startTime": 159.67,
+        "endTime": 164.94,
+        "text": "Bahkan ketika dunia ini"
+      },
+      {
+        "id": "tapped-33-164.94",
+        "startTime": 164.94,
+        "endTime": 170.36,
+        "text": "Memalingkan wajahnya dari diriku"
+      },
+      {
+        "id": "tapped-34-170.36",
+        "startTime": 170.36,
+        "endTime": 173.26,
+        "text": "Namun kau pasti"
+      },
+      {
+        "id": "tapped-35-173.26",
+        "startTime": 173.26,
+        "endTime": 176.63,
+        "text": "Tetap hampiriku"
+      },
+      {
+        "id": "tapped-36-176.63",
+        "startTime": 176.63,
+        "endTime": 182.47,
+        "text": "Bagaikan seolah datang keajaiban"
+      },
+      {
+        "id": "tapped-37-182.47",
+        "startTime": 182.47,
+        "endTime": 188.68,
+        "text": "Tak terucap rasa ini dalam kata-kata"
+      },
+      {
+        "id": "tapped-38-188.68",
+        "startTime": 188.68,
+        "endTime": 191.78,
+        "text": "Engkaulah sebuah alasan ku"
+      },
+      {
+        "id": "tapped-39-191.78",
+        "startTime": 191.78,
+        "endTime": 193.37,
+        "text": "tetap di sini"
+      },
+      {
+        "id": "tapped-40-193.37",
+        "startTime": 193.37,
+        "endTime": 199.7,
+        "text": "Alasan yang membuatku tetap mau percaya"
+      },
+      {
+        "id": "tapped-41-199.7",
+        "startTime": 199.7,
+        "endTime": 201.03,
+        "text": "Itulah mengapa"
+      },
+      {
+        "id": "tapped-42-201.03",
+        "startTime": 201.03,
+        "endTime": 203.52,
+        "text": "hingga saat ini ku tak menyerah"
+      },
+      {
+        "id": "tapped-43-203.52",
+        "startTime": 203.52,
+        "endTime": 209.27,
+        "text": "Kau adalah alasan mengapa mimpi itu"
+      },
+      {
+        "id": "tapped-44-209.27",
+        "startTime": 209.27,
+        "endTime": 210.62,
+        "text": "Dirimu (dirimu)"
+      },
+      {
+        "id": "tapped-45-210.62",
+        "startTime": 210.62,
+        "endTime": 212.43,
+        "text": "Adalah alasanku"
+      },
+      {
+        "id": "tapped-46-212.43",
+        "startTime": 212.43,
+        "endTime": 234.17,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-47-234.17",
+        "startTime": 234.17,
+        "endTime": 237.69,
+        "text": "Tak ada kata kata yang"
+      },
+      {
+        "id": "tapped-48-237.69",
+        "startTime": 237.69,
+        "endTime": 240.52,
+        "text": "cukup untuk mengungkapkan"
+      },
+      {
+        "id": "tapped-49-240.52",
+        "startTime": 240.52,
+        "endTime": 245.16,
+        "text": "Betapa besarnya artimu di dalam hidupku"
+      },
+      {
+        "id": "tapped-50-245.16",
+        "startTime": 245.16,
+        "endTime": 251.6,
+        "text": "Dirimulah alasanku untuk selalu percaya"
+      },
+      {
+        "id": "tapped-51-251.6",
+        "startTime": 251.6,
+        "endTime": 252.82,
+        "text": "Ku takkan berhenti"
+      },
+      {
+        "id": "tapped-52-252.82",
+        "startTime": 252.82,
+        "endTime": 256.08,
+        "text": "Karena kau ada di sisiku"
+      },
+      {
+        "id": "tapped-53-256.08",
+        "startTime": 256.08,
+        "endTime": 259.83,
+        "text": "Tak terucap rasa ini"
+      },
+      {
+        "id": "tapped-54-259.83",
+        "startTime": 259.83,
+        "endTime": 262.37,
+        "text": "dalam kata-kata"
+      },
+      {
+        "id": "tapped-55-262.37",
+        "startTime": 262.37,
+        "endTime": 265.35,
+        "text": "Engkaulah sebuah alasan ku"
+      },
+      {
+        "id": "tapped-56-265.35",
+        "startTime": 265.35,
+        "endTime": 266.88,
+        "text": "tetap di sini"
+      },
+      {
+        "id": "tapped-57-266.88",
+        "startTime": 266.88,
+        "endTime": 273.42,
+        "text": "Alasan yang membuatku tetap mau percaya"
+      },
+      {
+        "id": "tapped-58-273.42",
+        "startTime": 273.42,
+        "endTime": 274.65,
+        "text": "Itulah mengapa"
+      },
+      {
+        "id": "tapped-59-274.65",
+        "startTime": 274.65,
+        "endTime": 277.69,
+        "text": "hingga saat ini ku tak menyerah"
+      },
+      {
+        "id": "tapped-60-277.69",
+        "startTime": 277.69,
+        "endTime": 282.92,
+        "text": "Jika suatu hari aku mencapai mimpi"
+      },
+      {
+        "id": "tapped-61-282.92",
+        "startTime": 282.92,
+        "endTime": 284.24,
+        "text": "Ku tahu (ku tahu)"
+      },
+      {
+        "id": "tapped-62-284.24",
+        "startTime": 284.24,
+        "endTime": 288.24,
+        "text": "Karna kau disisiku"
+      }
+    ]
+  },
+  {
+    "id": "song-yt-8zi8cHcLOPA-1788196622817",
+    "title": "Kohi Sekai - Future (Official Music Video)",
+    "artist": "Kohi Sekai",
+    "source": "youtube",
+    "youtubeId": "8zi8cHcLOPA",
+    "duration": 285,
+    "coverArt": "https://i.ytimg.com/vi/8zi8cHcLOPA/hq720.jpg",
+    "rawLyrics": "[00:23.30] Di persimpangan waktu ini\n[00:25.51] diriku sendiri\n[00:28.10] Memandang jauh tak tau apa yang\n[00:30.69] telah menungguku di depan\n[00:33.42] ♪ ~ Instrumental Break ~ ♪\n[00:43.89] Oh hari kelam yang kemarin\n[00:46.10] selalu terlintas\n[00:48.71] Berfikir ingin ku akhiri\n[00:51.67] hari-hariku sendiri\n[00:54.17] Namun, apa yang sedang ku pikirkan?\n[00:56.75] Tentang hari kemarin\n[00:59.42] Tak bisa tenang buatku terbayang-bayang\n[01:04.48] Hey, apakah diriku di masa depan itu\n[01:09.68] Tersenyum indah tak seperti dulu\n[01:14.84] Hari ini bukanlah,\n[01:17.43] sekedar pengulangan kisah\n[01:21.23] Ku yakin lebih berwarna\n[01:25.20] Kemarin hanyalah kisah yang kelam\n[01:27.79] Esok kan lebih terang\n[01:30.37] Masa depan yang kuimpikan\n[01:32.92] GO! GO! Mirai! Kohi Sekai 2x\n[01:37.56] Letsgo!\n[01:38.04] ♪ ~ Instrumental Break ~ ♪\n[01:48.34] Setelah semua berlalu, kemanakah lagi?\n[01:53.20] Pertanyaan itu pun terus\n[01:56.09] bernyanyi di dalam hatiku\n[01:58.73] Walau tak tahu jadi seperti apa\n[02:01.26] Semua pasti bermakna\n[02:03.84] Hanya bisa membayangkan dimasa depan\n[02:09.05] Hey, apakah diriku di masa depan itu\n[02:14.15] Tersenyum indah tak seperti dulu\n[02:19.33] Hari ini bukanlah,\n[02:21.96] sekedar pengulangan kisah\n[02:25.80] Ku yakin lebih berwarna\n[02:29.62] Kemarin hanyalah kisah yang kelam\n[02:32.43] Esok kan lebih terang\n[02:34.81] Masa depan yang kuimpikan\n[02:37.40] GO! GO! Mirai! Kohi Sekai\n[02:40.00] GO! GO! Mirai! Kohi Sekai\n[02:42.02] Letsgo!\n[02:42.56] ♪ ~ Instrumental Break ~ ♪\n[02:52.84] Hari ini ku harus lebih dari kemarin\n[02:57.96] Sperti fajar mengusir kegelapan\n[03:03.18] Walau terkadang ragu berbisik dalam hati\n[03:08.37] Akan kulewati semua hari yang lelah\n[03:16.12] ♪ ~ Instrumental Break ~ ♪\n[03:18.62] Hey, apakah diriku di masa depan itu\n[03:23.84] Tersenyum indah tak seperti dulu\n[03:28.75] ♪ ~ Instrumental Break ~ ♪\n[03:30.37] Hari ini bukanlah,\n[03:32.83] sekedar pengulangan kisah\n[03:36.75] Ku yakin lebih berwarna\n[03:40.65] Kemarin hanyalah kisah yang kelam\n[03:43.21] Esok kan lebih terang\n[03:45.75] Masa depan yang kuimpikan\n[03:48.40] GO! GO! Mirai! Kohi Sekai\n[03:51.06] GO! GO! Mirai! Kohi Sekai\n[03:53.00] Letsgo!\n[03:53.90] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "line-0-23.31",
+        "startTime": 23.31,
+        "endTime": 25.51,
+        "text": "Di persimpangan waktu ini"
+      },
+      {
+        "id": "line-1-25.51",
+        "startTime": 25.51,
+        "endTime": 28.1,
+        "text": "diriku sendiri"
+      },
+      {
+        "id": "line-2-28.1",
+        "startTime": 28.1,
+        "endTime": 30.69,
+        "text": "Memandang jauh tak tau apa yang"
+      },
+      {
+        "id": "line-3-30.69",
+        "startTime": 30.69,
+        "endTime": 33.43,
+        "text": "telah menungguku di depan"
+      },
+      {
+        "id": "line-4-33.43",
+        "startTime": 33.43,
+        "endTime": 41.43,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-5-43.89",
+        "startTime": 43.89,
+        "endTime": 46.1,
+        "text": "Oh hari kelam yang kemarin"
+      },
+      {
+        "id": "line-6-46.1",
+        "startTime": 46.1,
+        "endTime": 48.72,
+        "text": "selalu terlintas"
+      },
+      {
+        "id": "line-7-48.72",
+        "startTime": 48.72,
+        "endTime": 51.67,
+        "text": "Berfikir ingin ku akhiri"
+      },
+      {
+        "id": "line-8-51.67",
+        "startTime": 51.67,
+        "endTime": 54.18,
+        "text": "hari-hariku sendiri"
+      },
+      {
+        "id": "line-9-54.18",
+        "startTime": 54.18,
+        "endTime": 56.75,
+        "text": "Namun, apa yang sedang ku pikirkan?"
+      },
+      {
+        "id": "line-10-56.75",
+        "startTime": 56.75,
+        "endTime": 59.42,
+        "text": "Tentang hari kemarin"
+      },
+      {
+        "id": "line-11-59.42",
+        "startTime": 59.42,
+        "endTime": 64.48,
+        "text": "Tak bisa tenang buatku terbayang-bayang"
+      },
+      {
+        "id": "line-12-64.48",
+        "startTime": 64.48,
+        "endTime": 69.68,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-13-69.68",
+        "startTime": 69.68,
+        "endTime": 74.84,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-14-74.84",
+        "startTime": 74.84,
+        "endTime": 77.43,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-15-77.43",
+        "startTime": 77.43,
+        "endTime": 81.23,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-16-81.23",
+        "startTime": 81.23,
+        "endTime": 85.2,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-17-85.2",
+        "startTime": 85.2,
+        "endTime": 87.79,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-18-87.79",
+        "startTime": 87.79,
+        "endTime": 90.37,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-19-90.37",
+        "startTime": 90.37,
+        "endTime": 92.92,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-20-92.92",
+        "startTime": 92.92,
+        "endTime": 97.56,
+        "text": "GO! GO! Mirai! Kohi Sekai 2x"
+      },
+      {
+        "id": "line-21-97.56",
+        "startTime": 97.56,
+        "endTime": 98.04,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-22-98.04",
+        "startTime": 98.04,
+        "endTime": 106.04,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-23-108.34",
+        "startTime": 108.34,
+        "endTime": 113.2,
+        "text": "Setelah semua berlalu, kemanakah lagi?"
+      },
+      {
+        "id": "line-24-113.2",
+        "startTime": 113.2,
+        "endTime": 116.09,
+        "text": "Pertanyaan itu pun terus"
+      },
+      {
+        "id": "line-25-116.09",
+        "startTime": 116.09,
+        "endTime": 118.73,
+        "text": "bernyanyi di dalam hatiku"
+      },
+      {
+        "id": "line-26-118.73",
+        "startTime": 118.73,
+        "endTime": 121.26,
+        "text": "Walau tak tahu jadi seperti apa"
+      },
+      {
+        "id": "line-27-121.26",
+        "startTime": 121.26,
+        "endTime": 123.84,
+        "text": "Semua pasti bermakna"
+      },
+      {
+        "id": "line-28-123.84",
+        "startTime": 123.84,
+        "endTime": 129.05,
+        "text": "Hanya bisa membayangkan dimasa depan"
+      },
+      {
+        "id": "line-29-129.05",
+        "startTime": 129.05,
+        "endTime": 134.15,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-30-134.15",
+        "startTime": 134.15,
+        "endTime": 139.33,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-31-139.33",
+        "startTime": 139.33,
+        "endTime": 141.96,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-32-141.96",
+        "startTime": 141.96,
+        "endTime": 145.8,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-33-145.8",
+        "startTime": 145.8,
+        "endTime": 149.62,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-34-149.62",
+        "startTime": 149.62,
+        "endTime": 152.43,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-35-152.43",
+        "startTime": 152.43,
+        "endTime": 154.81,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-36-154.81",
+        "startTime": 154.81,
+        "endTime": 157.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-37-157.4",
+        "startTime": 157.4,
+        "endTime": 160,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-38-160",
+        "startTime": 160,
+        "endTime": 162.02,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-39-162.02",
+        "startTime": 162.02,
+        "endTime": 162.56,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-40-162.56",
+        "startTime": 162.56,
+        "endTime": 170.56,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-41-172.84",
+        "startTime": 172.84,
+        "endTime": 177.96,
+        "text": "Hari ini ku harus lebih dari kemarin"
+      },
+      {
+        "id": "line-42-177.96",
+        "startTime": 177.96,
+        "endTime": 183.18,
+        "text": "Sperti fajar mengusir kegelapan"
+      },
+      {
+        "id": "line-43-183.18",
+        "startTime": 183.18,
+        "endTime": 188.37,
+        "text": "Walau terkadang ragu berbisik dalam hati"
+      },
+      {
+        "id": "line-44-188.37",
+        "startTime": 188.37,
+        "endTime": 196.12,
+        "text": "Akan kulewati semua hari yang lelah"
+      },
+      {
+        "id": "line-45-196.12",
+        "startTime": 196.12,
+        "endTime": 198.62,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-46-198.62",
+        "startTime": 198.62,
+        "endTime": 203.84,
+        "text": "Hey, apakah diriku di masa depan itu"
+      },
+      {
+        "id": "line-47-203.84",
+        "startTime": 203.84,
+        "endTime": 208.75,
+        "text": "Tersenyum indah tak seperti dulu"
+      },
+      {
+        "id": "line-48-208.75",
+        "startTime": 208.75,
+        "endTime": 210.37,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "line-49-210.37",
+        "startTime": 210.37,
+        "endTime": 212.83,
+        "text": "Hari ini bukanlah,"
+      },
+      {
+        "id": "line-50-212.83",
+        "startTime": 212.83,
+        "endTime": 216.75,
+        "text": "sekedar pengulangan kisah"
+      },
+      {
+        "id": "line-51-216.75",
+        "startTime": 216.75,
+        "endTime": 220.65,
+        "text": "Ku yakin lebih berwarna"
+      },
+      {
+        "id": "line-52-220.65",
+        "startTime": 220.65,
+        "endTime": 223.21,
+        "text": "Kemarin hanyalah kisah yang kelam"
+      },
+      {
+        "id": "line-53-223.21",
+        "startTime": 223.21,
+        "endTime": 225.75,
+        "text": "Esok kan lebih terang"
+      },
+      {
+        "id": "line-54-225.75",
+        "startTime": 225.75,
+        "endTime": 228.4,
+        "text": "Masa depan yang kuimpikan"
+      },
+      {
+        "id": "line-55-228.4",
+        "startTime": 228.4,
+        "endTime": 231.06,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-56-231.06",
+        "startTime": 231.06,
+        "endTime": 233,
+        "text": "GO! GO! Mirai! Kohi Sekai"
+      },
+      {
+        "id": "line-57-233",
+        "startTime": 233,
+        "endTime": 233.9,
+        "text": "Letsgo!"
+      },
+      {
+        "id": "line-58-233.9",
+        "startTime": 233.9,
+        "endTime": 238.9,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ]
+  },
+  {
+    "id": "song-yt-Em666F2_LzQ-1788272745734",
+    "title": "After 7 Years",
+    "artist": "Minerva Land",
+    "source": "youtube",
+    "youtubeId": "Em666F2_LzQ",
+    "duration": 304,
+    "coverArt": "https://i.ytimg.com/vi/Em666F2_LzQ/hq720.jpg",
+    "rawLyrics": "[00:22.28] Denting piano membawa\n[00:24.87] langkahmu mendekat\n[00:27.32] Bertabur k'lopak bunga\n[00:29.85] air mata bahagia\n[00:33.29] Angin yang lembut menghembus\n[00:36.00] helaian rambutmu\n[00:38.36] Kulihat tatapanmu\n[00:41.11] begitu berkilauan\n[00:44.25] Cinta masa remajaku,\n[00:46.74] di musim panas lalu\n[00:49.22] Kudekap lembut dengan\n[00:52.04] tatap yang berseri\n[00:54.85] Dua hati bertemu,\n[00:57.53] di tepi ombak\n[01:00.25] Ku yakin ini garis cinta\n[01:02.36] yang ditakdirkan\n[01:05.79] Genggam tanganmu\n[01:07.45] yang s'lalu meyakinkanku\n[01:10.04] hadapi dunia\n[01:11.71] Apapun yang terjadi\n[01:16.40] Hanyalah denganmu,\n[01:18.96] semua kan baik-baik saja\n[01:25.03] 愛 が そっと 胸 に 溢れてく | Ai ga sotto mune ni afureteku\n[01:30.25] Mulai sekarang,\n[01:32.85] kita tuk selamanya\n[01:35.98] 君 の 笑顔 わ | Kimi no egao wa,\n[01:38.62] 僕 の すべて さ | boku no subete sa\n[01:41.70] Karnanya (Karnanya) apapun\n[01:43.85] kan kulakukan untukmu\n[01:46.93] Di kehidupan ini atau selanjutnya\n[01:52.40] 未来 まで | Mirai made,\n[01:54.43] ずっと 一緒 に | zutto issho ni\n[01:55.98] ♪ ~ Instrumental Break ~ ♪\n[02:06.39] Terus berjalan perlahan\n[02:09.18] dan tanpa tergesa\n[02:11.40] Di bawah langit biru\n[02:14.18] sambil bercerita\n[02:17.06] Kita berbagi mimpi-mimpi sederhana\n[02:22.53] Yang suatu saat kan\n[02:24.06] kita gapai bersama\n[02:28.06] Dengan hati yang\n[02:29.80] penuh keyakinan akan\n[02:32.24] cinta dan harapan\n[02:33.94] Janji kita terucap\n[02:38.66] Lembaran baru yang\n[02:41.43] akan kita tulis bersama\n[02:47.30] 愛 が そっと 胸 に 溢れてく | Ai ga sotto mune ni afureteku\n[02:52.53] Mulai sekarang,\n[02:55.02] kita tuk selamanya\n[02:58.27] 君 の 笑顔 わ | Kimi no egao wa,\n[03:00.97] 僕 の すべて さ | boku no subete sa\n[03:03.91] Karnanya (karnanya) apapun\n[03:06.06] kan kulakukan untukmu\n[03:08.94] Di kehidupan ini atau selanjutnya\n[03:14.61] 未来 まで, ずっと 一緒 に | Mirai made, zutto issho ni\n[03:18.49] ♪ ~ Instrumental Break ~ ♪\n[03:20.90] Mungkin kita kan saling terluka\n[03:25.93] Namun terus kembali percaya\n[03:31.50] Kan s'lalu aku pilih dirimu\n[03:37.75] 愛してる | Aishiteru\n[03:40.00] ♪ ~ Instrumental Break ~ ♪\n[04:06.71] Cinta yang perlahan meluap\n[04:09.83] kini memuncak\n[04:12.08] Kau sambut dengan\n[04:14.59] kecup lembut bibirmu\n[04:17.68] 君 の 笑顔 わ | Kimi no egao wa,\n[04:20.25] 僕 の すべて さ | boku no subete sa\n[04:23.32] Karnanya (karnanya) apapun\n[04:25.57] kan kulakukan untukmu\n[04:28.70] Di kehidupan ini\n[04:31.62] atau selanjutnya\n[04:34.25] 最高 に 輝く | Saikou ni kagayaku,\n[04:40.24] 今 抱きしめて | ima dakishimete\n[04:43.12] ♪ ~ Instrumental Break ~ ♪\n[04:47.13] 君 が 好き だ | Kimi ga suki da~\n[04:52.75] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "tapped-0-22.28",
+        "startTime": 22.28,
+        "endTime": 24.87,
+        "text": "Denting piano membawa"
+      },
+      {
+        "id": "tapped-1-24.87",
+        "startTime": 24.87,
+        "endTime": 27.33,
+        "text": "langkahmu mendekat"
+      },
+      {
+        "id": "tapped-2-27.33",
+        "startTime": 27.33,
+        "endTime": 29.85,
+        "text": "Bertabur k'lopak bunga"
+      },
+      {
+        "id": "tapped-3-29.85",
+        "startTime": 29.85,
+        "endTime": 33.3,
+        "text": "air mata bahagia"
+      },
+      {
+        "id": "tapped-4-33.3",
+        "startTime": 33.3,
+        "endTime": 36.01,
+        "text": "Angin yang lembut menghembus"
+      },
+      {
+        "id": "tapped-5-36.01",
+        "startTime": 36.01,
+        "endTime": 38.37,
+        "text": "helaian rambutmu"
+      },
+      {
+        "id": "tapped-6-38.37",
+        "startTime": 38.37,
+        "endTime": 41.12,
+        "text": "Kulihat tatapanmu"
+      },
+      {
+        "id": "tapped-7-41.12",
+        "startTime": 41.12,
+        "endTime": 44.26,
+        "text": "begitu berkilauan"
+      },
+      {
+        "id": "tapped-8-44.26",
+        "startTime": 44.26,
+        "endTime": 46.74,
+        "text": "Cinta masa remajaku,"
+      },
+      {
+        "id": "tapped-9-46.74",
+        "startTime": 46.74,
+        "endTime": 49.23,
+        "text": "di musim panas lalu"
+      },
+      {
+        "id": "tapped-10-49.23",
+        "startTime": 49.23,
+        "endTime": 52.05,
+        "text": "Kudekap lembut dengan"
+      },
+      {
+        "id": "tapped-11-52.05",
+        "startTime": 52.05,
+        "endTime": 54.85,
+        "text": "tatap yang berseri"
+      },
+      {
+        "id": "tapped-12-54.85",
+        "startTime": 54.85,
+        "endTime": 57.53,
+        "text": "Dua hati bertemu,"
+      },
+      {
+        "id": "tapped-13-57.53",
+        "startTime": 57.53,
+        "endTime": 60.26,
+        "text": "di tepi ombak"
+      },
+      {
+        "id": "tapped-14-60.26",
+        "startTime": 60.26,
+        "endTime": 62.37,
+        "text": "Ku yakin ini garis cinta"
+      },
+      {
+        "id": "tapped-15-62.37",
+        "startTime": 62.37,
+        "endTime": 65.79,
+        "text": "yang ditakdirkan"
+      },
+      {
+        "id": "tapped-16-65.79",
+        "startTime": 65.79,
+        "endTime": 67.45,
+        "text": "Genggam tanganmu"
+      },
+      {
+        "id": "tapped-17-67.45",
+        "startTime": 67.45,
+        "endTime": 70.05,
+        "text": "yang s'lalu meyakinkanku"
+      },
+      {
+        "id": "tapped-18-70.05",
+        "startTime": 70.05,
+        "endTime": 71.72,
+        "text": "hadapi dunia"
+      },
+      {
+        "id": "tapped-19-71.72",
+        "startTime": 71.72,
+        "endTime": 76.41,
+        "text": "Apapun yang terjadi"
+      },
+      {
+        "id": "tapped-20-76.41",
+        "startTime": 76.41,
+        "endTime": 78.97,
+        "text": "Hanyalah denganmu,"
+      },
+      {
+        "id": "tapped-21-78.97",
+        "startTime": 78.97,
+        "endTime": 85.03,
+        "text": "semua kan baik-baik saja"
+      },
+      {
+        "id": "tapped-22-85.03",
+        "startTime": 85.03,
+        "endTime": 90.25,
+        "text": "愛 が そっと 胸 に 溢れてく",
+        "romaji": "Ai ga sotto mune ni afureteku"
+      },
+      {
+        "id": "tapped-23-90.25",
+        "startTime": 90.25,
+        "endTime": 92.86,
+        "text": "Mulai sekarang,"
+      },
+      {
+        "id": "tapped-24-92.86",
+        "startTime": 92.86,
+        "endTime": 95.99,
+        "text": "kita tuk selamanya"
+      },
+      {
+        "id": "tapped-25-95.99",
+        "startTime": 95.99,
+        "endTime": 98.62,
+        "text": "君 の 笑顔 わ",
+        "romaji": "Kimi no egao wa,"
+      },
+      {
+        "id": "tapped-26-98.62",
+        "startTime": 98.62,
+        "endTime": 101.7,
+        "text": "僕 の すべて さ",
+        "romaji": "boku no subete sa"
+      },
+      {
+        "id": "tapped-27-101.7",
+        "startTime": 101.7,
+        "endTime": 103.86,
+        "text": "Karnanya (Karnanya) apapun"
+      },
+      {
+        "id": "tapped-28-103.86",
+        "startTime": 103.86,
+        "endTime": 106.94,
+        "text": "kan kulakukan untukmu"
+      },
+      {
+        "id": "tapped-29-106.94",
+        "startTime": 106.94,
+        "endTime": 112.41,
+        "text": "Di kehidupan ini atau selanjutnya"
+      },
+      {
+        "id": "tapped-30-112.41",
+        "startTime": 112.41,
+        "endTime": 114.44,
+        "text": "未来 まで",
+        "romaji": "Mirai made,"
+      },
+      {
+        "id": "tapped-31-114.44",
+        "startTime": 114.44,
+        "endTime": 115.99,
+        "text": "ずっと 一緒 に",
+        "romaji": "zutto issho ni"
+      },
+      {
+        "id": "tapped-32-115.99",
+        "startTime": 115.99,
+        "endTime": 126.39,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-33-126.39",
+        "startTime": 126.39,
+        "endTime": 129.18,
+        "text": "Terus berjalan perlahan"
+      },
+      {
+        "id": "tapped-34-129.18",
+        "startTime": 129.18,
+        "endTime": 131.4,
+        "text": "dan tanpa tergesa"
+      },
+      {
+        "id": "tapped-35-131.4",
+        "startTime": 131.4,
+        "endTime": 134.19,
+        "text": "Di bawah langit biru"
+      },
+      {
+        "id": "tapped-36-134.19",
+        "startTime": 134.19,
+        "endTime": 137.06,
+        "text": "sambil bercerita"
+      },
+      {
+        "id": "tapped-37-137.06",
+        "startTime": 137.06,
+        "endTime": 142.53,
+        "text": "Kita berbagi mimpi-mimpi sederhana"
+      },
+      {
+        "id": "tapped-38-142.53",
+        "startTime": 142.53,
+        "endTime": 144.06,
+        "text": "Yang suatu saat kan"
+      },
+      {
+        "id": "tapped-39-144.06",
+        "startTime": 144.06,
+        "endTime": 148.06,
+        "text": "kita gapai bersama"
+      },
+      {
+        "id": "tapped-40-148.06",
+        "startTime": 148.06,
+        "endTime": 149.8,
+        "text": "Dengan hati yang"
+      },
+      {
+        "id": "tapped-41-149.8",
+        "startTime": 149.8,
+        "endTime": 152.24,
+        "text": "penuh keyakinan akan"
+      },
+      {
+        "id": "tapped-42-152.24",
+        "startTime": 152.24,
+        "endTime": 153.95,
+        "text": "cinta dan harapan"
+      },
+      {
+        "id": "tapped-43-153.95",
+        "startTime": 153.95,
+        "endTime": 158.67,
+        "text": "Janji kita terucap"
+      },
+      {
+        "id": "tapped-44-158.67",
+        "startTime": 158.67,
+        "endTime": 161.43,
+        "text": "Lembaran baru yang"
+      },
+      {
+        "id": "tapped-45-161.43",
+        "startTime": 161.43,
+        "endTime": 167.3,
+        "text": "akan kita tulis bersama"
+      },
+      {
+        "id": "tapped-46-167.3",
+        "startTime": 167.3,
+        "endTime": 172.53,
+        "text": "愛 が そっと 胸 に 溢れてく",
+        "romaji": "Ai ga sotto mune ni afureteku"
+      },
+      {
+        "id": "tapped-47-172.53",
+        "startTime": 172.53,
+        "endTime": 175.02,
+        "text": "Mulai sekarang,"
+      },
+      {
+        "id": "tapped-48-175.02",
+        "startTime": 175.02,
+        "endTime": 178.27,
+        "text": "kita tuk selamanya"
+      },
+      {
+        "id": "tapped-49-178.27",
+        "startTime": 178.27,
+        "endTime": 180.98,
+        "text": "君 の 笑顔 わ",
+        "romaji": "Kimi no egao wa,"
+      },
+      {
+        "id": "tapped-50-180.98",
+        "startTime": 180.98,
+        "endTime": 183.92,
+        "text": "僕 の すべて さ",
+        "romaji": "boku no subete sa"
+      },
+      {
+        "id": "tapped-51-183.92",
+        "startTime": 183.92,
+        "endTime": 186.07,
+        "text": "Karnanya (karnanya) apapun"
+      },
+      {
+        "id": "tapped-52-186.07",
+        "startTime": 186.07,
+        "endTime": 188.95,
+        "text": "kan kulakukan untukmu"
+      },
+      {
+        "id": "tapped-53-188.95",
+        "startTime": 188.95,
+        "endTime": 194.61,
+        "text": "Di kehidupan ini atau selanjutnya"
+      },
+      {
+        "id": "tapped-54-194.61",
+        "startTime": 194.61,
+        "endTime": 198.49,
+        "text": "未来 まで, ずっと 一緒 に",
+        "romaji": "Mirai made, zutto issho ni"
+      },
+      {
+        "id": "tapped-55-198.49",
+        "startTime": 198.49,
+        "endTime": 200.91,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-56-200.91",
+        "startTime": 200.91,
+        "endTime": 205.94,
+        "text": "Mungkin kita kan saling terluka"
+      },
+      {
+        "id": "tapped-57-205.94",
+        "startTime": 205.94,
+        "endTime": 211.51,
+        "text": "Namun terus kembali percaya"
+      },
+      {
+        "id": "tapped-58-211.51",
+        "startTime": 211.51,
+        "endTime": 217.76,
+        "text": "Kan s'lalu aku pilih dirimu"
+      },
+      {
+        "id": "tapped-59-217.76",
+        "startTime": 217.76,
+        "endTime": 220.01,
+        "text": "愛してる",
+        "romaji": "Aishiteru"
+      },
+      {
+        "id": "tapped-60-220.01",
+        "startTime": 220.01,
+        "endTime": 246.72,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-61-246.72",
+        "startTime": 246.72,
+        "endTime": 249.83,
+        "text": "Cinta yang perlahan meluap"
+      },
+      {
+        "id": "tapped-62-249.83",
+        "startTime": 249.83,
+        "endTime": 252.08,
+        "text": "kini memuncak"
+      },
+      {
+        "id": "tapped-63-252.08",
+        "startTime": 252.08,
+        "endTime": 254.6,
+        "text": "Kau sambut dengan"
+      },
+      {
+        "id": "tapped-64-254.6",
+        "startTime": 254.6,
+        "endTime": 257.69,
+        "text": "kecup lembut bibirmu"
+      },
+      {
+        "id": "tapped-65-257.69",
+        "startTime": 257.69,
+        "endTime": 260.26,
+        "text": "君 の 笑顔 わ",
+        "romaji": "Kimi no egao wa,"
+      },
+      {
+        "id": "tapped-66-260.26",
+        "startTime": 260.26,
+        "endTime": 263.33,
+        "text": "僕 の すべて さ",
+        "romaji": "boku no subete sa"
+      },
+      {
+        "id": "tapped-67-263.33",
+        "startTime": 263.33,
+        "endTime": 265.58,
+        "text": "Karnanya (karnanya) apapun"
+      },
+      {
+        "id": "tapped-68-265.58",
+        "startTime": 265.58,
+        "endTime": 268.71,
+        "text": "kan kulakukan untukmu"
+      },
+      {
+        "id": "tapped-69-268.71",
+        "startTime": 268.71,
+        "endTime": 271.62,
+        "text": "Di kehidupan ini"
+      },
+      {
+        "id": "tapped-70-271.62",
+        "startTime": 271.62,
+        "endTime": 274.26,
+        "text": "atau selanjutnya"
+      },
+      {
+        "id": "tapped-71-274.26",
+        "startTime": 274.26,
+        "endTime": 280.24,
+        "text": "最高 に 輝く",
+        "romaji": "Saikou ni kagayaku,"
+      },
+      {
+        "id": "tapped-72-280.24",
+        "startTime": 280.24,
+        "endTime": 283.13,
+        "text": "今 抱きしめて",
+        "romaji": "ima dakishimete"
+      },
+      {
+        "id": "tapped-73-283.13",
+        "startTime": 283.13,
+        "endTime": 287.14,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-74-287.14",
+        "startTime": 287.14,
+        "endTime": 292.76,
+        "text": "君 が 好き だ",
+        "romaji": "Kimi ga suki da~"
+      },
+      {
+        "id": "tapped-75-292.76",
+        "startTime": 292.76,
+        "endTime": 296.76,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ]
+  },
+  {
+    "id": "song-yt-x1qyrJd8fWA-1788274700038",
+    "title": "Kirin Day - Koi Overdrive (Official Lyrics Video)",
+    "artist": "Kirin Day",
+    "source": "youtube",
+    "youtubeId": "x1qyrJd8fWA",
+    "duration": 267,
+    "coverArt": "https://i.ytimg.com/vi/x1qyrJd8fWA/hq720.jpg",
+    "rawLyrics": "[00:01.20] Pada lintasan\n[00:03.02] hati yang tak kenal ujung,\n[00:06.69] 全部 君 が いい | Zenbu kimi ga ii\n[00:11.19] ♪ ~ Instrumental Break ~ ♪\n[00:22.46] Kunci diputar,\n[00:25.01] jantungku yang mulai berpacu\n[00:27.71] Jauh lebih kencang\n[00:30.08] daripada mesin motorku\n[00:33.64] ♪ ~ Instrumental Break ~ ♪\n[00:43.64] Wajah sampingmu\n[00:46.31] yang terlihat di kaca spion\n[00:49.07] Membuat duniaku\n[00:51.49] jadi seperti tak karuan\n[00:56.67] Volumeku kumaksimalkan\n[01:00.35] di earphone-ku\n[01:02.74] Lagu kesukaan kita\n[01:05.42] jadi sinyal I'm fully ready!\n[01:13.01] Koi Overdrive\n[01:14.84] Perasaan tak terkendali\n[01:18.23] Jalan kosong ini\n[01:19.93] hanya milik kita berdua\n[01:23.65] Lampu hijau di\n[01:25.59] hati menyala terang benderang\n[01:29.28] Tak ada ragu\n[01:31.96] I will rush into you\n[01:34.95] ♪ ~ Instrumental Break ~ ♪\n[01:39.68] Jarum di panel\n[01:42.18] mulai menari liar\n[01:44.73] Terpaan angin\n[01:47.40] membuat rasa takutku melayang\n[01:52.68] Perasaan ini semakin liar,\n[01:56.31] tak terbendung\n[01:58.81] Lewati batas kecepatan,\n[02:01.48] tak peduli\n[02:03.31] Lihat aku\n[02:06.87] ♪ ~ Instrumental Break ~ ♪\n[02:09.00] 恋 喘息 | Koi Zensoku\n[02:10.87] Tak dapat kutahan lagi\n[02:14.15] 'Kan kubawa kau pergi\n[02:16.03] dan lampaui semua awan\n[02:19.56] Perasaan di hati membara,\n[02:23.03] merah menyala\n[02:25.40] Tanpa terbendung\n[02:28.06] Sampai pada tujuan\n[02:30.99] ♪ ~ Instrumental Break ~ ♪\n[02:51.61] Frekuensi ini\n[02:53.87] di titik tertinggi\n[02:57.12] Tak dapat berhenti\n[03:02.28] Bukanlah tentang\n[03:04.61] jarak yang kulihat\n[03:07.65] Tapi kita 'kan semakin dekat\n[03:15.58] Koi Overdrive\n[03:17.33] Perasaan tak terkendali\n[03:20.78] Jalan kosong ini\n[03:22.62] hanya milik kita berdua\n[03:26.24] Lampu hijau di hati\n[03:28.65] menyala terang benderang\n[03:32.06] Tak ada ragu\n[03:34.68] I will rush into you\n[03:40.30] ♪ ~ Instrumental Break ~ ♪\n[03:42.27] 恋 喘息 | Koi Zensoku\n[03:44.31] Tak dapat kutahan lagi\n[03:47.44] 'Kan kubawa kau pergi\n[03:49.33] dan lampaui semua awan\n[03:52.96] Perasaan di hati membara,\n[03:56.31] merah menyala\n[03:58.63] Tanpa terbendung (Tanpa terbendung)\n[04:01.31] Sampai pada tujuan\n[04:07.03] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "tapped-0-1.21",
+        "startTime": 1.21,
+        "endTime": 3.02,
+        "text": "Pada lintasan"
+      },
+      {
+        "id": "tapped-1-3.02",
+        "startTime": 3.02,
+        "endTime": 6.69,
+        "text": "hati yang tak kenal ujung,"
+      },
+      {
+        "id": "tapped-2-6.69",
+        "startTime": 6.69,
+        "endTime": 11.2,
+        "text": "全部 君 が いい",
+        "romaji": "Zenbu kimi ga ii"
+      },
+      {
+        "id": "tapped-3-11.2",
+        "startTime": 11.2,
+        "endTime": 22.46,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-4-22.46",
+        "startTime": 22.46,
+        "endTime": 25.01,
+        "text": "Kunci diputar,"
+      },
+      {
+        "id": "tapped-5-25.01",
+        "startTime": 25.01,
+        "endTime": 27.72,
+        "text": "jantungku yang mulai berpacu"
+      },
+      {
+        "id": "tapped-6-27.72",
+        "startTime": 27.72,
+        "endTime": 30.09,
+        "text": "Jauh lebih kencang"
+      },
+      {
+        "id": "tapped-7-30.09",
+        "startTime": 30.09,
+        "endTime": 33.65,
+        "text": "daripada mesin motorku"
+      },
+      {
+        "id": "tapped-8-33.65",
+        "startTime": 33.65,
+        "endTime": 43.64,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-9-43.64",
+        "startTime": 43.64,
+        "endTime": 46.31,
+        "text": "Wajah sampingmu"
+      },
+      {
+        "id": "tapped-10-46.31",
+        "startTime": 46.31,
+        "endTime": 49.08,
+        "text": "yang terlihat di kaca spion"
+      },
+      {
+        "id": "tapped-11-49.08",
+        "startTime": 49.08,
+        "endTime": 51.49,
+        "text": "Membuat duniaku"
+      },
+      {
+        "id": "tapped-12-51.49",
+        "startTime": 51.49,
+        "endTime": 56.67,
+        "text": "jadi seperti tak karuan"
+      },
+      {
+        "id": "tapped-13-56.67",
+        "startTime": 56.67,
+        "endTime": 60.36,
+        "text": "Volumeku kumaksimalkan"
+      },
+      {
+        "id": "tapped-14-60.36",
+        "startTime": 60.36,
+        "endTime": 62.74,
+        "text": "di earphone-ku"
+      },
+      {
+        "id": "tapped-15-62.74",
+        "startTime": 62.74,
+        "endTime": 65.42,
+        "text": "Lagu kesukaan kita"
+      },
+      {
+        "id": "tapped-16-65.42",
+        "startTime": 65.42,
+        "endTime": 73.02,
+        "text": "jadi sinyal I'm fully ready!"
+      },
+      {
+        "id": "tapped-17-73.02",
+        "startTime": 73.02,
+        "endTime": 74.84,
+        "text": "Koi Overdrive"
+      },
+      {
+        "id": "tapped-18-74.84",
+        "startTime": 74.84,
+        "endTime": 78.24,
+        "text": "Perasaan tak terkendali"
+      },
+      {
+        "id": "tapped-19-78.24",
+        "startTime": 78.24,
+        "endTime": 79.94,
+        "text": "Jalan kosong ini"
+      },
+      {
+        "id": "tapped-20-79.94",
+        "startTime": 79.94,
+        "endTime": 83.66,
+        "text": "hanya milik kita berdua"
+      },
+      {
+        "id": "tapped-21-83.66",
+        "startTime": 83.66,
+        "endTime": 85.6,
+        "text": "Lampu hijau di"
+      },
+      {
+        "id": "tapped-22-85.6",
+        "startTime": 85.6,
+        "endTime": 89.28,
+        "text": "hati menyala terang benderang"
+      },
+      {
+        "id": "tapped-23-89.28",
+        "startTime": 89.28,
+        "endTime": 91.97,
+        "text": "Tak ada ragu"
+      },
+      {
+        "id": "tapped-24-91.97",
+        "startTime": 91.97,
+        "endTime": 94.95,
+        "text": "I will rush into you"
+      },
+      {
+        "id": "tapped-25-94.95",
+        "startTime": 94.95,
+        "endTime": 99.68,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-26-99.68",
+        "startTime": 99.68,
+        "endTime": 102.19,
+        "text": "Jarum di panel"
+      },
+      {
+        "id": "tapped-27-102.19",
+        "startTime": 102.19,
+        "endTime": 104.74,
+        "text": "mulai menari liar"
+      },
+      {
+        "id": "tapped-28-104.74",
+        "startTime": 104.74,
+        "endTime": 107.41,
+        "text": "Terpaan angin"
+      },
+      {
+        "id": "tapped-29-107.41",
+        "startTime": 107.41,
+        "endTime": 112.68,
+        "text": "membuat rasa takutku melayang"
+      },
+      {
+        "id": "tapped-30-112.68",
+        "startTime": 112.68,
+        "endTime": 116.31,
+        "text": "Perasaan ini semakin liar,"
+      },
+      {
+        "id": "tapped-31-116.31",
+        "startTime": 116.31,
+        "endTime": 118.82,
+        "text": "tak terbendung"
+      },
+      {
+        "id": "tapped-32-118.82",
+        "startTime": 118.82,
+        "endTime": 121.49,
+        "text": "Lewati batas kecepatan,"
+      },
+      {
+        "id": "tapped-33-121.49",
+        "startTime": 121.49,
+        "endTime": 123.31,
+        "text": "tak peduli"
+      },
+      {
+        "id": "tapped-34-123.31",
+        "startTime": 123.31,
+        "endTime": 126.88,
+        "text": "Lihat aku"
+      },
+      {
+        "id": "tapped-35-126.88",
+        "startTime": 126.88,
+        "endTime": 129,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-36-129",
+        "startTime": 129,
+        "endTime": 130.87,
+        "text": "恋 喘息",
+        "romaji": "Koi Zensoku"
+      },
+      {
+        "id": "tapped-37-130.87",
+        "startTime": 130.87,
+        "endTime": 134.15,
+        "text": "Tak dapat kutahan lagi"
+      },
+      {
+        "id": "tapped-38-134.15",
+        "startTime": 134.15,
+        "endTime": 136.04,
+        "text": "'Kan kubawa kau pergi"
+      },
+      {
+        "id": "tapped-39-136.04",
+        "startTime": 136.04,
+        "endTime": 139.57,
+        "text": "dan lampaui semua awan"
+      },
+      {
+        "id": "tapped-40-139.57",
+        "startTime": 139.57,
+        "endTime": 143.04,
+        "text": "Perasaan di hati membara,"
+      },
+      {
+        "id": "tapped-41-143.04",
+        "startTime": 143.04,
+        "endTime": 145.4,
+        "text": "merah menyala"
+      },
+      {
+        "id": "tapped-42-145.4",
+        "startTime": 145.4,
+        "endTime": 148.06,
+        "text": "Tanpa terbendung"
+      },
+      {
+        "id": "tapped-43-148.06",
+        "startTime": 148.06,
+        "endTime": 150.99,
+        "text": "Sampai pada tujuan"
+      },
+      {
+        "id": "tapped-44-150.99",
+        "startTime": 150.99,
+        "endTime": 171.61,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-45-171.61",
+        "startTime": 171.61,
+        "endTime": 173.87,
+        "text": "Frekuensi ini"
+      },
+      {
+        "id": "tapped-46-173.87",
+        "startTime": 173.87,
+        "endTime": 177.13,
+        "text": "di titik tertinggi"
+      },
+      {
+        "id": "tapped-47-177.13",
+        "startTime": 177.13,
+        "endTime": 182.29,
+        "text": "Tak dapat berhenti"
+      },
+      {
+        "id": "tapped-48-182.29",
+        "startTime": 182.29,
+        "endTime": 184.61,
+        "text": "Bukanlah tentang"
+      },
+      {
+        "id": "tapped-49-184.61",
+        "startTime": 184.61,
+        "endTime": 187.65,
+        "text": "jarak yang kulihat"
+      },
+      {
+        "id": "tapped-50-187.65",
+        "startTime": 187.65,
+        "endTime": 195.58,
+        "text": "Tapi kita 'kan semakin dekat"
+      },
+      {
+        "id": "tapped-51-195.58",
+        "startTime": 195.58,
+        "endTime": 197.33,
+        "text": "Koi Overdrive"
+      },
+      {
+        "id": "tapped-52-197.33",
+        "startTime": 197.33,
+        "endTime": 200.79,
+        "text": "Perasaan tak terkendali"
+      },
+      {
+        "id": "tapped-53-200.79",
+        "startTime": 200.79,
+        "endTime": 202.62,
+        "text": "Jalan kosong ini"
+      },
+      {
+        "id": "tapped-54-202.62",
+        "startTime": 202.62,
+        "endTime": 206.24,
+        "text": "hanya milik kita berdua"
+      },
+      {
+        "id": "tapped-55-206.24",
+        "startTime": 206.24,
+        "endTime": 208.65,
+        "text": "Lampu hijau di hati"
+      },
+      {
+        "id": "tapped-56-208.65",
+        "startTime": 208.65,
+        "endTime": 212.06,
+        "text": "menyala terang benderang"
+      },
+      {
+        "id": "tapped-57-212.06",
+        "startTime": 212.06,
+        "endTime": 214.68,
+        "text": "Tak ada ragu"
+      },
+      {
+        "id": "tapped-58-214.68",
+        "startTime": 214.68,
+        "endTime": 220.3,
+        "text": "I will rush into you"
+      },
+      {
+        "id": "tapped-59-220.3",
+        "startTime": 220.3,
+        "endTime": 222.27,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-60-222.27",
+        "startTime": 222.27,
+        "endTime": 224.31,
+        "text": "恋 喘息",
+        "romaji": "Koi Zensoku"
+      },
+      {
+        "id": "tapped-61-224.31",
+        "startTime": 224.31,
+        "endTime": 227.45,
+        "text": "Tak dapat kutahan lagi"
+      },
+      {
+        "id": "tapped-62-227.45",
+        "startTime": 227.45,
+        "endTime": 229.33,
+        "text": "'Kan kubawa kau pergi"
+      },
+      {
+        "id": "tapped-63-229.33",
+        "startTime": 229.33,
+        "endTime": 232.97,
+        "text": "dan lampaui semua awan"
+      },
+      {
+        "id": "tapped-64-232.97",
+        "startTime": 232.97,
+        "endTime": 236.32,
+        "text": "Perasaan di hati membara,"
+      },
+      {
+        "id": "tapped-65-236.32",
+        "startTime": 236.32,
+        "endTime": 238.64,
+        "text": "merah menyala"
+      },
+      {
+        "id": "tapped-66-238.64",
+        "startTime": 238.64,
+        "endTime": 241.32,
+        "text": "Tanpa terbendung (Tanpa terbendung)"
+      },
+      {
+        "id": "tapped-67-241.32",
+        "startTime": 241.32,
+        "endTime": 247.03,
+        "text": "Sampai pada tujuan"
+      },
+      {
+        "id": "tapped-68-247.03",
+        "startTime": 247.03,
+        "endTime": 251.03,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ]
+  }
+]

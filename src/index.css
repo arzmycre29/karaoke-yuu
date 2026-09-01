@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Orbitron:wght@600;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #080811;
+  color: #f3f4f6;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2a85;
+}
+
+/* Karaoke Lyrics Sweep Effect */
+.karaoke-text-sweep {
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.05s linear;
+}
+
+.text-glow-accent {
+  text-shadow: 0 0 10px rgba(255, 42, 133, 0.7), 0 0 25px rgba(255, 42, 133, 0.4);
+}
+
+.text-glow-neon {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+.box-glow-card {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* Ruby Furigana styling */
+ruby {
+  ruby-align: center;
+}
+rt {
+  font-size: 0.55em;
+  color: #00f0ff;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
