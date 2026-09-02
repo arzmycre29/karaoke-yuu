@@ -1,5 +1,410 @@
 [
   {
+    "id": "song-yt-i7MZ3zfyGRg-1788325511295",
+    "title": "Dea Awalia - Cinta Musim Semi (Official Music Video)",
+    "artist": "Dea Awalia",
+    "source": "youtube",
+    "youtubeId": "i7MZ3zfyGRg",
+    "duration": 262,
+    "coverArt": "https://i.ytimg.com/vi/i7MZ3zfyGRg/hq720.jpg",
+    "rawLyrics": "[00:03.79] Di senja musim semi\n[00:06.50] Bunga sakura mekar\n[00:08.41] menjadi saksi cintaku\n[00:12.23] Yang tersampaikan\n[00:14.75] Menjadi satu janji\n[00:17.30] Cinta tumbuh diantara kelopaknya\n[00:20.39] Ku tersenyum bahagia\n[00:23.01] 君 の 事 が 好き だ | Kimi no koto ga suki da\n[00:26.14] ♪ ~ Instrumental Break ~ ♪\n[00:47.35] Semilir angin\n[00:49.17] dan cerahnya pagi musim semi\n[00:53.02] Kita berpapasan\n[00:55.38] namun tidak saling menyapa\n[00:58.25] Satu ketika\n[01:00.11] tak kusangka kan bertemu lagi\n[01:03.93] Di hari yang sama\n[01:06.37] kau memberiku senyum kecil\n[01:09.59] Tiba-tiba ada bunyi notif darimu\n[01:14.73] Kau menyapaku pada malam itu\n[01:17.76] Akhirnya terus berlanjut\n[01:23.03] ♪ ~ Instrumental Break ~ ♪\n[01:26.06] Bukankah kau mengerti?\n[01:28.73] Aku mencintaimu\n[01:30.70] lebih dari siapa pun\n[01:34.31] Coba sadarilah\n[01:36.90] Kau menggenggam tanganku\n[01:39.48] Dan menatap kedua mataku\n[01:42.54] Dengan hati berdebar\n[01:45.26] 君 の 事 が 好き だ | Kimi no koto ga suki da\n[01:48.43] ♪ ~ Instrumental Break ~ ♪\n[01:50.45] Rasa yang tumbuh\n[01:52.29] seiring banyaknya pertemuan\n[01:56.04] Awal tak menyapa\n[01:58.40] hingga saling memberi kabar\n[02:01.68] Seperti kelopak bunga sakura mekar\n[02:06.81] Sampai tibanya musim yang berganti\n[02:09.84] Menunggu termakan waktu\n[02:15.62] ♪ ~ Instrumental Break ~ ♪\n[02:18.15] Bukankah kau mengerti?\n[02:20.84] Aku mencintaimu\n[02:22.81] lebih dari siapa pun\n[02:26.43] Coba sadarilah\n[02:29.06] Langit pun melihatku\n[02:31.75] Yang tersenyum dalam bayanganmu\n[02:34.68] Aku menatap haru\n[02:37.18] Mungkinkah rasaku keliru\n[02:40.37] ♪ ~ Instrumental Break ~ ♪\n[03:04.41] Saat musim gugur telah tiba\n[03:07.09] Kau yang pergi entah ke mana\n[03:09.80] Sudah satu tahun\n[03:11.37] sejak pertemuan kita berdua\n[03:15.41] Aku menunggu di tempat\n[03:17.97] kita pernah berjanji\n[03:21.12] Kuharap kau kan datang menghampiri\n[03:25.59] ♪ ~ Instrumental Break ~ ♪\n[03:28.28] Bunga sakura gugur\n[03:30.77] bersama dengan air mataku\n[03:33.83] Menetes deras,\n[03:36.56] mengingat tentangmu\n[03:39.03] Ku memalingkan badan\n[03:41.63] Melihat kau berlari\n[03:43.50] menghampiri\n[03:44.63] Kau memelukku erat\n[03:47.22] もう 君 を はなれない | Mou kimi wo hanarenai\n[03:50.34] ♪ ~ Instrumental Break ~ ♪",
+    "parsedLyrics": [
+      {
+        "id": "tapped-0-3.8",
+        "startTime": 3.8,
+        "endTime": 6.51,
+        "text": "Di senja musim semi"
+      },
+      {
+        "id": "tapped-1-6.51",
+        "startTime": 6.51,
+        "endTime": 8.42,
+        "text": "Bunga sakura mekar"
+      },
+      {
+        "id": "tapped-2-8.42",
+        "startTime": 8.42,
+        "endTime": 12.23,
+        "text": "menjadi saksi cintaku"
+      },
+      {
+        "id": "tapped-3-12.23",
+        "startTime": 12.23,
+        "endTime": 14.76,
+        "text": "Yang tersampaikan"
+      },
+      {
+        "id": "tapped-4-14.76",
+        "startTime": 14.76,
+        "endTime": 17.31,
+        "text": "Menjadi satu janji"
+      },
+      {
+        "id": "tapped-5-17.31",
+        "startTime": 17.31,
+        "endTime": 20.4,
+        "text": "Cinta tumbuh diantara kelopaknya"
+      },
+      {
+        "id": "tapped-6-20.4",
+        "startTime": 20.4,
+        "endTime": 23.02,
+        "text": "Ku tersenyum bahagia"
+      },
+      {
+        "id": "tapped-7-23.02",
+        "startTime": 23.02,
+        "endTime": 26.14,
+        "text": "君 の 事 が 好き だ",
+        "romaji": "Kimi no koto ga suki da"
+      },
+      {
+        "id": "tapped-8-26.14",
+        "startTime": 26.14,
+        "endTime": 47.36,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-9-47.36",
+        "startTime": 47.36,
+        "endTime": 49.17,
+        "text": "Semilir angin"
+      },
+      {
+        "id": "tapped-10-49.17",
+        "startTime": 49.17,
+        "endTime": 53.02,
+        "text": "dan cerahnya pagi musim semi"
+      },
+      {
+        "id": "tapped-11-53.02",
+        "startTime": 53.02,
+        "endTime": 55.38,
+        "text": "Kita berpapasan"
+      },
+      {
+        "id": "tapped-12-55.38",
+        "startTime": 55.38,
+        "endTime": 58.25,
+        "text": "namun tidak saling menyapa"
+      },
+      {
+        "id": "tapped-13-58.25",
+        "startTime": 58.25,
+        "endTime": 60.12,
+        "text": "Satu ketika"
+      },
+      {
+        "id": "tapped-14-60.12",
+        "startTime": 60.12,
+        "endTime": 63.94,
+        "text": "tak kusangka kan bertemu lagi"
+      },
+      {
+        "id": "tapped-15-63.94",
+        "startTime": 63.94,
+        "endTime": 66.37,
+        "text": "Di hari yang sama"
+      },
+      {
+        "id": "tapped-16-66.37",
+        "startTime": 66.37,
+        "endTime": 69.6,
+        "text": "kau memberiku senyum kecil"
+      },
+      {
+        "id": "tapped-17-69.6",
+        "startTime": 69.6,
+        "endTime": 74.74,
+        "text": "Tiba-tiba ada bunyi notif darimu"
+      },
+      {
+        "id": "tapped-18-74.74",
+        "startTime": 74.74,
+        "endTime": 77.76,
+        "text": "Kau menyapaku pada malam itu"
+      },
+      {
+        "id": "tapped-19-77.76",
+        "startTime": 77.76,
+        "endTime": 83.03,
+        "text": "Akhirnya terus berlanjut"
+      },
+      {
+        "id": "tapped-20-83.03",
+        "startTime": 83.03,
+        "endTime": 86.07,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-21-86.07",
+        "startTime": 86.07,
+        "endTime": 88.74,
+        "text": "Bukankah kau mengerti?"
+      },
+      {
+        "id": "tapped-22-88.74",
+        "startTime": 88.74,
+        "endTime": 90.7,
+        "text": "Aku mencintaimu"
+      },
+      {
+        "id": "tapped-23-90.7",
+        "startTime": 90.7,
+        "endTime": 94.31,
+        "text": "lebih dari siapa pun"
+      },
+      {
+        "id": "tapped-24-94.31",
+        "startTime": 94.31,
+        "endTime": 96.9,
+        "text": "Coba sadarilah"
+      },
+      {
+        "id": "tapped-25-96.9",
+        "startTime": 96.9,
+        "endTime": 99.49,
+        "text": "Kau menggenggam tanganku"
+      },
+      {
+        "id": "tapped-26-99.49",
+        "startTime": 99.49,
+        "endTime": 102.54,
+        "text": "Dan menatap kedua mataku"
+      },
+      {
+        "id": "tapped-27-102.54",
+        "startTime": 102.54,
+        "endTime": 105.27,
+        "text": "Dengan hati berdebar"
+      },
+      {
+        "id": "tapped-28-105.27",
+        "startTime": 105.27,
+        "endTime": 108.44,
+        "text": "君 の 事 が 好き だ",
+        "romaji": "Kimi no koto ga suki da"
+      },
+      {
+        "id": "tapped-29-108.44",
+        "startTime": 108.44,
+        "endTime": 110.46,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-30-110.46",
+        "startTime": 110.46,
+        "endTime": 112.29,
+        "text": "Rasa yang tumbuh"
+      },
+      {
+        "id": "tapped-31-112.29",
+        "startTime": 112.29,
+        "endTime": 116.05,
+        "text": "seiring banyaknya pertemuan"
+      },
+      {
+        "id": "tapped-32-116.05",
+        "startTime": 116.05,
+        "endTime": 118.4,
+        "text": "Awal tak menyapa"
+      },
+      {
+        "id": "tapped-33-118.4",
+        "startTime": 118.4,
+        "endTime": 121.68,
+        "text": "hingga saling memberi kabar"
+      },
+      {
+        "id": "tapped-34-121.68",
+        "startTime": 121.68,
+        "endTime": 126.81,
+        "text": "Seperti kelopak bunga sakura mekar"
+      },
+      {
+        "id": "tapped-35-126.81",
+        "startTime": 126.81,
+        "endTime": 129.85,
+        "text": "Sampai tibanya musim yang berganti"
+      },
+      {
+        "id": "tapped-36-129.85",
+        "startTime": 129.85,
+        "endTime": 135.62,
+        "text": "Menunggu termakan waktu"
+      },
+      {
+        "id": "tapped-37-135.62",
+        "startTime": 135.62,
+        "endTime": 138.15,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-38-138.15",
+        "startTime": 138.15,
+        "endTime": 140.84,
+        "text": "Bukankah kau mengerti?"
+      },
+      {
+        "id": "tapped-39-140.84",
+        "startTime": 140.84,
+        "endTime": 142.81,
+        "text": "Aku mencintaimu"
+      },
+      {
+        "id": "tapped-40-142.81",
+        "startTime": 142.81,
+        "endTime": 146.43,
+        "text": "lebih dari siapa pun"
+      },
+      {
+        "id": "tapped-41-146.43",
+        "startTime": 146.43,
+        "endTime": 149.06,
+        "text": "Coba sadarilah"
+      },
+      {
+        "id": "tapped-42-149.06",
+        "startTime": 149.06,
+        "endTime": 151.75,
+        "text": "Langit pun melihatku"
+      },
+      {
+        "id": "tapped-43-151.75",
+        "startTime": 151.75,
+        "endTime": 154.69,
+        "text": "Yang tersenyum dalam bayanganmu"
+      },
+      {
+        "id": "tapped-44-154.69",
+        "startTime": 154.69,
+        "endTime": 157.18,
+        "text": "Aku menatap haru"
+      },
+      {
+        "id": "tapped-45-157.18",
+        "startTime": 157.18,
+        "endTime": 160.38,
+        "text": "Mungkinkah rasaku keliru"
+      },
+      {
+        "id": "tapped-46-160.38",
+        "startTime": 160.38,
+        "endTime": 184.42,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-47-184.42",
+        "startTime": 184.42,
+        "endTime": 187.1,
+        "text": "Saat musim gugur telah tiba"
+      },
+      {
+        "id": "tapped-48-187.1",
+        "startTime": 187.1,
+        "endTime": 189.8,
+        "text": "Kau yang pergi entah ke mana"
+      },
+      {
+        "id": "tapped-49-189.8",
+        "startTime": 189.8,
+        "endTime": 191.37,
+        "text": "Sudah satu tahun"
+      },
+      {
+        "id": "tapped-50-191.37",
+        "startTime": 191.37,
+        "endTime": 195.42,
+        "text": "sejak pertemuan kita berdua"
+      },
+      {
+        "id": "tapped-51-195.42",
+        "startTime": 195.42,
+        "endTime": 197.98,
+        "text": "Aku menunggu di tempat"
+      },
+      {
+        "id": "tapped-52-197.98",
+        "startTime": 197.98,
+        "endTime": 201.13,
+        "text": "kita pernah berjanji"
+      },
+      {
+        "id": "tapped-53-201.13",
+        "startTime": 201.13,
+        "endTime": 205.59,
+        "text": "Kuharap kau kan datang menghampiri"
+      },
+      {
+        "id": "tapped-54-205.59",
+        "startTime": 205.59,
+        "endTime": 208.29,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      },
+      {
+        "id": "tapped-55-208.29",
+        "startTime": 208.29,
+        "endTime": 210.77,
+        "text": "Bunga sakura gugur"
+      },
+      {
+        "id": "tapped-56-210.77",
+        "startTime": 210.77,
+        "endTime": 213.83,
+        "text": "bersama dengan air mataku"
+      },
+      {
+        "id": "tapped-57-213.83",
+        "startTime": 213.83,
+        "endTime": 216.57,
+        "text": "Menetes deras,"
+      },
+      {
+        "id": "tapped-58-216.57",
+        "startTime": 216.57,
+        "endTime": 219.04,
+        "text": "mengingat tentangmu"
+      },
+      {
+        "id": "tapped-59-219.04",
+        "startTime": 219.04,
+        "endTime": 221.64,
+        "text": "Ku memalingkan badan"
+      },
+      {
+        "id": "tapped-60-221.64",
+        "startTime": 221.64,
+        "endTime": 223.51,
+        "text": "Melihat kau berlari"
+      },
+      {
+        "id": "tapped-61-223.51",
+        "startTime": 223.51,
+        "endTime": 224.64,
+        "text": "menghampiri"
+      },
+      {
+        "id": "tapped-62-224.64",
+        "startTime": 224.64,
+        "endTime": 227.23,
+        "text": "Kau memelukku erat"
+      },
+      {
+        "id": "tapped-63-227.23",
+        "startTime": 227.23,
+        "endTime": 230.35,
+        "text": "もう 君 を はなれない",
+        "romaji": "Mou kimi wo hanarenai"
+      },
+      {
+        "id": "tapped-64-230.35",
+        "startTime": 230.35,
+        "endTime": 234.35,
+        "text": "♪ ~ Instrumental Break ~ ♪"
+      }
+    ]
+  },
+  {
     "id": "song-local-1788280661895",
     "title": "Future",
     "artist": "Kohi Sekai",
@@ -1131,361 +1536,1884 @@
     "youtubeId": "8zi8cHcLOPA",
     "duration": 285,
     "coverArt": "https://i.ytimg.com/vi/8zi8cHcLOPA/hq720.jpg",
-    "rawLyrics": "[00:23.30] Di persimpangan waktu ini\n[00:25.51] diriku sendiri\n[00:28.10] Memandang jauh tak tau apa yang\n[00:30.69] telah menungguku di depan\n[00:33.42] ♪ ~ Instrumental Break ~ ♪\n[00:43.89] Oh hari kelam yang kemarin\n[00:46.10] selalu terlintas\n[00:48.71] Berfikir ingin ku akhiri\n[00:51.67] hari-hariku sendiri\n[00:54.17] Namun, apa yang sedang ku pikirkan?\n[00:56.75] Tentang hari kemarin\n[00:59.42] Tak bisa tenang buatku terbayang-bayang\n[01:04.48] Hey, apakah diriku di masa depan itu\n[01:09.68] Tersenyum indah tak seperti dulu\n[01:14.84] Hari ini bukanlah,\n[01:17.43] sekedar pengulangan kisah\n[01:21.23] Ku yakin lebih berwarna\n[01:25.20] Kemarin hanyalah kisah yang kelam\n[01:27.79] Esok kan lebih terang\n[01:30.37] Masa depan yang kuimpikan\n[01:32.92] GO! GO! Mirai! Kohi Sekai 2x\n[01:37.56] Letsgo!\n[01:38.04] ♪ ~ Instrumental Break ~ ♪\n[01:48.34] Setelah semua berlalu, kemanakah lagi?\n[01:53.20] Pertanyaan itu pun terus\n[01:56.09] bernyanyi di dalam hatiku\n[01:58.73] Walau tak tahu jadi seperti apa\n[02:01.26] Semua pasti bermakna\n[02:03.84] Hanya bisa membayangkan dimasa depan\n[02:09.05] Hey, apakah diriku di masa depan itu\n[02:14.15] Tersenyum indah tak seperti dulu\n[02:19.33] Hari ini bukanlah,\n[02:21.96] sekedar pengulangan kisah\n[02:25.80] Ku yakin lebih berwarna\n[02:29.62] Kemarin hanyalah kisah yang kelam\n[02:32.43] Esok kan lebih terang\n[02:34.81] Masa depan yang kuimpikan\n[02:37.40] GO! GO! Mirai! Kohi Sekai\n[02:40.00] GO! GO! Mirai! Kohi Sekai\n[02:42.02] Letsgo!\n[02:42.56] ♪ ~ Instrumental Break ~ ♪\n[02:52.84] Hari ini ku harus lebih dari kemarin\n[02:57.96] Sperti fajar mengusir kegelapan\n[03:03.18] Walau terkadang ragu berbisik dalam hati\n[03:08.37] Akan kulewati semua hari yang lelah\n[03:16.12] ♪ ~ Instrumental Break ~ ♪\n[03:18.62] Hey, apakah diriku di masa depan itu\n[03:23.84] Tersenyum indah tak seperti dulu\n[03:28.75] ♪ ~ Instrumental Break ~ ♪\n[03:30.37] Hari ini bukanlah,\n[03:32.83] sekedar pengulangan kisah\n[03:36.75] Ku yakin lebih berwarna\n[03:40.65] Kemarin hanyalah kisah yang kelam\n[03:43.21] Esok kan lebih terang\n[03:45.75] Masa depan yang kuimpikan\n[03:48.40] GO! GO! Mirai! Kohi Sekai\n[03:51.06] GO! GO! Mirai! Kohi Sekai\n[03:53.00] Letsgo!\n[03:53.90] ♪ ~ Instrumental Break ~ ♪",
+    "rawLyrics": "[00:23.30] <00:23.10>Di <00:23.62>persimpangan <00:24.55>waktu <00:25.07>ini\n[00:25.51] <00:25.51>diriku <00:26.35>sendiri\n[00:28.10] <00:28.10>Memandang <00:28.53>jauh <00:29.16>tak <00:29.50>tau <00:29.82>apa <00:30.21>yang\n[00:30.69] <00:30.69>telah <00:31.37>menungguku <00:32.06>di <00:32.68>depan\n[00:33.42] <00:33.42>♪ <00:35.17>~ <00:36.92>Instrumental <00:38.65>Break <00:40.39>~ <00:42.14>♪\n[00:43.89] <00:43.89>Oh <00:44.32>hari <00:44.77>kelam <00:45.17>yang <00:45.40>kemarin\n[00:46.10] <00:46.10>selalu <00:47.00>terlintas\n[00:48.71] <00:48.71>Berfikir <00:49.46>ingin <00:50.04>ku <00:50.47>akhiri\n[00:51.67] <00:51.67>hari-hariku <00:52.86>sendiri\n[00:54.17] <00:54.17>Namun, <00:54.40>apa <00:54.78>yang <00:55.02>sedang <00:55.39>ku <00:55.57>pikirkan?\n[00:56.75] <00:56.75>Tentang <00:57.34>hari <00:58.03>kemarin\n[00:59.42] <00:59.42>Tak <00:59.72>bisa <01:00.43>tenang <01:01.10>buatku <01:01.92>terbayang-bayang\n[01:04.48] <01:04.48>Hey, <01:04.96>apakah <01:05.76>diriku <01:06.81>di <01:07.29>masa <01:07.98>depan <01:08.79>itu\n[01:09.68] <01:09.68>Tersenyum <01:11.20>indah <01:11.93>tak <01:12.57>seperti <01:13.35>dulu\n[01:14.84] <01:14.84>Hari <01:15.54>ini <01:16.26>bukanlah,\n[01:17.43] <01:17.43>sekedar <01:18.70>pengulangan <01:19.95>kisah\n[01:21.23] <01:21.23>Ku <01:21.71>yakin <01:22.51>lebih <01:23.35>berwarna\n[01:25.20] <01:25.20>Kemarin <01:25.56>hanyalah <01:25.93>kisah <01:26.54>yang <01:27.01>kelam\n[01:27.79] <01:27.79>Esok <01:28.29>kan <01:28.62>lebih <01:29.37>terang\n[01:30.37] <01:30.37>Masa <01:30.95>depan <01:31.50>yang <01:31.87>kuimpikan\n[01:32.92] <01:32.92>GO! <01:33.68>GO! <01:34.46>Mirai! <01:35.23>Kohi <01:36.01>Sekai <01:36.79>2x\n[01:37.56] <01:37.56>L <01:37.62>e <01:37.70>t <01:37.76>s <01:37.84>g <01:37.92>o <01:37.98>!\n[01:38.04] <01:38.04>♪ <01:39.76>~ <01:41.46>Instrumental <01:43.18>Break <01:44.90>~ <01:46.62>♪\n[01:48.34] <01:48.34>Setelah <01:49.31>semua <01:50.28>berlalu, <01:51.26>kemanakah <01:52.23>lagi?\n[01:53.20] <01:53.20>Pertanyaan <01:53.92>itu <01:54.65>pun <01:55.37>terus\n[01:56.09] <01:56.09>bernyanyi <01:56.75>di <01:57.40>dalam <01:58.06>hatiku\n[01:58.73] <01:58.73>Walau <01:59.15>tak <01:59.56>tahu <02:00.00>jadi <02:00.42>seperti <02:00.84>apa\n[02:01.26] <02:01.26>Semua <02:02.12>pasti <02:02.98>bermakna\n[02:03.84] <02:03.84>Hanya <02:04.87>bisa <02:05.92>membayangkan <02:06.96>dimasa <02:08.00>depan\n[02:09.05] <02:09.05>Hey, <02:09.78>apakah <02:10.50>diriku <02:11.24>di <02:11.96>masa <02:12.68>depan <02:13.41>itu\n[02:14.15] <02:14.15>Tersenyum <02:15.18>indah <02:16.21>tak <02:17.25>seperti <02:18.28>dulu\n[02:19.33] <02:19.33>Hari <02:20.21>ini <02:21.08>bukanlah,\n[02:21.96] <02:21.96>sekedar <02:23.24>pengulangan <02:24.52>kisah\n[02:25.80] <02:25.80>Ku <02:26.75>yakin <02:27.71>lebih <02:28.66>berwarna\n[02:29.62] <02:29.62>Kemarin <02:30.18>hanyalah <02:30.74>kisah <02:31.31>yang <02:31.87>kelam\n[02:32.43] <02:32.43>Esok <02:33.03>kan <02:33.62>lebih <02:34.21>terang\n[02:34.81] <02:34.81>Masa <02:35.46>depan <02:36.11>yang <02:36.75>kuimpikan\n[02:37.40] <02:37.40>GO! <02:37.91>GO! <02:38.43>Mirai! <02:38.96>Kohi <02:39.47>Sekai\n[02:40.00] <02:40.00>GO! <02:40.40>GO! <02:40.81>Mirai! <02:41.21>Kohi <02:41.62>Sekai\n[02:42.02] <02:42.02>L <02:42.09>e <02:42.16>t <02:42.25>s <02:42.33>g <02:42.40>o <02:42.47>!\n[02:42.56] <02:42.56>♪ <02:44.27>~ <02:45.99>Instrumental <02:47.69>Break <02:49.40>~ <02:51.12>♪\n[02:52.84] <02:52.84>Hari <02:53.56>ini <02:54.30>ku <02:55.03>harus <02:55.77>lebih <02:56.50>dari <02:57.22>kemarin\n[02:57.96] <02:57.96>Sperti <02:59.27>fajar <03:00.56>mengusir <03:01.87>kegelapan\n[03:03.18] <03:03.18>Walau <03:04.05>terkadang <03:04.90>ragu <03:05.78>berbisik <03:06.63>dalam <03:07.50>hati\n[03:08.37] <03:08.37>Akan <03:09.65>kulewati <03:10.94>semua <03:12.25>hari <03:13.53>yang <03:14.83>lelah\n[03:16.12] <03:16.12>♪ <03:16.53>~ <03:16.94>Instrumental <03:17.37>Break <03:17.78>~ <03:18.19>♪\n[03:18.62] <03:18.62>Hey, <03:19.37>apakah <03:20.11>diriku <03:20.86>di <03:21.59>masa <03:22.34>depan <03:23.09>itu\n[03:23.84] <03:23.84>Tersenyum <03:24.81>indah <03:25.80>tak <03:26.78>seperti <03:27.77>dulu\n[03:28.75] <03:28.75>♪ <03:29.02>~ <03:29.28>Instrumental <03:29.56>Break <03:29.83>~ <03:30.09>♪\n[03:30.37] <03:30.37>Hari <03:31.18>ini <03:32.00>bukanlah,\n[03:32.83] <03:32.83>sekedar <03:34.13>pengulangan <03:35.43>kisah\n[03:36.75] <03:36.75>Ku <03:37.71>yakin <03:38.69>lebih <03:39.68>berwarna\n[03:40.65] <03:40.65>Kemarin <03:41.15>hanyalah <03:41.66>kisah <03:42.18>yang <03:42.69>kelam\n[03:43.21] <03:43.21>Esok <03:43.84>kan <03:44.47>lebih <03:45.12>terang\n[03:45.75] <03:45.75>Masa <03:46.40>depan <03:47.06>yang <03:47.74>kuimpikan\n[03:48.40] <03:48.40>GO! <03:48.93>GO! <03:49.46>Mirai! <03:50.00>Kohi <03:50.53>Sekai\n[03:51.06] <03:51.06>GO! <03:51.44>GO! <03:51.84>Mirai! <03:52.21>Kohi <03:52.61>Sekai\n[03:53.00] <03:53.00>L <03:53.12>e <03:53.25>t <03:53.38>s <03:53.50>g <03:53.63>o <03:53.77>!\n[03:53.90] <03:53.90>♪ <03:54.72>~ <03:55.56>Instrumental <03:56.40>Break <03:57.22>~ <03:58.06>♪",
     "parsedLyrics": [
       {
-        "id": "line-0-23.31",
+        "id": "tapped-0-23.31",
         "startTime": 23.31,
         "endTime": 25.51,
-        "text": "Di persimpangan waktu ini"
+        "text": "Di persimpangan waktu ini",
+        "words": [
+          {
+            "text": "Di",
+            "startTime": 23.11,
+            "endTime": 23.63
+          },
+          {
+            "text": "persimpangan",
+            "startTime": 23.63,
+            "endTime": 24.55
+          },
+          {
+            "text": "waktu",
+            "startTime": 24.55,
+            "endTime": 25.08
+          },
+          {
+            "text": "ini",
+            "startTime": 25.08,
+            "endTime": 26.28
+          }
+        ]
       },
       {
-        "id": "line-1-25.51",
+        "id": "tapped-1-25.51",
         "startTime": 25.51,
         "endTime": 28.1,
-        "text": "diriku sendiri"
+        "text": "diriku sendiri",
+        "words": [
+          {
+            "text": "diriku",
+            "startTime": 25.51,
+            "endTime": 26.35
+          },
+          {
+            "text": "sendiri",
+            "startTime": 26.35,
+            "endTime": 28.1
+          }
+        ]
       },
       {
-        "id": "line-2-28.1",
+        "id": "tapped-2-28.1",
         "startTime": 28.1,
         "endTime": 30.69,
-        "text": "Memandang jauh tak tau apa yang"
+        "text": "Memandang jauh tak tau apa yang",
+        "words": [
+          {
+            "text": "Memandang",
+            "startTime": 28.1,
+            "endTime": 28.53
+          },
+          {
+            "text": "jauh",
+            "startTime": 28.53,
+            "endTime": 29.16
+          },
+          {
+            "text": "tak",
+            "startTime": 29.16,
+            "endTime": 29.5
+          },
+          {
+            "text": "tau",
+            "startTime": 29.5,
+            "endTime": 29.83
+          },
+          {
+            "text": "apa",
+            "startTime": 29.83,
+            "endTime": 30.21
+          },
+          {
+            "text": "yang",
+            "startTime": 30.21,
+            "endTime": 30.69
+          }
+        ]
       },
       {
-        "id": "line-3-30.69",
+        "id": "tapped-3-30.69",
         "startTime": 30.69,
         "endTime": 33.43,
-        "text": "telah menungguku di depan"
+        "text": "telah menungguku di depan",
+        "words": [
+          {
+            "text": "telah",
+            "startTime": 30.69,
+            "endTime": 31.38
+          },
+          {
+            "text": "menungguku",
+            "startTime": 31.38,
+            "endTime": 32.06
+          },
+          {
+            "text": "di",
+            "startTime": 32.06,
+            "endTime": 32.69
+          },
+          {
+            "text": "depan",
+            "startTime": 32.69,
+            "endTime": 33.43
+          }
+        ]
       },
       {
-        "id": "line-4-33.43",
+        "id": "tapped-4-33.43",
         "startTime": 33.43,
-        "endTime": 41.43,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "endTime": 43.89,
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 33.43,
+            "endTime": 35.17
+          },
+          {
+            "text": "~",
+            "startTime": 35.17,
+            "endTime": 36.92
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 36.92,
+            "endTime": 38.66
+          },
+          {
+            "text": "Break",
+            "startTime": 38.66,
+            "endTime": 40.4
+          },
+          {
+            "text": "~",
+            "startTime": 40.4,
+            "endTime": 42.15
+          },
+          {
+            "text": "♪",
+            "startTime": 42.15,
+            "endTime": 43.89
+          }
+        ]
       },
       {
-        "id": "line-5-43.89",
+        "id": "tapped-5-43.89",
         "startTime": 43.89,
         "endTime": 46.1,
-        "text": "Oh hari kelam yang kemarin"
+        "text": "Oh hari kelam yang kemarin",
+        "words": [
+          {
+            "text": "Oh",
+            "startTime": 43.89,
+            "endTime": 44.33
+          },
+          {
+            "text": "hari",
+            "startTime": 44.33,
+            "endTime": 44.77
+          },
+          {
+            "text": "kelam",
+            "startTime": 44.77,
+            "endTime": 45.17
+          },
+          {
+            "text": "yang",
+            "startTime": 45.17,
+            "endTime": 45.41
+          },
+          {
+            "text": "kemarin",
+            "startTime": 45.41,
+            "endTime": 46.1
+          }
+        ]
       },
       {
-        "id": "line-6-46.1",
+        "id": "tapped-6-46.1",
         "startTime": 46.1,
         "endTime": 48.72,
-        "text": "selalu terlintas"
+        "text": "selalu terlintas",
+        "words": [
+          {
+            "text": "selalu",
+            "startTime": 46.1,
+            "endTime": 47.01
+          },
+          {
+            "text": "terlintas",
+            "startTime": 47.01,
+            "endTime": 48.72
+          }
+        ]
       },
       {
-        "id": "line-7-48.72",
+        "id": "tapped-7-48.72",
         "startTime": 48.72,
         "endTime": 51.67,
-        "text": "Berfikir ingin ku akhiri"
+        "text": "Berfikir ingin ku akhiri",
+        "words": [
+          {
+            "text": "Berfikir",
+            "startTime": 48.72,
+            "endTime": 49.46
+          },
+          {
+            "text": "ingin",
+            "startTime": 49.46,
+            "endTime": 50.05
+          },
+          {
+            "text": "ku",
+            "startTime": 50.05,
+            "endTime": 50.48
+          },
+          {
+            "text": "akhiri",
+            "startTime": 50.48,
+            "endTime": 51.67
+          }
+        ]
       },
       {
-        "id": "line-8-51.67",
+        "id": "tapped-8-51.67",
         "startTime": 51.67,
         "endTime": 54.18,
-        "text": "hari-hariku sendiri"
+        "text": "hari-hariku sendiri",
+        "words": [
+          {
+            "text": "hari-hariku",
+            "startTime": 51.67,
+            "endTime": 52.87
+          },
+          {
+            "text": "sendiri",
+            "startTime": 52.87,
+            "endTime": 54.18
+          }
+        ]
       },
       {
-        "id": "line-9-54.18",
+        "id": "tapped-9-54.18",
         "startTime": 54.18,
         "endTime": 56.75,
-        "text": "Namun, apa yang sedang ku pikirkan?"
+        "text": "Namun, apa yang sedang ku pikirkan?",
+        "words": [
+          {
+            "text": "Namun,",
+            "startTime": 54.18,
+            "endTime": 54.41
+          },
+          {
+            "text": "apa",
+            "startTime": 54.41,
+            "endTime": 54.79
+          },
+          {
+            "text": "yang",
+            "startTime": 54.79,
+            "endTime": 55.02
+          },
+          {
+            "text": "sedang",
+            "startTime": 55.02,
+            "endTime": 55.39
+          },
+          {
+            "text": "ku",
+            "startTime": 55.39,
+            "endTime": 55.57
+          },
+          {
+            "text": "pikirkan?",
+            "startTime": 55.57,
+            "endTime": 56.75
+          }
+        ]
       },
       {
-        "id": "line-10-56.75",
+        "id": "tapped-10-56.75",
         "startTime": 56.75,
         "endTime": 59.42,
-        "text": "Tentang hari kemarin"
+        "text": "Tentang hari kemarin",
+        "words": [
+          {
+            "text": "Tentang",
+            "startTime": 56.75,
+            "endTime": 57.34
+          },
+          {
+            "text": "hari",
+            "startTime": 57.34,
+            "endTime": 58.03
+          },
+          {
+            "text": "kemarin",
+            "startTime": 58.03,
+            "endTime": 59.42
+          }
+        ]
       },
       {
-        "id": "line-11-59.42",
+        "id": "tapped-11-59.42",
         "startTime": 59.42,
         "endTime": 64.48,
-        "text": "Tak bisa tenang buatku terbayang-bayang"
+        "text": "Tak bisa tenang buatku terbayang-bayang",
+        "words": [
+          {
+            "text": "Tak",
+            "startTime": 59.42,
+            "endTime": 59.73
+          },
+          {
+            "text": "bisa",
+            "startTime": 59.73,
+            "endTime": 60.44
+          },
+          {
+            "text": "tenang",
+            "startTime": 60.44,
+            "endTime": 61.11
+          },
+          {
+            "text": "buatku",
+            "startTime": 61.11,
+            "endTime": 61.92
+          },
+          {
+            "text": "terbayang-bayang",
+            "startTime": 61.92,
+            "endTime": 64.48
+          }
+        ]
       },
       {
-        "id": "line-12-64.48",
+        "id": "tapped-12-64.48",
         "startTime": 64.48,
         "endTime": 69.68,
-        "text": "Hey, apakah diriku di masa depan itu"
+        "text": "Hey, apakah diriku di masa depan itu",
+        "words": [
+          {
+            "text": "Hey,",
+            "startTime": 64.48,
+            "endTime": 64.97
+          },
+          {
+            "text": "apakah",
+            "startTime": 64.97,
+            "endTime": 65.77
+          },
+          {
+            "text": "diriku",
+            "startTime": 65.77,
+            "endTime": 66.81
+          },
+          {
+            "text": "di",
+            "startTime": 66.81,
+            "endTime": 67.3
+          },
+          {
+            "text": "masa",
+            "startTime": 67.3,
+            "endTime": 67.99
+          },
+          {
+            "text": "depan",
+            "startTime": 67.99,
+            "endTime": 68.79
+          },
+          {
+            "text": "itu",
+            "startTime": 68.79,
+            "endTime": 69.68
+          }
+        ]
       },
       {
-        "id": "line-13-69.68",
+        "id": "tapped-13-69.68",
         "startTime": 69.68,
         "endTime": 74.84,
-        "text": "Tersenyum indah tak seperti dulu"
+        "text": "Tersenyum indah tak seperti dulu",
+        "words": [
+          {
+            "text": "Tersenyum",
+            "startTime": 69.68,
+            "endTime": 71.21
+          },
+          {
+            "text": "indah",
+            "startTime": 71.21,
+            "endTime": 71.94
+          },
+          {
+            "text": "tak",
+            "startTime": 71.94,
+            "endTime": 72.58
+          },
+          {
+            "text": "seperti",
+            "startTime": 72.58,
+            "endTime": 73.36
+          },
+          {
+            "text": "dulu",
+            "startTime": 73.36,
+            "endTime": 74.84
+          }
+        ]
       },
       {
-        "id": "line-14-74.84",
+        "id": "tapped-14-74.84",
         "startTime": 74.84,
         "endTime": 77.43,
-        "text": "Hari ini bukanlah,"
+        "text": "Hari ini bukanlah,",
+        "words": [
+          {
+            "text": "Hari",
+            "startTime": 74.84,
+            "endTime": 75.55
+          },
+          {
+            "text": "ini",
+            "startTime": 75.55,
+            "endTime": 76.27
+          },
+          {
+            "text": "bukanlah,",
+            "startTime": 76.27,
+            "endTime": 77.43
+          }
+        ]
       },
       {
-        "id": "line-15-77.43",
+        "id": "tapped-15-77.43",
         "startTime": 77.43,
         "endTime": 81.23,
-        "text": "sekedar pengulangan kisah"
+        "text": "sekedar pengulangan kisah",
+        "words": [
+          {
+            "text": "sekedar",
+            "startTime": 77.43,
+            "endTime": 78.7
+          },
+          {
+            "text": "pengulangan",
+            "startTime": 78.7,
+            "endTime": 79.96
+          },
+          {
+            "text": "kisah",
+            "startTime": 79.96,
+            "endTime": 81.23
+          }
+        ]
       },
       {
-        "id": "line-16-81.23",
+        "id": "tapped-16-81.23",
         "startTime": 81.23,
         "endTime": 85.2,
-        "text": "Ku yakin lebih berwarna"
+        "text": "Ku yakin lebih berwarna",
+        "words": [
+          {
+            "text": "Ku",
+            "startTime": 81.23,
+            "endTime": 81.72
+          },
+          {
+            "text": "yakin",
+            "startTime": 81.72,
+            "endTime": 82.52
+          },
+          {
+            "text": "lebih",
+            "startTime": 82.52,
+            "endTime": 83.36
+          },
+          {
+            "text": "berwarna",
+            "startTime": 83.36,
+            "endTime": 85.2
+          }
+        ]
       },
       {
-        "id": "line-17-85.2",
+        "id": "tapped-17-85.2",
         "startTime": 85.2,
         "endTime": 87.79,
-        "text": "Kemarin hanyalah kisah yang kelam"
+        "text": "Kemarin hanyalah kisah yang kelam",
+        "words": [
+          {
+            "text": "Kemarin",
+            "startTime": 85.2,
+            "endTime": 85.57
+          },
+          {
+            "text": "hanyalah",
+            "startTime": 85.57,
+            "endTime": 85.94
+          },
+          {
+            "text": "kisah",
+            "startTime": 85.94,
+            "endTime": 86.55
+          },
+          {
+            "text": "yang",
+            "startTime": 86.55,
+            "endTime": 87.02
+          },
+          {
+            "text": "kelam",
+            "startTime": 87.02,
+            "endTime": 87.79
+          }
+        ]
       },
       {
-        "id": "line-18-87.79",
+        "id": "tapped-18-87.79",
         "startTime": 87.79,
         "endTime": 90.37,
-        "text": "Esok kan lebih terang"
+        "text": "Esok kan lebih terang",
+        "words": [
+          {
+            "text": "Esok",
+            "startTime": 87.79,
+            "endTime": 88.29
+          },
+          {
+            "text": "kan",
+            "startTime": 88.29,
+            "endTime": 88.63
+          },
+          {
+            "text": "lebih",
+            "startTime": 88.63,
+            "endTime": 89.38
+          },
+          {
+            "text": "terang",
+            "startTime": 89.38,
+            "endTime": 90.37
+          }
+        ]
       },
       {
-        "id": "line-19-90.37",
+        "id": "tapped-19-90.37",
         "startTime": 90.37,
         "endTime": 92.92,
-        "text": "Masa depan yang kuimpikan"
+        "text": "Masa depan yang kuimpikan",
+        "words": [
+          {
+            "text": "Masa",
+            "startTime": 90.37,
+            "endTime": 90.96
+          },
+          {
+            "text": "depan",
+            "startTime": 90.96,
+            "endTime": 91.5
+          },
+          {
+            "text": "yang",
+            "startTime": 91.5,
+            "endTime": 91.88
+          },
+          {
+            "text": "kuimpikan",
+            "startTime": 91.88,
+            "endTime": 92.92
+          }
+        ]
       },
       {
-        "id": "line-20-92.92",
+        "id": "tapped-20-92.92",
         "startTime": 92.92,
         "endTime": 97.56,
-        "text": "GO! GO! Mirai! Kohi Sekai 2x"
+        "text": "GO! GO! Mirai! Kohi Sekai 2x",
+        "words": [
+          {
+            "text": "GO!",
+            "startTime": 92.92,
+            "endTime": 93.69
+          },
+          {
+            "text": "GO!",
+            "startTime": 93.69,
+            "endTime": 94.47
+          },
+          {
+            "text": "Mirai!",
+            "startTime": 94.47,
+            "endTime": 95.24
+          },
+          {
+            "text": "Kohi",
+            "startTime": 95.24,
+            "endTime": 96.01
+          },
+          {
+            "text": "Sekai",
+            "startTime": 96.01,
+            "endTime": 96.79
+          },
+          {
+            "text": "2x",
+            "startTime": 96.79,
+            "endTime": 97.56
+          }
+        ]
       },
       {
-        "id": "line-21-97.56",
+        "id": "tapped-21-97.56",
         "startTime": 97.56,
         "endTime": 98.04,
-        "text": "Letsgo!"
+        "text": "Letsgo!",
+        "words": [
+          {
+            "text": "L",
+            "startTime": 97.56,
+            "endTime": 97.63
+          },
+          {
+            "text": "e",
+            "startTime": 97.63,
+            "endTime": 97.7
+          },
+          {
+            "text": "t",
+            "startTime": 97.7,
+            "endTime": 97.77
+          },
+          {
+            "text": "s",
+            "startTime": 97.77,
+            "endTime": 97.85
+          },
+          {
+            "text": "g",
+            "startTime": 97.85,
+            "endTime": 97.92
+          },
+          {
+            "text": "o",
+            "startTime": 97.92,
+            "endTime": 97.99
+          },
+          {
+            "text": "!",
+            "startTime": 97.99,
+            "endTime": 98.06
+          }
+        ]
       },
       {
-        "id": "line-22-98.04",
+        "id": "tapped-22-98.04",
         "startTime": 98.04,
-        "endTime": 106.04,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "endTime": 108.34,
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 98.04,
+            "endTime": 99.76
+          },
+          {
+            "text": "~",
+            "startTime": 99.76,
+            "endTime": 101.47
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 101.47,
+            "endTime": 103.19
+          },
+          {
+            "text": "Break",
+            "startTime": 103.19,
+            "endTime": 104.91
+          },
+          {
+            "text": "~",
+            "startTime": 104.91,
+            "endTime": 106.62
+          },
+          {
+            "text": "♪",
+            "startTime": 106.62,
+            "endTime": 108.34
+          }
+        ]
       },
       {
-        "id": "line-23-108.34",
+        "id": "tapped-23-108.34",
         "startTime": 108.34,
         "endTime": 113.2,
-        "text": "Setelah semua berlalu, kemanakah lagi?"
+        "text": "Setelah semua berlalu, kemanakah lagi?",
+        "words": [
+          {
+            "text": "Setelah",
+            "startTime": 108.34,
+            "endTime": 109.31
+          },
+          {
+            "text": "semua",
+            "startTime": 109.31,
+            "endTime": 110.28
+          },
+          {
+            "text": "berlalu,",
+            "startTime": 110.28,
+            "endTime": 111.26
+          },
+          {
+            "text": "kemanakah",
+            "startTime": 111.26,
+            "endTime": 112.23
+          },
+          {
+            "text": "lagi?",
+            "startTime": 112.23,
+            "endTime": 113.2
+          }
+        ]
       },
       {
-        "id": "line-24-113.2",
+        "id": "tapped-24-113.2",
         "startTime": 113.2,
         "endTime": 116.09,
-        "text": "Pertanyaan itu pun terus"
+        "text": "Pertanyaan itu pun terus",
+        "words": [
+          {
+            "text": "Pertanyaan",
+            "startTime": 113.2,
+            "endTime": 113.92
+          },
+          {
+            "text": "itu",
+            "startTime": 113.92,
+            "endTime": 114.65
+          },
+          {
+            "text": "pun",
+            "startTime": 114.65,
+            "endTime": 115.37
+          },
+          {
+            "text": "terus",
+            "startTime": 115.37,
+            "endTime": 116.09
+          }
+        ]
       },
       {
-        "id": "line-25-116.09",
+        "id": "tapped-25-116.09",
         "startTime": 116.09,
         "endTime": 118.73,
-        "text": "bernyanyi di dalam hatiku"
+        "text": "bernyanyi di dalam hatiku",
+        "words": [
+          {
+            "text": "bernyanyi",
+            "startTime": 116.09,
+            "endTime": 116.75
+          },
+          {
+            "text": "di",
+            "startTime": 116.75,
+            "endTime": 117.41
+          },
+          {
+            "text": "dalam",
+            "startTime": 117.41,
+            "endTime": 118.07
+          },
+          {
+            "text": "hatiku",
+            "startTime": 118.07,
+            "endTime": 118.73
+          }
+        ]
       },
       {
-        "id": "line-26-118.73",
+        "id": "tapped-26-118.73",
         "startTime": 118.73,
         "endTime": 121.26,
-        "text": "Walau tak tahu jadi seperti apa"
+        "text": "Walau tak tahu jadi seperti apa",
+        "words": [
+          {
+            "text": "Walau",
+            "startTime": 118.73,
+            "endTime": 119.15
+          },
+          {
+            "text": "tak",
+            "startTime": 119.15,
+            "endTime": 119.57
+          },
+          {
+            "text": "tahu",
+            "startTime": 119.57,
+            "endTime": 120
+          },
+          {
+            "text": "jadi",
+            "startTime": 120,
+            "endTime": 120.42
+          },
+          {
+            "text": "seperti",
+            "startTime": 120.42,
+            "endTime": 120.84
+          },
+          {
+            "text": "apa",
+            "startTime": 120.84,
+            "endTime": 121.26
+          }
+        ]
       },
       {
-        "id": "line-27-121.26",
+        "id": "tapped-27-121.26",
         "startTime": 121.26,
         "endTime": 123.84,
-        "text": "Semua pasti bermakna"
+        "text": "Semua pasti bermakna",
+        "words": [
+          {
+            "text": "Semua",
+            "startTime": 121.26,
+            "endTime": 122.12
+          },
+          {
+            "text": "pasti",
+            "startTime": 122.12,
+            "endTime": 122.98
+          },
+          {
+            "text": "bermakna",
+            "startTime": 122.98,
+            "endTime": 123.84
+          }
+        ]
       },
       {
-        "id": "line-28-123.84",
+        "id": "tapped-28-123.84",
         "startTime": 123.84,
         "endTime": 129.05,
-        "text": "Hanya bisa membayangkan dimasa depan"
+        "text": "Hanya bisa membayangkan dimasa depan",
+        "words": [
+          {
+            "text": "Hanya",
+            "startTime": 123.84,
+            "endTime": 124.88
+          },
+          {
+            "text": "bisa",
+            "startTime": 124.88,
+            "endTime": 125.92
+          },
+          {
+            "text": "membayangkan",
+            "startTime": 125.92,
+            "endTime": 126.97
+          },
+          {
+            "text": "dimasa",
+            "startTime": 126.97,
+            "endTime": 128.01
+          },
+          {
+            "text": "depan",
+            "startTime": 128.01,
+            "endTime": 129.05
+          }
+        ]
       },
       {
-        "id": "line-29-129.05",
+        "id": "tapped-29-129.05",
         "startTime": 129.05,
         "endTime": 134.15,
-        "text": "Hey, apakah diriku di masa depan itu"
+        "text": "Hey, apakah diriku di masa depan itu",
+        "words": [
+          {
+            "text": "Hey,",
+            "startTime": 129.05,
+            "endTime": 129.78
+          },
+          {
+            "text": "apakah",
+            "startTime": 129.78,
+            "endTime": 130.51
+          },
+          {
+            "text": "diriku",
+            "startTime": 130.51,
+            "endTime": 131.24
+          },
+          {
+            "text": "di",
+            "startTime": 131.24,
+            "endTime": 131.96
+          },
+          {
+            "text": "masa",
+            "startTime": 131.96,
+            "endTime": 132.69
+          },
+          {
+            "text": "depan",
+            "startTime": 132.69,
+            "endTime": 133.42
+          },
+          {
+            "text": "itu",
+            "startTime": 133.42,
+            "endTime": 134.15
+          }
+        ]
       },
       {
-        "id": "line-30-134.15",
+        "id": "tapped-30-134.15",
         "startTime": 134.15,
         "endTime": 139.33,
-        "text": "Tersenyum indah tak seperti dulu"
+        "text": "Tersenyum indah tak seperti dulu",
+        "words": [
+          {
+            "text": "Tersenyum",
+            "startTime": 134.15,
+            "endTime": 135.19
+          },
+          {
+            "text": "indah",
+            "startTime": 135.19,
+            "endTime": 136.22
+          },
+          {
+            "text": "tak",
+            "startTime": 136.22,
+            "endTime": 137.26
+          },
+          {
+            "text": "seperti",
+            "startTime": 137.26,
+            "endTime": 138.29
+          },
+          {
+            "text": "dulu",
+            "startTime": 138.29,
+            "endTime": 139.33
+          }
+        ]
       },
       {
-        "id": "line-31-139.33",
+        "id": "tapped-31-139.33",
         "startTime": 139.33,
         "endTime": 141.96,
-        "text": "Hari ini bukanlah,"
+        "text": "Hari ini bukanlah,",
+        "words": [
+          {
+            "text": "Hari",
+            "startTime": 139.33,
+            "endTime": 140.21
+          },
+          {
+            "text": "ini",
+            "startTime": 140.21,
+            "endTime": 141.08
+          },
+          {
+            "text": "bukanlah,",
+            "startTime": 141.08,
+            "endTime": 141.96
+          }
+        ]
       },
       {
-        "id": "line-32-141.96",
+        "id": "tapped-32-141.96",
         "startTime": 141.96,
         "endTime": 145.8,
-        "text": "sekedar pengulangan kisah"
+        "text": "sekedar pengulangan kisah",
+        "words": [
+          {
+            "text": "sekedar",
+            "startTime": 141.96,
+            "endTime": 143.24
+          },
+          {
+            "text": "pengulangan",
+            "startTime": 143.24,
+            "endTime": 144.52
+          },
+          {
+            "text": "kisah",
+            "startTime": 144.52,
+            "endTime": 145.8
+          }
+        ]
       },
       {
-        "id": "line-33-145.8",
+        "id": "tapped-33-145.8",
         "startTime": 145.8,
         "endTime": 149.62,
-        "text": "Ku yakin lebih berwarna"
+        "text": "Ku yakin lebih berwarna",
+        "words": [
+          {
+            "text": "Ku",
+            "startTime": 145.8,
+            "endTime": 146.75
+          },
+          {
+            "text": "yakin",
+            "startTime": 146.75,
+            "endTime": 147.71
+          },
+          {
+            "text": "lebih",
+            "startTime": 147.71,
+            "endTime": 148.67
+          },
+          {
+            "text": "berwarna",
+            "startTime": 148.67,
+            "endTime": 149.62
+          }
+        ]
       },
       {
-        "id": "line-34-149.62",
+        "id": "tapped-34-149.62",
         "startTime": 149.62,
         "endTime": 152.43,
-        "text": "Kemarin hanyalah kisah yang kelam"
+        "text": "Kemarin hanyalah kisah yang kelam",
+        "words": [
+          {
+            "text": "Kemarin",
+            "startTime": 149.62,
+            "endTime": 150.18
+          },
+          {
+            "text": "hanyalah",
+            "startTime": 150.18,
+            "endTime": 150.74
+          },
+          {
+            "text": "kisah",
+            "startTime": 150.74,
+            "endTime": 151.31
+          },
+          {
+            "text": "yang",
+            "startTime": 151.31,
+            "endTime": 151.87
+          },
+          {
+            "text": "kelam",
+            "startTime": 151.87,
+            "endTime": 152.43
+          }
+        ]
       },
       {
-        "id": "line-35-152.43",
+        "id": "tapped-35-152.43",
         "startTime": 152.43,
         "endTime": 154.81,
-        "text": "Esok kan lebih terang"
+        "text": "Esok kan lebih terang",
+        "words": [
+          {
+            "text": "Esok",
+            "startTime": 152.43,
+            "endTime": 153.03
+          },
+          {
+            "text": "kan",
+            "startTime": 153.03,
+            "endTime": 153.62
+          },
+          {
+            "text": "lebih",
+            "startTime": 153.62,
+            "endTime": 154.22
+          },
+          {
+            "text": "terang",
+            "startTime": 154.22,
+            "endTime": 154.81
+          }
+        ]
       },
       {
-        "id": "line-36-154.81",
+        "id": "tapped-36-154.81",
         "startTime": 154.81,
         "endTime": 157.4,
-        "text": "Masa depan yang kuimpikan"
+        "text": "Masa depan yang kuimpikan",
+        "words": [
+          {
+            "text": "Masa",
+            "startTime": 154.81,
+            "endTime": 155.46
+          },
+          {
+            "text": "depan",
+            "startTime": 155.46,
+            "endTime": 156.11
+          },
+          {
+            "text": "yang",
+            "startTime": 156.11,
+            "endTime": 156.75
+          },
+          {
+            "text": "kuimpikan",
+            "startTime": 156.75,
+            "endTime": 157.4
+          }
+        ]
       },
       {
-        "id": "line-37-157.4",
+        "id": "tapped-37-157.4",
         "startTime": 157.4,
         "endTime": 160,
-        "text": "GO! GO! Mirai! Kohi Sekai"
+        "text": "GO! GO! Mirai! Kohi Sekai",
+        "words": [
+          {
+            "text": "GO!",
+            "startTime": 157.4,
+            "endTime": 157.92
+          },
+          {
+            "text": "GO!",
+            "startTime": 157.92,
+            "endTime": 158.44
+          },
+          {
+            "text": "Mirai!",
+            "startTime": 158.44,
+            "endTime": 158.96
+          },
+          {
+            "text": "Kohi",
+            "startTime": 158.96,
+            "endTime": 159.48
+          },
+          {
+            "text": "Sekai",
+            "startTime": 159.48,
+            "endTime": 160
+          }
+        ]
       },
       {
-        "id": "line-38-160",
+        "id": "tapped-38-160",
         "startTime": 160,
         "endTime": 162.02,
-        "text": "GO! GO! Mirai! Kohi Sekai"
+        "text": "GO! GO! Mirai! Kohi Sekai",
+        "words": [
+          {
+            "text": "GO!",
+            "startTime": 160,
+            "endTime": 160.4
+          },
+          {
+            "text": "GO!",
+            "startTime": 160.4,
+            "endTime": 160.81
+          },
+          {
+            "text": "Mirai!",
+            "startTime": 160.81,
+            "endTime": 161.21
+          },
+          {
+            "text": "Kohi",
+            "startTime": 161.21,
+            "endTime": 161.62
+          },
+          {
+            "text": "Sekai",
+            "startTime": 161.62,
+            "endTime": 162.02
+          }
+        ]
       },
       {
-        "id": "line-39-162.02",
+        "id": "tapped-39-162.02",
         "startTime": 162.02,
         "endTime": 162.56,
-        "text": "Letsgo!"
+        "text": "Letsgo!",
+        "words": [
+          {
+            "text": "L",
+            "startTime": 162.02,
+            "endTime": 162.1
+          },
+          {
+            "text": "e",
+            "startTime": 162.1,
+            "endTime": 162.17
+          },
+          {
+            "text": "t",
+            "startTime": 162.17,
+            "endTime": 162.25
+          },
+          {
+            "text": "s",
+            "startTime": 162.25,
+            "endTime": 162.33
+          },
+          {
+            "text": "g",
+            "startTime": 162.33,
+            "endTime": 162.41
+          },
+          {
+            "text": "o",
+            "startTime": 162.41,
+            "endTime": 162.48
+          },
+          {
+            "text": "!",
+            "startTime": 162.48,
+            "endTime": 162.56
+          }
+        ]
       },
       {
-        "id": "line-40-162.56",
+        "id": "tapped-40-162.56",
         "startTime": 162.56,
-        "endTime": 170.56,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "endTime": 172.84,
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 162.56,
+            "endTime": 164.27
+          },
+          {
+            "text": "~",
+            "startTime": 164.27,
+            "endTime": 165.99
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 165.99,
+            "endTime": 167.7
+          },
+          {
+            "text": "Break",
+            "startTime": 167.7,
+            "endTime": 169.41
+          },
+          {
+            "text": "~",
+            "startTime": 169.41,
+            "endTime": 171.13
+          },
+          {
+            "text": "♪",
+            "startTime": 171.13,
+            "endTime": 172.84
+          }
+        ]
       },
       {
-        "id": "line-41-172.84",
+        "id": "tapped-41-172.84",
         "startTime": 172.84,
         "endTime": 177.96,
-        "text": "Hari ini ku harus lebih dari kemarin"
+        "text": "Hari ini ku harus lebih dari kemarin",
+        "words": [
+          {
+            "text": "Hari",
+            "startTime": 172.84,
+            "endTime": 173.57
+          },
+          {
+            "text": "ini",
+            "startTime": 173.57,
+            "endTime": 174.3
+          },
+          {
+            "text": "ku",
+            "startTime": 174.3,
+            "endTime": 175.03
+          },
+          {
+            "text": "harus",
+            "startTime": 175.03,
+            "endTime": 175.77
+          },
+          {
+            "text": "lebih",
+            "startTime": 175.77,
+            "endTime": 176.5
+          },
+          {
+            "text": "dari",
+            "startTime": 176.5,
+            "endTime": 177.23
+          },
+          {
+            "text": "kemarin",
+            "startTime": 177.23,
+            "endTime": 177.96
+          }
+        ]
       },
       {
-        "id": "line-42-177.96",
+        "id": "tapped-42-177.96",
         "startTime": 177.96,
         "endTime": 183.18,
-        "text": "Sperti fajar mengusir kegelapan"
+        "text": "Sperti fajar mengusir kegelapan",
+        "words": [
+          {
+            "text": "Sperti",
+            "startTime": 177.96,
+            "endTime": 179.27
+          },
+          {
+            "text": "fajar",
+            "startTime": 179.27,
+            "endTime": 180.57
+          },
+          {
+            "text": "mengusir",
+            "startTime": 180.57,
+            "endTime": 181.88
+          },
+          {
+            "text": "kegelapan",
+            "startTime": 181.88,
+            "endTime": 183.18
+          }
+        ]
       },
       {
-        "id": "line-43-183.18",
+        "id": "tapped-43-183.18",
         "startTime": 183.18,
         "endTime": 188.37,
-        "text": "Walau terkadang ragu berbisik dalam hati"
+        "text": "Walau terkadang ragu berbisik dalam hati",
+        "words": [
+          {
+            "text": "Walau",
+            "startTime": 183.18,
+            "endTime": 184.05
+          },
+          {
+            "text": "terkadang",
+            "startTime": 184.05,
+            "endTime": 184.91
+          },
+          {
+            "text": "ragu",
+            "startTime": 184.91,
+            "endTime": 185.78
+          },
+          {
+            "text": "berbisik",
+            "startTime": 185.78,
+            "endTime": 186.64
+          },
+          {
+            "text": "dalam",
+            "startTime": 186.64,
+            "endTime": 187.5
+          },
+          {
+            "text": "hati",
+            "startTime": 187.5,
+            "endTime": 188.37
+          }
+        ]
       },
       {
-        "id": "line-44-188.37",
+        "id": "tapped-44-188.37",
         "startTime": 188.37,
         "endTime": 196.12,
-        "text": "Akan kulewati semua hari yang lelah"
+        "text": "Akan kulewati semua hari yang lelah",
+        "words": [
+          {
+            "text": "Akan",
+            "startTime": 188.37,
+            "endTime": 189.66
+          },
+          {
+            "text": "kulewati",
+            "startTime": 189.66,
+            "endTime": 190.95
+          },
+          {
+            "text": "semua",
+            "startTime": 190.95,
+            "endTime": 192.25
+          },
+          {
+            "text": "hari",
+            "startTime": 192.25,
+            "endTime": 193.54
+          },
+          {
+            "text": "yang",
+            "startTime": 193.54,
+            "endTime": 194.83
+          },
+          {
+            "text": "lelah",
+            "startTime": 194.83,
+            "endTime": 196.12
+          }
+        ]
       },
       {
-        "id": "line-45-196.12",
+        "id": "tapped-45-196.12",
         "startTime": 196.12,
         "endTime": 198.62,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 196.12,
+            "endTime": 196.54
+          },
+          {
+            "text": "~",
+            "startTime": 196.54,
+            "endTime": 196.95
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 196.95,
+            "endTime": 197.37
+          },
+          {
+            "text": "Break",
+            "startTime": 197.37,
+            "endTime": 197.79
+          },
+          {
+            "text": "~",
+            "startTime": 197.79,
+            "endTime": 198.2
+          },
+          {
+            "text": "♪",
+            "startTime": 198.2,
+            "endTime": 198.62
+          }
+        ]
       },
       {
-        "id": "line-46-198.62",
+        "id": "tapped-46-198.62",
         "startTime": 198.62,
         "endTime": 203.84,
-        "text": "Hey, apakah diriku di masa depan itu"
+        "text": "Hey, apakah diriku di masa depan itu",
+        "words": [
+          {
+            "text": "Hey,",
+            "startTime": 198.62,
+            "endTime": 199.37
+          },
+          {
+            "text": "apakah",
+            "startTime": 199.37,
+            "endTime": 200.11
+          },
+          {
+            "text": "diriku",
+            "startTime": 200.11,
+            "endTime": 200.86
+          },
+          {
+            "text": "di",
+            "startTime": 200.86,
+            "endTime": 201.6
+          },
+          {
+            "text": "masa",
+            "startTime": 201.6,
+            "endTime": 202.35
+          },
+          {
+            "text": "depan",
+            "startTime": 202.35,
+            "endTime": 203.09
+          },
+          {
+            "text": "itu",
+            "startTime": 203.09,
+            "endTime": 203.84
+          }
+        ]
       },
       {
-        "id": "line-47-203.84",
+        "id": "tapped-47-203.84",
         "startTime": 203.84,
         "endTime": 208.75,
-        "text": "Tersenyum indah tak seperti dulu"
+        "text": "Tersenyum indah tak seperti dulu",
+        "words": [
+          {
+            "text": "Tersenyum",
+            "startTime": 203.84,
+            "endTime": 204.82
+          },
+          {
+            "text": "indah",
+            "startTime": 204.82,
+            "endTime": 205.8
+          },
+          {
+            "text": "tak",
+            "startTime": 205.8,
+            "endTime": 206.79
+          },
+          {
+            "text": "seperti",
+            "startTime": 206.79,
+            "endTime": 207.77
+          },
+          {
+            "text": "dulu",
+            "startTime": 207.77,
+            "endTime": 208.75
+          }
+        ]
       },
       {
-        "id": "line-48-208.75",
+        "id": "tapped-48-208.75",
         "startTime": 208.75,
         "endTime": 210.37,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 208.75,
+            "endTime": 209.02
+          },
+          {
+            "text": "~",
+            "startTime": 209.02,
+            "endTime": 209.29
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 209.29,
+            "endTime": 209.56
+          },
+          {
+            "text": "Break",
+            "startTime": 209.56,
+            "endTime": 209.83
+          },
+          {
+            "text": "~",
+            "startTime": 209.83,
+            "endTime": 210.1
+          },
+          {
+            "text": "♪",
+            "startTime": 210.1,
+            "endTime": 210.37
+          }
+        ]
       },
       {
-        "id": "line-49-210.37",
+        "id": "tapped-49-210.37",
         "startTime": 210.37,
         "endTime": 212.83,
-        "text": "Hari ini bukanlah,"
+        "text": "Hari ini bukanlah,",
+        "words": [
+          {
+            "text": "Hari",
+            "startTime": 210.37,
+            "endTime": 211.19
+          },
+          {
+            "text": "ini",
+            "startTime": 211.19,
+            "endTime": 212.01
+          },
+          {
+            "text": "bukanlah,",
+            "startTime": 212.01,
+            "endTime": 212.83
+          }
+        ]
       },
       {
-        "id": "line-50-212.83",
+        "id": "tapped-50-212.83",
         "startTime": 212.83,
         "endTime": 216.75,
-        "text": "sekedar pengulangan kisah"
+        "text": "sekedar pengulangan kisah",
+        "words": [
+          {
+            "text": "sekedar",
+            "startTime": 212.83,
+            "endTime": 214.14
+          },
+          {
+            "text": "pengulangan",
+            "startTime": 214.14,
+            "endTime": 215.44
+          },
+          {
+            "text": "kisah",
+            "startTime": 215.44,
+            "endTime": 216.75
+          }
+        ]
       },
       {
-        "id": "line-51-216.75",
+        "id": "tapped-51-216.75",
         "startTime": 216.75,
         "endTime": 220.65,
-        "text": "Ku yakin lebih berwarna"
+        "text": "Ku yakin lebih berwarna",
+        "words": [
+          {
+            "text": "Ku",
+            "startTime": 216.75,
+            "endTime": 217.72
+          },
+          {
+            "text": "yakin",
+            "startTime": 217.72,
+            "endTime": 218.7
+          },
+          {
+            "text": "lebih",
+            "startTime": 218.7,
+            "endTime": 219.68
+          },
+          {
+            "text": "berwarna",
+            "startTime": 219.68,
+            "endTime": 220.65
+          }
+        ]
       },
       {
-        "id": "line-52-220.65",
+        "id": "tapped-52-220.65",
         "startTime": 220.65,
         "endTime": 223.21,
-        "text": "Kemarin hanyalah kisah yang kelam"
+        "text": "Kemarin hanyalah kisah yang kelam",
+        "words": [
+          {
+            "text": "Kemarin",
+            "startTime": 220.65,
+            "endTime": 221.16
+          },
+          {
+            "text": "hanyalah",
+            "startTime": 221.16,
+            "endTime": 221.67
+          },
+          {
+            "text": "kisah",
+            "startTime": 221.67,
+            "endTime": 222.19
+          },
+          {
+            "text": "yang",
+            "startTime": 222.19,
+            "endTime": 222.7
+          },
+          {
+            "text": "kelam",
+            "startTime": 222.7,
+            "endTime": 223.21
+          }
+        ]
       },
       {
-        "id": "line-53-223.21",
+        "id": "tapped-53-223.21",
         "startTime": 223.21,
         "endTime": 225.75,
-        "text": "Esok kan lebih terang"
+        "text": "Esok kan lebih terang",
+        "words": [
+          {
+            "text": "Esok",
+            "startTime": 223.21,
+            "endTime": 223.84
+          },
+          {
+            "text": "kan",
+            "startTime": 223.84,
+            "endTime": 224.48
+          },
+          {
+            "text": "lebih",
+            "startTime": 224.48,
+            "endTime": 225.12
+          },
+          {
+            "text": "terang",
+            "startTime": 225.12,
+            "endTime": 225.75
+          }
+        ]
       },
       {
-        "id": "line-54-225.75",
+        "id": "tapped-54-225.75",
         "startTime": 225.75,
         "endTime": 228.4,
-        "text": "Masa depan yang kuimpikan"
+        "text": "Masa depan yang kuimpikan",
+        "words": [
+          {
+            "text": "Masa",
+            "startTime": 225.75,
+            "endTime": 226.41
+          },
+          {
+            "text": "depan",
+            "startTime": 226.41,
+            "endTime": 227.07
+          },
+          {
+            "text": "yang",
+            "startTime": 227.07,
+            "endTime": 227.74
+          },
+          {
+            "text": "kuimpikan",
+            "startTime": 227.74,
+            "endTime": 228.4
+          }
+        ]
       },
       {
-        "id": "line-55-228.4",
+        "id": "tapped-55-228.4",
         "startTime": 228.4,
         "endTime": 231.06,
-        "text": "GO! GO! Mirai! Kohi Sekai"
+        "text": "GO! GO! Mirai! Kohi Sekai",
+        "words": [
+          {
+            "text": "GO!",
+            "startTime": 228.4,
+            "endTime": 228.93
+          },
+          {
+            "text": "GO!",
+            "startTime": 228.93,
+            "endTime": 229.46
+          },
+          {
+            "text": "Mirai!",
+            "startTime": 229.46,
+            "endTime": 230
+          },
+          {
+            "text": "Kohi",
+            "startTime": 230,
+            "endTime": 230.53
+          },
+          {
+            "text": "Sekai",
+            "startTime": 230.53,
+            "endTime": 231.06
+          }
+        ]
       },
       {
-        "id": "line-56-231.06",
+        "id": "tapped-56-231.06",
         "startTime": 231.06,
         "endTime": 233,
-        "text": "GO! GO! Mirai! Kohi Sekai"
+        "text": "GO! GO! Mirai! Kohi Sekai",
+        "words": [
+          {
+            "text": "GO!",
+            "startTime": 231.06,
+            "endTime": 231.45
+          },
+          {
+            "text": "GO!",
+            "startTime": 231.45,
+            "endTime": 231.84
+          },
+          {
+            "text": "Mirai!",
+            "startTime": 231.84,
+            "endTime": 232.22
+          },
+          {
+            "text": "Kohi",
+            "startTime": 232.22,
+            "endTime": 232.61
+          },
+          {
+            "text": "Sekai",
+            "startTime": 232.61,
+            "endTime": 233
+          }
+        ]
       },
       {
-        "id": "line-57-233",
+        "id": "tapped-57-233",
         "startTime": 233,
         "endTime": 233.9,
-        "text": "Letsgo!"
+        "text": "Letsgo!",
+        "words": [
+          {
+            "text": "L",
+            "startTime": 233,
+            "endTime": 233.13
+          },
+          {
+            "text": "e",
+            "startTime": 233.13,
+            "endTime": 233.26
+          },
+          {
+            "text": "t",
+            "startTime": 233.26,
+            "endTime": 233.39
+          },
+          {
+            "text": "s",
+            "startTime": 233.39,
+            "endTime": 233.51
+          },
+          {
+            "text": "g",
+            "startTime": 233.51,
+            "endTime": 233.64
+          },
+          {
+            "text": "o",
+            "startTime": 233.64,
+            "endTime": 233.77
+          },
+          {
+            "text": "!",
+            "startTime": 233.77,
+            "endTime": 233.9
+          }
+        ]
       },
       {
-        "id": "line-58-233.9",
+        "id": "tapped-58-233.9",
         "startTime": 233.9,
         "endTime": 238.9,
-        "text": "♪ ~ Instrumental Break ~ ♪"
+        "text": "♪ ~ Instrumental Break ~ ♪",
+        "words": [
+          {
+            "text": "♪",
+            "startTime": 233.9,
+            "endTime": 234.73
+          },
+          {
+            "text": "~",
+            "startTime": 234.73,
+            "endTime": 235.57
+          },
+          {
+            "text": "Instrumental",
+            "startTime": 235.57,
+            "endTime": 236.4
+          },
+          {
+            "text": "Break",
+            "startTime": 236.4,
+            "endTime": 237.23
+          },
+          {
+            "text": "~",
+            "startTime": 237.23,
+            "endTime": 238.07
+          },
+          {
+            "text": "♪",
+            "startTime": 238.07,
+            "endTime": 238.9
+          }
+        ]
       }
     ]
   },

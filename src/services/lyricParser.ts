@@ -109,12 +109,145 @@ export function parseLRC(lrcContent: string): LyricLine[] {
 }
 
 /**
- * Converts structured LyricLine[] back to LRC formatted string
+ * Formats seconds into <mm:ss.xx> (Enhanced LRC Syllable Tag)
+ */
+export function formatSyllableTimestamp(seconds: number): string {
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  const ms = Math.floor((seconds % 1) * 100);
+  return `<${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}.${ms.toString().padStart(2, '0')}>`;
+}
+
+/**
+ * Tokenizes a line into an array of LyricWord units.
+ * Supports spaced words, Romaji, and non-spaced CJK characters.
+ */
+export function tokenizeLine(
+  text: string,
+  startTime: number,
+  endTime: number,
+  _romaji?: string
+): LyricWord[] {
+  const cleanText = text.trim();
+  if (!cleanText) return [];
+
+  let tokens: string[] = [];
+
+  // Check if text has spaces
+  if (cleanText.includes(' ')) {
+    tokens = cleanText.split(/\s+/).filter(t => t.length > 0);
+  } else {
+    // If no spaces, tokenize Japanese/Kanji characters or mora
+    tokens = Array.from(cleanText);
+  }
+
+  if (tokens.length === 0) return [];
+
+  const lineDuration = Math.max(0.5, endTime - startTime);
+  const wordDuration = lineDuration / tokens.length;
+
+  return tokens.map((token, idx) => {
+    const wStart = parseFloat((startTime + idx * wordDuration).toFixed(2));
+    const wEnd = parseFloat((startTime + (idx + 1) * wordDuration).toFixed(2));
+    return {
+      text: token,
+      startTime: wStart,
+      endTime: wEnd
+    };
+  });
+}
+
+/**
+ * Applies rhythmic pacing curve presets to word timestamps within a line.
+ */
+export type TimingPresetType = 'linear' | 'hold_ending' | 'accelerate' | 'decelerate' | 'weighted';
+
+export function applyTimingPreset(
+  words: LyricWord[],
+  lineStartTime: number,
+  lineEndTime: number,
+  preset: TimingPresetType
+): LyricWord[] {
+  if (!words || words.length === 0) return [];
+  if (words.length === 1) {
+    return [{
+      ...words[0],
+      startTime: parseFloat(lineStartTime.toFixed(2)),
+      endTime: parseFloat(lineEndTime.toFixed(2))
+    }];
+  }
+
+  const n = words.length;
+  const totalDuration = Math.max(0.4, lineEndTime - lineStartTime);
+  let weights: number[] = [];
+
+  switch (preset) {
+    case 'hold_ending': {
+      // First (n - 1) words share 50% of the time, the last word takes 50% (melisma / held note)
+      const baseWeight = 0.5 / (n - 1);
+      weights = words.map((_, i) => (i === n - 1 ? 0.5 : baseWeight));
+      break;
+    }
+    case 'accelerate': {
+      // Starts slow (large duration), speeds up towards end
+      weights = words.map((_, i) => n - i);
+      const sum = weights.reduce((a, b) => a + b, 0);
+      weights = weights.map(w => w / sum);
+      break;
+    }
+    case 'decelerate': {
+      // Starts fast, gets slower towards end
+      weights = words.map((_, i) => i + 1);
+      const sum = weights.reduce((a, b) => a + b, 0);
+      weights = weights.map(w => w / sum);
+      break;
+    }
+    case 'weighted': {
+      // Weighted according to text character length
+      weights = words.map(w => Math.max(1, w.text.length));
+      const sum = weights.reduce((a, b) => a + b, 0);
+      weights = weights.map(w => w / sum);
+      break;
+    }
+    case 'linear':
+    default: {
+      weights = words.map(() => 1 / n);
+      break;
+    }
+  }
+
+  let accumulatedTime = lineStartTime;
+  return words.map((word, idx) => {
+    const duration = totalDuration * weights[idx];
+    const wStart = parseFloat(accumulatedTime.toFixed(2));
+    accumulatedTime += duration;
+    const wEnd = idx === n - 1 ? parseFloat(lineEndTime.toFixed(2)) : parseFloat(accumulatedTime.toFixed(2));
+
+    return {
+      ...word,
+      startTime: wStart,
+      endTime: Math.max(wStart + 0.05, wEnd)
+    };
+  });
+}
+
+/**
+ * Converts structured LyricLine[] back to LRC / Enhanced LRC formatted string
  */
 export function exportToLRC(lyrics: LyricLine[]): string {
   return lyrics
     .map(line => {
       const timeStr = formatTimestamp(line.startTime);
+
+      // If enhanced syllable words exist, serialize with <mm:ss.xx> tags
+      if (line.words && line.words.length > 0) {
+        const syllableText = line.words
+          .map(w => `${formatSyllableTimestamp(w.startTime)}${w.text}`)
+          .join(' ');
+        const text = line.romaji ? `${syllableText} | ${line.romaji}` : syllableText;
+        return `${timeStr} ${text}`;
+      }
+
       const text = line.romaji ? `${line.text} | ${line.romaji}` : line.text;
       return `${timeStr} ${text}`;
     })

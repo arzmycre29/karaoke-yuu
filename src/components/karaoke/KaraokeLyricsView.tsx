@@ -121,34 +121,77 @@ export const KaraokeLyricsView: React.FC<KaraokeLyricsViewProps> = ({
             )}
           </div>
         ) : (
-          <div className="relative py-4 px-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-stage-accent/40 shadow-[0_0_30px_rgba(0,0,0,0.8)] transition-all duration-150 transform scale-105 max-w-5xl">
+          <div className="relative py-4 px-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-stage-accent/40 shadow-[0_0_30px_rgba(0,0,0,0.8)] transition-opacity duration-150 max-w-5xl">
             {/* Countdown cue if there was a gap after previous line */}
             {isApproachingNextLine && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-stage-accent text-white text-xs font-black animate-bounce shadow-md">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-stage-accent text-white text-xs font-black shadow-md">
                 🔥 Masuk dalam: {secondsToNextLine}s
               </div>
             )}
 
             {/* Main Japanese / Primary Text with Gradient Sweep */}
-            <div className="relative inline-block">
-              {/* Background base text (Unsung part: Clean white with dark shadow) */}
-              <span
-                className={`${fontSizeClasses} font-black font-jp tracking-wide text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]`}
-              >
-                {currentLine.text}
-              </span>
+            {currentLine.words && currentLine.words.length > 0 ? (
+              <div className={`flex flex-wrap items-center justify-center ${currentLine.text.includes(' ') ? 'gap-x-3.5 md:gap-x-5 gap-y-2' : 'gap-x-1 md:gap-x-1.5 gap-y-1'}`}>
+                {currentLine.words.map((word, wIdx) => {
+                  const wordDur = Math.max(0.01, word.endTime - word.startTime);
+                  const wordProgress =
+                    currentTime < word.startTime
+                      ? 0
+                      : currentTime >= word.endTime
+                      ? 100
+                      : Math.min(100, Math.max(0, ((currentTime - word.startTime) / wordDur) * 100));
 
-              {/* Foreground swept text (Sung part: Vibrant Neon Gradient Wipe) */}
-              <span
-                className={`absolute top-0 left-0 ${fontSizeClasses} font-black font-jp tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-stage-accent via-pink-400 to-stage-neon overflow-hidden whitespace-nowrap drop-shadow-[0_0_25px_rgba(255,42,133,1)]`}
-                style={{
-                  width: `${lineProgress}%`,
-                  transition: 'width 0.05s linear'
-                }}
-              >
-                {currentLine.text}
-              </span>
-            </div>
+                  return (
+                    <span
+                      key={wIdx}
+                      className="relative inline-block select-none"
+                    >
+                      {/* Background base text (Unsung) */}
+                      <span
+                        className={`${fontSizeClasses} font-black font-jp tracking-wide text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] inline-block`}
+                      >
+                        {word.text}
+                      </span>
+
+                      {/* Foreground swept text (Sung) - Exactly superimposed 1:1 with base text */}
+                      <span
+                        aria-hidden="true"
+                        className={`absolute top-0 left-0 w-full h-full ${fontSizeClasses} font-black font-jp tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-stage-accent via-pink-400 to-stage-neon drop-shadow-[0_0_25px_rgba(255,42,133,1)] inline-block select-none pointer-events-none`}
+                        style={{
+                          clipPath: `inset(-20% calc(100% - ${wordProgress}%) -20% 0)`,
+                          WebkitClipPath: `inset(-20% calc(100% - ${wordProgress}%) -20% 0)`,
+                          transition: 'clip-path 0.03s linear, -webkit-clip-path 0.03s linear'
+                        }}
+                      >
+                        {word.text}
+                      </span>
+                    </span>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="relative inline-block select-none">
+                {/* Background base text (Unsung part: Clean white with dark shadow) */}
+                <span
+                  className={`${fontSizeClasses} font-black font-jp tracking-wide text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] inline-block`}
+                >
+                  {currentLine.text}
+                </span>
+
+                {/* Foreground swept text (Sung part: Vibrant Neon Gradient Wipe) */}
+                <span
+                  aria-hidden="true"
+                  className={`absolute top-0 left-0 w-full h-full ${fontSizeClasses} font-black font-jp tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-stage-accent via-pink-400 to-stage-neon drop-shadow-[0_0_25px_rgba(255,42,133,1)] inline-block select-none pointer-events-none`}
+                  style={{
+                    clipPath: `inset(-20% calc(100% - ${lineProgress}%) -20% 0)`,
+                    WebkitClipPath: `inset(-20% calc(100% - ${lineProgress}%) -20% 0)`,
+                    transition: 'clip-path 0.04s linear, -webkit-clip-path 0.04s linear'
+                  }}
+                >
+                  {currentLine.text}
+                </span>
+              </div>
+            )}
 
             {/* Romaji Subtitle / Pronunciation */}
             {showRomaji && currentLine.romaji && (
@@ -168,7 +211,7 @@ export const KaraokeLyricsView: React.FC<KaraokeLyricsViewProps> = ({
 
       {/* 3. NEXT LINE PREVIEW (Highlighted with extra visibility when approaching) */}
       {nextLine && (
-        <div className={`transition-all duration-300 ${isApproachingNextLine ? 'scale-110 opacity-100' : 'opacity-80'}`}>
+        <div className={`transition-opacity duration-300 ${isApproachingNextLine ? 'opacity-100' : 'opacity-75'}`}>
           <span className={`px-4 py-1.5 rounded-xl border shadow-md font-jp text-lg md:text-2xl ${
             isApproachingNextLine
               ? 'bg-stage-accent/30 border-stage-accent text-white shadow-[0_0_20px_rgba(255,42,133,0.6)] font-bold'

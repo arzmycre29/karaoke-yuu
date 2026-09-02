@@ -154,6 +154,14 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('STATE_UPDATE', newState);
   });
 
+  socket.on('TIME_UPDATE', (timeData) => {
+    if (globalAppState) {
+      globalAppState.currentTime = timeData.currentTime;
+      if (timeData.duration) globalAppState.duration = timeData.duration;
+    }
+    socket.broadcast.emit('TIME_UPDATE', timeData);
+  });
+
   socket.on('disconnect', () => {
     console.log(`❌ Client disconnected: ${socket.id}`);
   });

@@ -110,10 +110,12 @@ export const DEFAULT_INITIAL_STATE: AppState = {
 
 export class SyncService {
   private static instance: SyncService;
+  private clientId: string = Math.random().toString(36).substring(2, 9);
   private channel: BroadcastChannel | null = null;
   private socket: Socket | null = null;
   private state: AppState = DEFAULT_INITIAL_STATE;
   private listeners: Set<(state: AppState) => void> = new Set();
+  private saveStorageTimer: any = null;
 
   private constructor() {
     this.loadStateFromStorage();
@@ -133,28 +135,53 @@ export class SyncService {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        this.state = { ...DEFAULT_INITIAL_STATE, ...parsed, soundFxTrigger: null };
+        this.state = { ...DEFAULT_INITIAL_STATE, ...parsed, soundFxTrigger: null, playerCommand: null };
       }
     } catch (e) {
       console.warn("Could not load from localStorage:", e);
     }
   }
 
-  private saveStateToStorage() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(this.state));
-    } catch (e) {
-      console.warn("Could not save to localStorage:", e);
+  // Throttled save to localStorage (avoids freezing main UI thread during 20fps time updates)
+  private saveStateToStorage(immediate = false) {
+    if (immediate) {
+      if (this.saveStorageTimer) clearTimeout(this.saveStorageTimer);
+      this.saveStorageTimer = null;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.state));
+      } catch (e) {
+        console.warn("Could not save to localStorage:", e);
+      }
+      return;
     }
+
+    if (this.saveStorageTimer) return;
+    this.saveStorageTimer = setTimeout(() => {
+      this.saveStorageTimer = null;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.state));
+      } catch (e) {
+        console.warn("Could not save to localStorage:", e);
+      }
+    }, 1000);
   }
 
   private initBroadcastChannel() {
     if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
       this.channel = new BroadcastChannel(BROADCAST_CHANNEL_NAME);
       this.channel.onmessage = (event) => {
-        if (event.data && event.data.type === 'STATE_UPDATE') {
+        if (!event.data || event.data.clientId === this.clientId) return;
+
+        if (event.data.type === 'STATE_UPDATE') {
           this.state = event.data.state;
-          this.notifyListeners();
+          this.notifyListeners(false);
+        } else if (event.data.type === 'TIME_UPDATE') {
+          this.state = {
+            ...this.state,
+            currentTime: event.data.currentTime,
+            duration: event.data.duration || this.state.duration
+          };
+          this.notifyListeners(false);
         }
       };
     }
@@ -175,7 +202,16 @@ export class SyncService {
 
       this.socket.on('STATE_UPDATE', (newState: AppState) => {
         this.state = newState;
-        this.notifyListeners();
+        this.notifyListeners(false);
+      });
+
+      this.socket.on('TIME_UPDATE', (timeData: { currentTime: number; duration?: number }) => {
+        this.state = {
+          ...this.state,
+          currentTime: timeData.currentTime,
+          duration: timeData.duration || this.state.duration
+        };
+        this.notifyListeners(false);
       });
     } catch (err) {
       console.warn("Socket.io initialization skipped (running local BroadcastChannel mode)");
@@ -192,9 +228,41 @@ export class SyncService {
     return () => this.listeners.delete(listener);
   }
 
-  private notifyListeners() {
-    this.saveStateToStorage();
+  private notifyListeners(persist = true) {
+    if (persist) {
+      this.saveStateToStorage(false);
+    }
     this.listeners.forEach((l) => l(this.state));
+  }
+
+  // Lightweight time update from stage player (never overwrites master state properties)
+  public updateTime(currentTime: number, duration?: number) {
+    const validTime = Math.max(0, currentTime);
+    const validDur = duration && duration > 0 ? duration : this.state.duration;
+
+    this.state = {
+      ...this.state,
+      currentTime: validTime,
+      duration: validDur
+    };
+
+    if (this.channel) {
+      this.channel.postMessage({
+        type: 'TIME_UPDATE',
+        currentTime: validTime,
+        duration: validDur,
+        clientId: this.clientId
+      });
+    }
+
+    if (this.socket && this.socket.connected) {
+      this.socket.emit('TIME_UPDATE', {
+        currentTime: validTime,
+        duration: validDur
+      });
+    }
+
+    this.notifyListeners(false);
   }
 
   public updateState(updater: Partial<AppState> | ((prev: AppState) => AppState)) {
@@ -207,7 +275,8 @@ export class SyncService {
     if (this.channel) {
       this.channel.postMessage({
         type: 'STATE_UPDATE',
-        state: this.state
+        state: this.state,
+        clientId: this.clientId
       });
     }
 
@@ -215,7 +284,22 @@ export class SyncService {
       this.socket.emit('UPDATE_STATE', this.state);
     }
 
-    this.notifyListeners();
+    this.notifyListeners(true);
+  }
+
+  public play() {
+    this.updateState({ isPlaying: true });
+  }
+
+  public pause() {
+    this.updateState({ isPlaying: false });
+  }
+
+  public togglePlay() {
+    this.updateState((prev) => ({
+      ...prev,
+      isPlaying: !prev.isPlaying
+    }));
   }
 
   public setCurrentSong(item: QueueItem | null) {
@@ -225,14 +309,25 @@ export class SyncService {
       currentTime: 0,
       isPlaying: !!item,
       showScoreOverlay: false,
-      submissions: []
+      submissions: [],
+      playerCommand: {
+        type: 'replay',
+        targetTime: 0,
+        timestamp: Date.now()
+      }
     }));
   }
 
   public nextSong() {
     this.updateState((prev) => {
       if (prev.queue.length === 0) {
-        return { ...prev, currentQueueItem: null, isPlaying: false, currentTime: 0 };
+        return {
+          ...prev,
+          currentQueueItem: null,
+          isPlaying: false,
+          currentTime: 0,
+          playerCommand: { type: 'stop', targetTime: 0, timestamp: Date.now() }
+        };
       }
       const [nextItem, ...remainingQueue] = prev.queue;
       return {
@@ -242,7 +337,12 @@ export class SyncService {
         currentTime: 0,
         isPlaying: true,
         showScoreOverlay: false,
-        submissions: []
+        submissions: [],
+        playerCommand: {
+          type: 'replay',
+          targetTime: 0,
+          timestamp: Date.now()
+        }
       };
     });
   }
@@ -258,6 +358,11 @@ export class SyncService {
         timestamp: Date.now()
       }
     }));
+  }
+
+  public seekRelative(deltaSeconds: number) {
+    const target = Math.max(0, Math.min(this.state.duration || 100, this.state.currentTime + deltaSeconds));
+    this.seekTo(target);
   }
 
   public replaySong() {

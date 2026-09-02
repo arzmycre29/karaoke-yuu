@@ -21,7 +21,7 @@ export const StageView: React.FC<StageViewProps> = ({ state, onNavigateToOperato
   const [fontSize, setFontSize] = useState<'normal' | 'large' | 'massive'>('large');
 
   const handleTimeUpdate = (cur: number, dur: number) => {
-    sync.updateState({ currentTime: cur, duration: dur });
+    sync.updateTime(cur, dur);
   };
 
   const handleSongEnded = () => {

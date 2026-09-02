@@ -67,6 +67,9 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
   const [pitchWeight, setPitchWeight] = useState<number>(state.scoringConfig.pitchWeight);
   const [judgeWeight, setJudgeWeight] = useState<number>(state.scoringConfig.judgeWeight);
 
+  // Local seekbar dragging state to prevent slider jitter
+  const [draggingSeekTime, setDraggingSeekTime] = useState<number | null>(null);
+
   // Pitch Tracker instance for competition mode
   const pitchTrackerRef = useRef<PitchTracker | null>(null);
 
@@ -525,6 +528,16 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
             <QrCode className="w-4 h-4" />
             <span>QR Juri/Queue</span>
           </button>
+
+          <a
+            href="/?view=stage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 bg-purple-600/30 text-purple-300 hover:bg-purple-600 hover:text-white rounded-2xl transition flex items-center gap-1.5 text-xs font-bold border border-purple-400/40 shadow-md"
+            title="Buka Layar Panggung di Tab/Layar Terpisah"
+          >
+            <span>🖥️ Layar Panggung</span>
+          </a>
         </div>
       </div>
 
@@ -552,18 +565,40 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                   <p className="text-sm text-gray-400">{currentSong?.artist}</p>
                 </div>
 
-                {/* Interactive Seek Bar */}
+                {/* Interactive Seek Bar with Butter-Smooth Dragging */}
                 <div className="space-y-1">
                   <div className="flex justify-between text-xs font-mono text-gray-400">
-                    <span>{Math.floor(state.currentTime / 60)}:{(state.currentTime % 60).toFixed(0).padStart(2, '0')}</span>
+                    <span className="text-stage-neon font-bold">
+                      {Math.floor((draggingSeekTime !== null ? draggingSeekTime : state.currentTime) / 60)}:
+                      {((draggingSeekTime !== null ? draggingSeekTime : state.currentTime) % 60).toFixed(0).padStart(2, '0')}
+                    </span>
                     <span>{Math.floor(state.duration / 60)}:{(state.duration % 60).toFixed(0).padStart(2, '0')}</span>
                   </div>
                   <input
                     type="range"
                     min="0"
                     max={state.duration || 100}
-                    value={state.currentTime}
-                    onChange={(e) => handleSeek(parseFloat(e.target.value))}
+                    step="0.1"
+                    value={draggingSeekTime !== null ? draggingSeekTime : state.currentTime}
+                    onChange={(e) => setDraggingSeekTime(parseFloat(e.target.value))}
+                    onPointerUp={() => {
+                      if (draggingSeekTime !== null) {
+                        handleSeek(draggingSeekTime);
+                        setDraggingSeekTime(null);
+                      }
+                    }}
+                    onTouchEnd={() => {
+                      if (draggingSeekTime !== null) {
+                        handleSeek(draggingSeekTime);
+                        setDraggingSeekTime(null);
+                      }
+                    }}
+                    onKeyUp={() => {
+                      if (draggingSeekTime !== null) {
+                        handleSeek(draggingSeekTime);
+                        setDraggingSeekTime(null);
+                      }
+                    }}
                     className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-stage-neon"
                   />
                 </div>
@@ -576,7 +611,7 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                       {/* Replay / Restart button */}
                       <button
                         onClick={handleReplay}
-                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition"
+                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition shadow"
                         title="Putar Ulang dari Awal (0:00)"
                       >
                         <RotateCcw className="w-4 h-4" />
@@ -585,7 +620,7 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                       {/* -5s Rewind */}
                       <button
                         onClick={() => handleSeekRelative(-5)}
-                        className="px-2.5 py-2 bg-white/10 hover:bg-white/20 text-gray-300 rounded-xl text-xs font-mono font-bold transition"
+                        className="px-2.5 py-2 bg-white/10 hover:bg-white/20 text-gray-300 rounded-xl text-xs font-mono font-bold transition shadow"
                         title="Mundur 5 Detik"
                       >
                         -5s
@@ -593,8 +628,8 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
 
                       {/* Play / Pause */}
                       <button
-                        onClick={() => sync.updateState(prev => ({ ...prev, isPlaying: !prev.isPlaying }))}
-                        className="p-3 bg-gradient-to-tr from-stage-accent to-pink-600 hover:opacity-90 text-white rounded-xl shadow-[0_0_15px_rgba(255,42,133,0.6)] transition"
+                        onClick={() => sync.togglePlay()}
+                        className="p-3 bg-gradient-to-tr from-stage-accent to-pink-600 hover:opacity-90 text-white rounded-xl shadow-[0_0_15px_rgba(255,42,133,0.6)] transition active:scale-95"
                       >
                         {state.isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                       </button>
@@ -602,7 +637,7 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                       {/* +5s Fast Forward */}
                       <button
                         onClick={() => handleSeekRelative(5)}
-                        className="px-2.5 py-2 bg-white/10 hover:bg-white/20 text-gray-300 rounded-xl text-xs font-mono font-bold transition"
+                        className="px-2.5 py-2 bg-white/10 hover:bg-white/20 text-gray-300 rounded-xl text-xs font-mono font-bold transition shadow"
                         title="Maju 5 Detik"
                       >
                         +5s
@@ -611,7 +646,7 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                       {/* Stop */}
                       <button
                         onClick={handleStop}
-                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition"
+                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition shadow"
                         title="Stop (Kembali ke Awal & Pause)"
                       >
                         <Square className="w-4 h-4" />
@@ -620,7 +655,7 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                       {/* Skip Next Song */}
                       <button
                         onClick={() => sync.nextSong()}
-                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition"
+                        className="p-2.5 bg-white/10 hover:bg-white/20 text-gray-200 rounded-xl transition shadow"
                         title="Lagu Berikutnya"
                       >
                         <SkipForward className="w-4 h-4" />
