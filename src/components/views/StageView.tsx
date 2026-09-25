@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { AppState } from '../../types/karaoke';
-import { SyncService } from '../../services/syncService';
+import { SyncService, type NetworkStatus } from '../../services/syncService';
 import { YouTubePlayer } from '../player/YouTubePlayer';
 import { LocalMediaPlayer } from '../player/LocalMediaPlayer';
 import { KaraokeLyricsView } from '../karaoke/KaraokeLyricsView';
 import { PitchVisualizer } from '../karaoke/PitchVisualizer';
 import { LeaderboardOverlay } from '../karaoke/LeaderboardOverlay';
-import { Mic2, Flame, Trophy, Music2, Maximize2 } from 'lucide-react';
+import { Mic2, Flame, Trophy, Music2, Maximize2, WifiOff } from 'lucide-react';
 
 interface StageViewProps {
   state: AppState;
@@ -19,6 +19,14 @@ export const StageView: React.FC<StageViewProps> = ({ state, onNavigateToOperato
   const currentSong = currentItem?.song;
 
   const [fontSize, setFontSize] = useState<'normal' | 'large' | 'massive'>('large');
+  const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(sync.getNetworkStatus());
+
+  useEffect(() => {
+    const unsub = sync.subscribeNetwork((status) => {
+      setNetworkStatus(status);
+    });
+    return () => unsub();
+  }, [sync]);
 
   const handleTimeUpdate = (cur: number, dur: number) => {
     sync.updateTime(cur, dur);
@@ -249,6 +257,17 @@ export const StageView: React.FC<StageViewProps> = ({ state, onNavigateToOperato
             XL
           </button>
         </div>
+
+        {/* Discreet Offline Connection Alert */}
+        {networkStatus.quality === 'offline' && (
+          <div
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-950/80 border border-red-500/50 text-[10px] font-mono text-red-300 animate-pulse ml-3"
+            title="Koneksi socket ke operator terputus. Panggung tetap memutar musik saat ini secara mandiri."
+          >
+            <WifiOff className="w-3 h-3" />
+            <span className="hidden sm:inline">Sync Terputus (Mode Otonom)</span>
+          </div>
+        )}
       </div>
 
       {/* LEADERBOARD / PODIUM OVERLAY */}

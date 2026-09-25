@@ -108,6 +108,14 @@ export const DEFAULT_INITIAL_STATE: AppState = {
   soundFxTrigger: null
 };
 
+export interface NetworkStatus {
+  socketConnected: boolean;
+  isInternetOnline: boolean;
+  pingMs: number;
+  quality: 'online' | 'lan-only' | 'offline';
+  lastPing: number;
+}
+
 export class SyncService {
   private static instance: SyncService;
   private clientId: string = Math.random().toString(36).substring(2, 9);
@@ -117,10 +125,21 @@ export class SyncService {
   private listeners: Set<(state: AppState) => void> = new Set();
   private saveStorageTimer: any = null;
 
+  // Real-time network health state
+  private networkStatus: NetworkStatus = {
+    socketConnected: false,
+    isInternetOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+    pingMs: 0,
+    quality: 'online',
+    lastPing: Date.now()
+  };
+  private networkListeners: Set<(status: NetworkStatus) => void> = new Set();
+
   private constructor() {
     this.loadStateFromStorage();
     this.initBroadcastChannel();
     this.initSocket();
+    this.startPingMonitor();
   }
 
   public static getInstance(): SyncService {
@@ -189,15 +208,29 @@ export class SyncService {
 
   private initSocket() {
     try {
-      const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin;
+      const serverUrl = `${window.location.protocol}//${window.location.hostname}:3001`;
       this.socket = io(serverUrl, {
         autoConnect: true,
-        reconnectionAttempts: 5,
-        timeout: 2000
+        reconnectionAttempts: 15,
+        reconnectionDelay: 1500,
+        timeout: 3000
       });
 
       this.socket.on('connect', () => {
         console.log('🔗 Connected to J-Stage Sync Server');
+        this.networkStatus.socketConnected = true;
+        this.notifyNetworkListeners();
+      });
+
+      this.socket.on('disconnect', () => {
+        console.warn('⚠️ Disconnected from J-Stage Sync Server');
+        this.networkStatus.socketConnected = false;
+        this.notifyNetworkListeners();
+      });
+
+      this.socket.on('connect_error', () => {
+        this.networkStatus.socketConnected = false;
+        this.notifyNetworkListeners();
       });
 
       this.socket.on('STATE_UPDATE', (newState: AppState) => {
@@ -216,6 +249,66 @@ export class SyncService {
     } catch (err) {
       console.warn("Socket.io initialization skipped (running local BroadcastChannel mode)");
     }
+  }
+
+  // Periodic Ping & WAN Internet Monitor
+  private startPingMonitor() {
+    if (typeof window === 'undefined') return;
+
+    const checkPing = async () => {
+      const serverUrl = `${window.location.protocol}//${window.location.hostname}:3001`;
+      const start = performance.now();
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 2500);
+        const res = await fetch(`${serverUrl}/api/ping`, { signal: controller.signal });
+        clearTimeout(timeoutId);
+
+        if (res.ok) {
+          const data = await res.json();
+          const latency = Math.round(performance.now() - start);
+          const hasInternet = Boolean(data.internet && navigator.onLine);
+          this.networkStatus = {
+            socketConnected: Boolean(this.socket?.connected),
+            isInternetOnline: hasInternet,
+            pingMs: latency,
+            quality: hasInternet ? 'online' : 'lan-only',
+            lastPing: Date.now()
+          };
+        } else {
+          throw new Error('Ping status not OK');
+        }
+      } catch (e) {
+        this.networkStatus = {
+          socketConnected: Boolean(this.socket?.connected),
+          isInternetOnline: typeof navigator !== 'undefined' ? navigator.onLine : false,
+          pingMs: -1,
+          quality: 'offline',
+          lastPing: Date.now()
+        };
+      }
+      this.notifyNetworkListeners();
+    };
+
+    checkPing();
+    setInterval(checkPing, 5000);
+
+    window.addEventListener('online', () => checkPing());
+    window.addEventListener('offline', () => checkPing());
+  }
+
+  public getNetworkStatus(): NetworkStatus {
+    return { ...this.networkStatus };
+  }
+
+  public subscribeNetwork(listener: (status: NetworkStatus) => void): () => void {
+    this.networkListeners.add(listener);
+    listener({ ...this.networkStatus });
+    return () => this.networkListeners.delete(listener);
+  }
+
+  private notifyNetworkListeners() {
+    this.networkListeners.forEach((l) => l({ ...this.networkStatus }));
   }
 
   public getState(): AppState {

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { AppState, QueueItem, Song } from '../../types/karaoke';
-import { SyncService } from '../../services/syncService';
+import { SyncService, type NetworkStatus } from '../../services/syncService';
 import { parseLRC, exportToLRC } from '../../services/lyricParser';
 import { PitchTracker } from '../../services/pitchDetection';
 import { searchLrcLib, type LrcSearchResult } from '../../services/lrclibService';
@@ -12,7 +12,8 @@ import {
   Volume2, VolumeX, Mic2,
   Plus, Trash2, ArrowUp, ArrowDown, Sparkles, Flame, Trophy,
   Sliders, Music, Upload, Search, QrCode, FileText, BookmarkPlus, Download,
-  FolderOpen, Disc3, Copy, Check
+  FolderOpen, Disc3, Copy, Check, CloudUpload, CloudDownload, Loader2,
+  Wifi, WifiOff, Globe, HardDrive, AlertTriangle
 } from 'lucide-react';
 
 interface OperatorViewProps {
@@ -54,6 +55,11 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
   const [presets, setPresets] = useState<Song[]>(presetService.getPresets());
   const [copiedSongId, setCopiedSongId] = useState<string | null>(null);
 
+  // GitHub Sync State
+  const [isGitPulling, setIsGitPulling] = useState<boolean>(false);
+  const [isGitPushing, setIsGitPushing] = useState<boolean>(false);
+  const [gitStatusMessage, setGitStatusMessage] = useState<{ type: 'success' | 'error' | 'info'; text: string } | null>(null);
+
   // LRCLIB Search
   const [lrcQuery, setLrcQuery] = useState<string>('');
   const [lrcResults, setLrcResults] = useState<LrcSearchResult[]>([]);
@@ -69,6 +75,16 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
 
   // Local seekbar dragging state to prevent slider jitter
   const [draggingSeekTime, setDraggingSeekTime] = useState<number | null>(null);
+
+  // Real-time network health
+  const [networkStatus, setNetworkStatus] = useState<NetworkStatus>(sync.getNetworkStatus());
+
+  useEffect(() => {
+    const unsub = sync.subscribeNetwork((status) => {
+      setNetworkStatus(status);
+    });
+    return () => unsub();
+  }, [sync]);
 
   // Pitch Tracker instance for competition mode
   const pitchTrackerRef = useRef<PitchTracker | null>(null);
@@ -376,6 +392,59 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
     }
   };
 
+  // GitHub Sync Handlers
+  const handleGitPull = async () => {
+    if (isGitPulling || isGitPushing) return;
+    setIsGitPulling(true);
+    setGitStatusMessage({ type: 'info', text: 'Menarik data lagu & lirik terbaru dari GitHub...' });
+    try {
+      const res = await presetService.pullFromGithub();
+      if (res.success) {
+        setPresets(presetService.getPresets());
+        setGitStatusMessage({
+          type: 'success',
+          text: `✅ ${res.message} (${res.count ?? presetService.getPresets().length} lagu siap)`
+        });
+      } else {
+        setGitStatusMessage({ type: 'error', text: `❌ ${res.message}` });
+      }
+    } catch (e: any) {
+      setGitStatusMessage({ type: 'error', text: `❌ Error: ${e?.message || 'Gagal tersambung'}` });
+    } finally {
+      setIsGitPulling(false);
+      setTimeout(() => setGitStatusMessage(null), 6000);
+    }
+  };
+
+  const handleGitPush = async () => {
+    if (isGitPulling || isGitPushing) return;
+    const confirmPush = window.confirm(
+      'Push data preset lagu & timing lirik saat ini ke GitHub repository?\n\nPerubahan ini akan tersimpan permanen di remote GitHub.'
+    );
+    if (!confirmPush) return;
+
+    setIsGitPushing(true);
+    setGitStatusMessage({ type: 'info', text: 'Menyimpan & melakukan push presets ke GitHub...' });
+    try {
+      const res = await presetService.pushToGithub();
+      if (res.success) {
+        setGitStatusMessage({
+          type: 'success',
+          text: res.alreadyUpToDate
+            ? 'ℹ️ Preset di komputer sudah up-to-date dengan GitHub (tidak ada perubahan baru).'
+            : `✅ ${res.message}`
+        });
+      } else {
+        setGitStatusMessage({ type: 'error', text: `❌ ${res.message}` });
+      }
+    } catch (e: any) {
+      setGitStatusMessage({ type: 'error', text: `❌ Error: ${e?.message || 'Gagal tersambung'}` });
+    } finally {
+      setIsGitPushing(false);
+      setTimeout(() => setGitStatusMessage(null), 6000);
+    }
+  };
+
   // Queue actions
   const handleMoveQueueItem = (index: number, direction: 'up' | 'down') => {
     const newQueue = [...state.queue];
@@ -502,6 +571,44 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
 
         {/* Action Buttons */}
         <div className="flex items-center space-x-2">
+          {/* Real-time Network & Ping Indicator */}
+          <div
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-2xl border text-xs font-mono transition shadow-md ${
+              networkStatus.quality === 'online'
+                ? 'bg-emerald-950/40 border-emerald-500/40 text-emerald-300'
+                : networkStatus.quality === 'lan-only'
+                ? 'bg-yellow-950/40 border-yellow-500/40 text-yellow-300'
+                : 'bg-red-950/40 border-red-500/40 text-red-300'
+            }`}
+            title={
+              networkStatus.quality === 'online'
+                ? `Jaringan Wi-Fi & Internet Online (Latency: ${networkStatus.pingMs}ms)`
+                : networkStatus.quality === 'lan-only'
+                ? `Tersambung ke LAN lokal, tetapi koneksi internet publik mati. Lagu YouTube berisiko macet!`
+                : `Terputus dari server sinkronisasi. Sedang mencoba menyambung ulang...`
+            }
+          >
+            {networkStatus.quality === 'online' ? (
+              <>
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                <Wifi className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="font-bold hidden sm:inline">Online ({networkStatus.pingMs}ms)</span>
+              </>
+            ) : networkStatus.quality === 'lan-only' ? (
+              <>
+                <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
+                <Wifi className="w-3.5 h-3.5 text-yellow-400" />
+                <span className="font-bold hidden sm:inline">LAN Saja (Internet Mati)</span>
+              </>
+            ) : (
+              <>
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+                <WifiOff className="w-3.5 h-3.5 text-red-400" />
+                <span className="font-bold hidden sm:inline">Terputus (Reconnect...)</span>
+              </>
+            )}
+          </div>
+
           {state.activeMode === 'competition' && (
             <button
               onClick={() => setIsScoringConfigOpen(true)}
@@ -541,6 +648,42 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
         </div>
       </div>
 
+      {/* 1.5 EMERGENCY OFFLINE & SIGNAL WARNING BANNER */}
+      {(!networkStatus.isInternetOnline || networkStatus.quality === 'lan-only' || networkStatus.quality === 'offline') && (currentSong?.source === 'youtube' || state.queue[0]?.song?.source === 'youtube') && (
+        <div className="bg-gradient-to-r from-yellow-950/90 via-red-950/90 to-yellow-950/90 border-2 border-yellow-500/60 p-4 rounded-3xl flex flex-wrap items-center justify-between gap-4 text-yellow-200 shadow-2xl animate-pulse">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 bg-yellow-500/20 border border-yellow-500/40 rounded-2xl text-yellow-400 shrink-0">
+              <AlertTriangle className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-black text-sm uppercase tracking-wider text-yellow-300 flex items-center gap-2">
+                <span>⚠️ PERINGATAN KONEKSI: Internet Terputus / Tidak Stabil!</span>
+              </h4>
+              <p className="text-xs text-yellow-100/90 mt-0.5">
+                {currentSong?.source === 'youtube'
+                  ? `Lagu yang sedang diputar ("${currentSong?.title}") bersumber dari YouTube dan berisiko buffering/macet di panggung! Disarankan beralih ke lagu Preset / File Lokal.`
+                  : `Lagu berikutnya di antrean (${state.queue[0]?.song?.title}) bersumber dari YouTube. Pastikan internet stabil atau alihkan ke lagu lokal.`
+                }
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setActiveTab('presets')}
+              className="px-4 py-2 bg-stage-gold hover:bg-yellow-400 text-black font-black text-xs rounded-xl shadow-lg transition flex items-center gap-1.5"
+            >
+              ⭐ Buka Preset Lagu (Bebas Internet)
+            </button>
+            <button
+              onClick={() => setActiveTab('local')}
+              className="px-3.5 py-2 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs rounded-xl shadow transition flex items-center gap-1.5"
+            >
+              📁 File Lokal
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* 2. MAIN GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* LEFT COLUMN: NOW PLAYING & FULL PLAYER CONTROLS (5 Cols) */}
@@ -550,8 +693,24 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
               <span className="text-xs uppercase font-bold tracking-widest text-stage-accent flex items-center gap-1.5">
                 <Music className="w-4 h-4" /> SEDANG DIPUTAR DI PANGGUNG
               </span>
-              <span className="text-xs font-mono font-bold text-gray-400 bg-black/40 px-2.5 py-1 rounded-lg border border-white/10">
-                {currentSong?.source === 'youtube' ? 'YouTube' : 'Local Media'}
+              <span className={`text-xs font-mono font-bold px-2.5 py-1 rounded-lg border flex items-center gap-1.5 ${
+                currentSong?.source === 'youtube'
+                  ? networkStatus.isInternetOnline
+                    ? 'bg-blue-950/40 border-blue-500/30 text-blue-300'
+                    : 'bg-yellow-950/60 border-yellow-500/50 text-yellow-300 animate-pulse'
+                  : 'bg-emerald-950/40 border-emerald-500/30 text-emerald-300'
+              }`}>
+                {currentSong?.source === 'youtube' ? (
+                  <>
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>YouTube {networkStatus.isInternetOnline ? '(Stream)' : '(⚠️ Offline)'}</span>
+                  </>
+                ) : (
+                  <>
+                    <HardDrive className="w-3.5 h-3.5" />
+                    <span>File Lokal (Bebas Internet)</span>
+                  </>
+                )}
               </span>
             </div>
 
@@ -822,8 +981,17 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                             {item.mode}
                           </span>
                         </div>
-                        <div className="text-xs text-gray-400 truncate">
-                          {item.song.title} - {item.song.artist}
+                        <div className="text-xs text-gray-400 truncate flex items-center gap-2 mt-0.5">
+                          <span className="truncate">{item.song.title} - {item.song.artist}</span>
+                          {item.song.source === 'youtube' ? (
+                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1 shrink-0">
+                              <Globe className="w-2.5 h-2.5" /> YouTube
+                            </span>
+                          ) : (
+                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shrink-0">
+                              <HardDrive className="w-2.5 h-2.5" /> Lokal
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -1018,11 +1186,42 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
             {/* TAB 2: PRESET LIBRARY */}
             {activeTab === 'presets' && (
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-xs text-gray-400">
                     Lagu siap putar dengan lirik tersinkronisasi:
                   </span>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {/* GitHub Pull Button */}
+                    <button
+                      onClick={handleGitPull}
+                      disabled={isGitPulling || isGitPushing}
+                      className="px-2.5 py-1 bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 rounded-lg text-xs text-blue-300 flex items-center gap-1.5 transition disabled:opacity-50 font-medium"
+                      title="Tarik update lagu dan lirik terbaru dari GitHub (git pull)"
+                    >
+                      {isGitPulling ? (
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      ) : (
+                        <CloudDownload className="w-3.5 h-3.5 text-blue-400" />
+                      )}
+                      <span>{isGitPulling ? 'Menarik...' : 'Pull GitHub'}</span>
+                    </button>
+
+                    {/* GitHub Push Button */}
+                    <button
+                      onClick={handleGitPush}
+                      disabled={isGitPulling || isGitPushing}
+                      className="px-2.5 py-1 bg-emerald-600/20 hover:bg-emerald-600/40 border border-emerald-500/30 rounded-lg text-xs text-emerald-300 flex items-center gap-1.5 transition disabled:opacity-50 font-medium"
+                      title="Upload data preset & lirik terbaru ke GitHub (git push)"
+                    >
+                      {isGitPushing ? (
+                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      ) : (
+                        <CloudUpload className="w-3.5 h-3.5 text-emerald-400" />
+                      )}
+                      <span>{isGitPushing ? 'Mengupload...' : 'Push GitHub'}</span>
+                    </button>
+
+                    {/* Local File Export / Import */}
                     <button
                       onClick={handleExportPresets}
                       className="px-2.5 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-xs text-gray-300 flex items-center gap-1"
@@ -1036,6 +1235,27 @@ export const OperatorView: React.FC<OperatorViewProps> = ({ state, onOpenQrModal
                     </label>
                   </div>
                 </div>
+
+                {/* Git Status Notification Banner */}
+                {gitStatusMessage && (
+                  <div
+                    className={`px-3 py-2 rounded-xl text-xs flex items-center justify-between border transition animate-fadeIn ${
+                      gitStatusMessage.type === 'success'
+                        ? 'bg-emerald-950/70 border-emerald-500/40 text-emerald-300'
+                        : gitStatusMessage.type === 'error'
+                        ? 'bg-red-950/70 border-red-500/40 text-red-300'
+                        : 'bg-blue-950/70 border-blue-500/40 text-blue-300'
+                    }`}
+                  >
+                    <span className="font-medium">{gitStatusMessage.text}</span>
+                    <button
+                      onClick={() => setGitStatusMessage(null)}
+                      className="text-gray-400 hover:text-white ml-2 text-sm leading-none font-bold"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                )}
 
                 <div className="max-h-64 overflow-y-auto space-y-2 pr-1">
                   {presets.length === 0 ? (

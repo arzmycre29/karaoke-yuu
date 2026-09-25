@@ -3,6 +3,10 @@ import { SAMPLE_ANIME_SONGS, parseLRC } from './lyricParser';
 
 const PRESETS_STORAGE_KEY = 'j_stage_presets_v1';
 
+export const getBackendServerUrl = (): string => {
+  return `${window.location.protocol}//${window.location.hostname}:3001`;
+};
+
 export class PresetService {
   private static instance: PresetService;
   private presets: Song[] = [];
@@ -41,7 +45,7 @@ export class PresetService {
   // Fetch disk-persisted presets from Node backend server
   private async syncWithServerDisk() {
     try {
-      const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin;
+      const serverUrl = getBackendServerUrl();
       const res = await fetch(`${serverUrl}/api/presets`);
       if (res.ok) {
         const data = await res.json();
@@ -65,7 +69,7 @@ export class PresetService {
 
   private async saveToServerDisk() {
     try {
-      const serverUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin;
+      const serverUrl = getBackendServerUrl();
       await fetch(`${serverUrl}/api/presets`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -73,6 +77,67 @@ export class PresetService {
       });
     } catch (e) {
       // Silent catch if server offline
+    }
+  }
+
+  // Pull presets directly from GitHub via backend
+  public async pullFromGithub(): Promise<{ success: boolean; message: string; count?: number; presets?: Song[] }> {
+    try {
+      const serverUrl = getBackendServerUrl();
+      const res = await fetch(`${serverUrl}/api/git/pull`, {
+        method: 'POST'
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        if (Array.isArray(data.presets)) {
+          this.presets = data.presets.map((s: any) => ({
+            ...s,
+            parsedLyrics: (s.parsedLyrics && s.parsedLyrics.length > 0)
+              ? s.parsedLyrics
+              : (s.rawLyrics ? parseLRC(s.rawLyrics) : [])
+          }));
+          localStorage.setItem(PRESETS_STORAGE_KEY, JSON.stringify(this.presets));
+        }
+        return { success: true, message: data.message, count: this.presets.length, presets: this.presets };
+      } else {
+        return { success: false, message: data.error || 'Gagal menarik data dari GitHub' };
+      }
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Koneksi ke backend server gagal' };
+    }
+  }
+
+  // Push presets directly to GitHub via backend
+  public async pushToGithub(commitMessage?: string): Promise<{ success: boolean; message: string; alreadyUpToDate?: boolean }> {
+    try {
+      const serverUrl = getBackendServerUrl();
+      const res = await fetch(`${serverUrl}/api/git/push`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          presets: this.presets,
+          commitMessage
+        })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        return { success: true, message: data.message, alreadyUpToDate: data.alreadyUpToDate };
+      } else {
+        return { success: false, message: data.error || 'Gagal melakukan push ke GitHub' };
+      }
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Koneksi ke backend server gagal' };
+    }
+  }
+
+  // Get Git Status
+  public async getGitStatus(): Promise<{ success: boolean; lastCommit?: string; hasLocalChanges?: boolean; error?: string }> {
+    try {
+      const serverUrl = getBackendServerUrl();
+      const res = await fetch(`${serverUrl}/api/git/status`);
+      return await res.json();
+    } catch (e: any) {
+      return { success: false, error: e.message };
     }
   }
 

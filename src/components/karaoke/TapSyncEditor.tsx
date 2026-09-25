@@ -12,7 +12,7 @@ import { YouTubePlayer } from '../player/YouTubePlayer';
 import {
   Play, Pause, RotateCcw, Check, Sparkles, Keyboard, Undo2, Music,
   Edit3, Disc3, Save, Volume2, Trash2, ArrowUpRight, ArrowLeft, ArrowRight,
-  Repeat, Wand2, Sliders, Scissors, Layers
+  Repeat, Wand2, Sliders, Scissors, Layers, Magnet
 } from 'lucide-react';
 
 interface SyncedLineData {
@@ -21,6 +21,19 @@ interface SyncedLineData {
   endTime: number;
   romaji?: string;
   words?: LyricWord[];
+}
+
+interface TimelineDragState {
+  mode: 'move' | 'trim-start' | 'trim-end';
+  wordIdx: number;
+  initialStartTime: number;
+  initialEndTime: number;
+  startX: number;
+  trackWidth: number;
+  lineStart: number;
+  lineDuration: number;
+  currentStartTime: number;
+  currentEndTime: number;
 }
 
 interface TapSyncEditorProps {
@@ -102,6 +115,12 @@ export const TapSyncEditor: React.FC<TapSyncEditorProps> = ({
   const [activeWordTapIndex, setActiveWordTapIndex] = useState<number>(0);
   const [isLoopingAdvanceLine, setIsLoopingAdvanceLine] = useState<boolean>(false);
   const [selectedWordIdx, setSelectedWordIdx] = useState<number | null>(null);
+
+  // INTERACTIVE VIDEO TIMELINE DRAG & TRIM STATE
+  const [timelineDrag, setTimelineDrag] = useState<TimelineDragState | null>(null);
+  const [isSnapEnabled, setIsSnapEnabled] = useState<boolean>(true);
+  const timelineTrackRef = useRef<HTMLDivElement | null>(null);
+  const isDraggingTimelineRef = useRef<boolean>(false);
 
   // Helper to extract clean text & romaji
   const getLineTextAndRomaji = (fullText: string) => {
@@ -537,6 +556,149 @@ export const TapSyncEditor: React.FC<TapSyncEditorProps> = ({
     handleUpdateAdvanceWords(newWords);
     setSelectedWordIdx(wordIdx);
   };
+
+  // Start dragging a word clip (either left handle trim, center body move, or right handle trim)
+  const startTimelineDrag = (
+    e: React.PointerEvent,
+    wordIdx: number,
+    mode: 'move' | 'trim-start' | 'trim-end'
+  ) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (!timelineTrackRef.current || !activeAdvanceLine) return;
+
+    const rect = timelineTrackRef.current.getBoundingClientRect();
+    const targetWord = currentAdvanceWords[wordIdx];
+    if (!targetWord) return;
+
+    const lineStart = activeAdvanceLine.startTime;
+    const lineEnd = activeAdvanceLine.endTime || lineStart + 4;
+    const lineDuration = Math.max(0.5, lineEnd - lineStart);
+
+    isDraggingTimelineRef.current = true;
+    setSelectedWordIdx(wordIdx);
+
+    setTimelineDrag({
+      mode,
+      wordIdx,
+      initialStartTime: targetWord.startTime,
+      initialEndTime: targetWord.endTime,
+      startX: e.clientX,
+      trackWidth: rect.width,
+      lineStart,
+      lineDuration,
+      currentStartTime: targetWord.startTime,
+      currentEndTime: targetWord.endTime
+    });
+  };
+
+  // Pointer move & pointer up event listeners for timeline clip dragging
+  useEffect(() => {
+    if (!timelineDrag) {
+      isDraggingTimelineRef.current = false;
+      return;
+    }
+
+    const handlePointerMove = (e: PointerEvent) => {
+      const deltaPx = e.clientX - timelineDrag.startX;
+      const deltaSec = (deltaPx / timelineDrag.trackWidth) * timelineDrag.lineDuration;
+      const minDuration = 0.05;
+      const lineEnd = timelineDrag.lineStart + timelineDrag.lineDuration;
+
+      let newStart = timelineDrag.initialStartTime;
+      let newEnd = timelineDrag.initialEndTime;
+
+      if (timelineDrag.mode === 'trim-start') {
+        newStart = parseFloat((timelineDrag.initialStartTime + deltaSec).toFixed(2));
+        newStart = Math.max(timelineDrag.lineStart, newStart);
+        newStart = Math.min(newStart, newEnd - minDuration);
+
+        // Magnetic snap to Playhead
+        if (isSnapEnabled && Math.abs(newStart - currentTime) < 0.08) {
+          newStart = parseFloat(currentTime.toFixed(2));
+        }
+        // Magnetic snap to previous word end
+        const prevWord = currentAdvanceWords[timelineDrag.wordIdx - 1];
+        if (isSnapEnabled && prevWord && Math.abs(newStart - prevWord.endTime) < 0.08) {
+          newStart = prevWord.endTime;
+        }
+      } else if (timelineDrag.mode === 'trim-end') {
+        newEnd = parseFloat((timelineDrag.initialEndTime + deltaSec).toFixed(2));
+        newEnd = Math.max(newStart + minDuration, newEnd);
+        newEnd = Math.min(lineEnd, newEnd);
+
+        // Magnetic snap to Playhead
+        if (isSnapEnabled && Math.abs(newEnd - currentTime) < 0.08) {
+          newEnd = parseFloat(currentTime.toFixed(2));
+        }
+        // Magnetic snap to next word start
+        const nextWord = currentAdvanceWords[timelineDrag.wordIdx + 1];
+        if (isSnapEnabled && nextWord && Math.abs(newEnd - nextWord.startTime) < 0.08) {
+          newEnd = nextWord.startTime;
+        }
+      } else if (timelineDrag.mode === 'move') {
+        const dur = parseFloat((timelineDrag.initialEndTime - timelineDrag.initialStartTime).toFixed(2));
+        newStart = parseFloat((timelineDrag.initialStartTime + deltaSec).toFixed(2));
+
+        if (newStart < timelineDrag.lineStart) {
+          newStart = timelineDrag.lineStart;
+        } else if (newStart + dur > lineEnd) {
+          newStart = parseFloat((lineEnd - dur).toFixed(2));
+        }
+
+        // Magnetic snap to Playhead
+        if (isSnapEnabled) {
+          if (Math.abs(newStart - currentTime) < 0.08) {
+            newStart = parseFloat(currentTime.toFixed(2));
+          } else if (Math.abs((newStart + dur) - currentTime) < 0.08) {
+            newStart = parseFloat((currentTime - dur).toFixed(2));
+          }
+          // Magnetic snap to prev/next word
+          const prevWord = currentAdvanceWords[timelineDrag.wordIdx - 1];
+          if (prevWord && Math.abs(newStart - prevWord.endTime) < 0.08) {
+            newStart = prevWord.endTime;
+          }
+          const nextWord = currentAdvanceWords[timelineDrag.wordIdx + 1];
+          if (nextWord && Math.abs((newStart + dur) - nextWord.startTime) < 0.08) {
+            newStart = parseFloat((nextWord.startTime - dur).toFixed(2));
+          }
+        }
+
+        newEnd = parseFloat((newStart + dur).toFixed(2));
+      }
+
+      setTimelineDrag(prev => prev ? {
+        ...prev,
+        currentStartTime: newStart,
+        currentEndTime: newEnd
+      } : null);
+    };
+
+    const handlePointerUp = () => {
+      if (timelineDrag) {
+        const updated = [...currentAdvanceWords];
+        if (updated[timelineDrag.wordIdx]) {
+          updated[timelineDrag.wordIdx] = {
+            ...updated[timelineDrag.wordIdx],
+            startTime: timelineDrag.currentStartTime,
+            endTime: timelineDrag.currentEndTime
+          };
+          handleUpdateAdvanceWords(updated);
+        }
+      }
+      setTimelineDrag(null);
+      setTimeout(() => {
+        isDraggingTimelineRef.current = false;
+      }, 60);
+    };
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerup', handlePointerUp);
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerup', handlePointerUp);
+    };
+  }, [timelineDrag, isSnapEnabled, currentTime, currentAdvanceWords]);
 
   // Advance mode loop listener
   useEffect(() => {
@@ -1193,26 +1355,60 @@ export const TapSyncEditor: React.FC<TapSyncEditorProps> = ({
 
                     {/* 3. INTERACTIVE VIDEO-EDITOR MULTI-SEGMENT TIMELINE TRACK */}
                     <div className="space-y-1.5 text-left">
-                      <div className="flex items-center justify-between text-[11px] text-gray-400 font-mono px-1">
-                        <span className="flex items-center gap-1.5 font-bold text-stage-neon">
-                          <Layers className="w-3.5 h-3.5" /> Video Timeline Track (Klik untuk pindah playhead / Tekan C untuk memotong)
-                        </span>
-                        <span>Playhead: <b className="text-white">{formatTimestamp(currentTime)}</b></span>
+                      <div className="flex flex-wrap items-center justify-between text-[11px] text-gray-400 font-mono px-1 gap-2">
+                        <div className="flex items-center gap-2">
+                          <span className="flex items-center gap-1.5 font-bold text-stage-neon">
+                            <Layers className="w-3.5 h-3.5" /> Video Timeline Track
+                          </span>
+                          {/* Magnet Snapping Toggle */}
+                          <button
+                            type="button"
+                            onClick={() => setIsSnapEnabled(!isSnapEnabled)}
+                            className={`px-2 py-0.5 rounded-md text-[10px] flex items-center gap-1 border transition ${
+                              isSnapEnabled
+                                ? 'bg-stage-neon/20 border-stage-neon/50 text-stage-neon font-bold'
+                                : 'bg-white/5 border-white/10 text-gray-500 hover:text-gray-300'
+                            }`}
+                            title="Toggle Magnetic Snap: Menempel otomatis pada playhead dan batas kata lain"
+                          >
+                            <Magnet className="w-3 h-3" />
+                            <span>Snap: {isSnapEnabled ? 'ON' : 'OFF'}</span>
+                          </button>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                          {timelineDrag ? (
+                            <span className="text-yellow-400 font-bold animate-pulse text-[10px]">
+                              {timelineDrag.mode === 'trim-start'
+                                ? '✂️ Trim Awal'
+                                : timelineDrag.mode === 'trim-end'
+                                ? '✂️ Trim Akhir'
+                                : '↔️ Menggeser'}: {(timelineDrag.currentEndTime - timelineDrag.currentStartTime).toFixed(2)}s
+                            </span>
+                          ) : (
+                            <span className="text-[10px] text-gray-400 hidden sm:inline">
+                              Drag tengah untuk geser • Tarik ujung kiri/kanan untuk trim durasi • C untuk potong
+                            </span>
+                          )}
+                          <span>Playhead: <b className="text-white">{formatTimestamp(currentTime)}</b></span>
+                        </div>
                       </div>
 
                       {/* The Timeline Track Container */}
                       <div
+                        ref={timelineTrackRef}
                         onClick={(e) => {
+                          if (isDraggingTimelineRef.current) return;
                           const rect = e.currentTarget.getBoundingClientRect();
                           const clickX = e.clientX - rect.left;
                           const ratio = Math.max(0, Math.min(1, clickX / rect.width));
                           const targetTime = parseFloat((lineStart + ratio * lineDuration).toFixed(2));
                           handleTimeSeek(targetTime);
                         }}
-                        className="relative w-full h-16 bg-black/90 border border-white/20 rounded-2xl overflow-hidden cursor-pointer select-none shadow-inner p-1"
+                        className="relative w-full h-16 bg-black/90 border border-white/20 rounded-2xl overflow-visible cursor-pointer select-none shadow-inner p-1"
                       >
                         {/* Timeline Ruler Ticks */}
-                        <div className="absolute inset-0 flex justify-between px-3 pointer-events-none opacity-20">
+                        <div className="absolute inset-0 flex justify-between px-3 pointer-events-none opacity-20 overflow-hidden rounded-2xl">
                           {Array.from({ length: 9 }).map((_, idx) => (
                             <div key={idx} className="h-full border-r border-white/40 flex flex-col justify-between py-1 text-[8px] font-mono">
                               <span>|</span>
@@ -1224,10 +1420,14 @@ export const TapSyncEditor: React.FC<TapSyncEditorProps> = ({
                         {/* Word Clips on Track */}
                         <div className="relative w-full h-full flex items-center">
                           {currentAdvanceWords.map((word, wIdx) => {
-                            const wStartPct = Math.min(100, Math.max(0, ((word.startTime - lineStart) / lineDuration) * 100));
-                            const wEndPct = Math.min(100, Math.max(0, ((word.endTime - lineStart) / lineDuration) * 100));
-                            const wWidthPct = Math.max(1.5, wEndPct - wStartPct);
-                            const isCurrent = currentTime >= word.startTime && currentTime <= word.endTime;
+                            const isDraggingThis = timelineDrag && timelineDrag.wordIdx === wIdx;
+                            const effectiveStart = isDraggingThis ? timelineDrag.currentStartTime : word.startTime;
+                            const effectiveEnd = isDraggingThis ? timelineDrag.currentEndTime : word.endTime;
+
+                            const wStartPct = Math.min(100, Math.max(0, ((effectiveStart - lineStart) / lineDuration) * 100));
+                            const wEndPct = Math.min(100, Math.max(0, ((effectiveEnd - lineStart) / lineDuration) * 100));
+                            const wWidthPct = Math.max(2, wEndPct - wStartPct);
+                            const isCurrent = currentTime >= effectiveStart && currentTime <= effectiveEnd;
                             const isSelected = selectedWordIdx === wIdx;
 
                             // Palette for alternate chips
@@ -1242,30 +1442,75 @@ export const TapSyncEditor: React.FC<TapSyncEditorProps> = ({
                             return (
                               <div
                                 key={wIdx}
+                                onPointerDown={(e) => startTimelineDrag(e, wIdx, 'move')}
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  setSelectedWordIdx(wIdx);
-                                  handleTimeSeek(word.startTime);
+                                  if (!isDraggingTimelineRef.current) {
+                                    setSelectedWordIdx(wIdx);
+                                    handleTimeSeek(word.startTime);
+                                  }
                                 }}
                                 style={{
                                   left: `${wStartPct}%`,
                                   width: `${wWidthPct}%`
                                 }}
-                                className={`absolute top-1 bottom-1 rounded-xl bg-gradient-to-r border flex flex-col items-center justify-center px-1.5 transition overflow-hidden shadow group ${colorClass} ${
-                                  isSelected
+                                className={`absolute top-1 bottom-1 rounded-xl bg-gradient-to-r border flex items-center justify-center transition-all select-none shadow group cursor-grab active:cursor-grabbing ${colorClass} ${
+                                  isDraggingThis
+                                    ? 'ring-2 ring-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.9)] z-30 scale-[1.02]'
+                                    : isSelected
                                     ? 'ring-2 ring-stage-neon shadow-[0_0_15px_rgba(0,240,255,0.8)] z-10'
                                     : isCurrent
                                     ? 'border-white shadow-[0_0_10px_rgba(255,42,133,0.6)] z-10'
                                     : 'hover:brightness-125'
                                 }`}
-                                title={`#${wIdx + 1}: "${word.text}" (${formatTimestamp(word.startTime)} - ${formatTimestamp(word.endTime)})`}
+                                title={`#${wIdx + 1}: "${word.text}" (${formatTimestamp(effectiveStart)} - ${formatTimestamp(effectiveEnd)})`}
                               >
-                                <span className="text-xs font-black font-jp truncate max-w-full drop-shadow">
-                                  {word.text}
-                                </span>
-                                <span className="text-[9px] font-mono opacity-80 truncate">
-                                  {(word.endTime - word.startTime).toFixed(2)}s
-                                </span>
+                                {/* LEFT TRIM HANDLE (Ujung Depan) */}
+                                <div
+                                  onPointerDown={(e) => startTimelineDrag(e, wIdx, 'trim-start')}
+                                  className="absolute left-0 top-0 bottom-0 w-3 cursor-col-resize z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:opacity-100 transition-opacity bg-black/60 hover:bg-stage-neon rounded-l-xl border-r border-white/50"
+                                  title="Tarik ujung depan untuk memotong / mengubah awal durasi kata"
+                                >
+                                  <div className="w-0.5 h-3.5 bg-white rounded-full pointer-events-none" />
+                                </div>
+
+                                {/* CENTER CONTENT (Text & Duration) */}
+                                <div className="flex flex-col items-center justify-center px-2 pointer-events-none overflow-hidden max-w-full">
+                                  <span className="text-xs font-black font-jp truncate max-w-full drop-shadow">
+                                    {word.text}
+                                  </span>
+                                  <span className="text-[9px] font-mono opacity-80 truncate">
+                                    {(effectiveEnd - effectiveStart).toFixed(2)}s
+                                  </span>
+                                </div>
+
+                                {/* RIGHT TRIM HANDLE (Ujung Belakang) */}
+                                <div
+                                  onPointerDown={(e) => startTimelineDrag(e, wIdx, 'trim-end')}
+                                  className="absolute right-0 top-0 bottom-0 w-3 cursor-col-resize z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:opacity-100 transition-opacity bg-black/60 hover:bg-stage-neon rounded-r-xl border-l border-white/50"
+                                  title="Tarik ujung belakang untuk memotong / mengubah akhir durasi kata"
+                                >
+                                  <div className="w-0.5 h-3.5 bg-white rounded-full pointer-events-none" />
+                                </div>
+
+                                {/* FLOATING DRAG TOOLTIP BADGE */}
+                                {isDraggingThis && (
+                                  <div className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-black/95 border border-stage-neon text-stage-neon font-mono text-[10px] rounded-md shadow-2xl pointer-events-none whitespace-nowrap z-40 flex items-center gap-1.5 font-bold animate-fadeIn">
+                                    <span>
+                                      {timelineDrag.mode === 'trim-start'
+                                        ? '✂️ Trim Awal'
+                                        : timelineDrag.mode === 'trim-end'
+                                        ? '✂️ Trim Akhir'
+                                        : '↔️ Geser'}
+                                    </span>
+                                    <span className="text-white">
+                                      {formatTimestamp(effectiveStart)} - {formatTimestamp(effectiveEnd)}
+                                    </span>
+                                    <span className="text-yellow-300 font-extrabold">
+                                      ({(effectiveEnd - effectiveStart).toFixed(2)}s)
+                                    </span>
+                                  </div>
+                                )}
                               </div>
                             );
                           })}

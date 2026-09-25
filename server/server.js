@@ -6,10 +6,33 @@ import os from 'os';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import dns from 'dns';
 import ytSearch from 'yt-search';
 
+const execAsync = promisify(exec);
+
+let lastInternetCheck = 0;
+let cachedInternetStatus = true;
+
+async function checkInternetAccess() {
+  const now = Date.now();
+  if (now - lastInternetCheck < 8000) {
+    return cachedInternetStatus;
+  }
+  lastInternetCheck = now;
+  try {
+    await dns.promises.lookup('google.com');
+    cachedInternetStatus = true;
+  } catch (e) {
+    cachedInternetStatus = false;
+  }
+  return cachedInternetStatus;
+}
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const PROJECT_ROOT = path.resolve(__dirname, '..');
 
 const app = express();
 app.use(cors());
@@ -70,6 +93,16 @@ async function writePresetsToDisk(presets) {
   }
 }
 
+// 0. GET /api/ping (Heartbeat, latency check & internet connectivity status)
+app.get('/api/ping', async (req, res) => {
+  const hasInternet = await checkInternetAccess();
+  return res.json({
+    ok: true,
+    timestamp: Date.now(),
+    internet: hasInternet
+  });
+});
+
 // 1. GET /api/presets (Load permanent presets from hard drive)
 app.get('/api/presets', async (req, res) => {
   const diskPresets = await readPresetsFromDisk();
@@ -88,6 +121,97 @@ app.post('/api/presets', async (req, res) => {
     return res.json({ success: true, count: presets.length });
   } else {
     return res.status(500).json({ error: 'Failed to save presets to server disk' });
+  }
+});
+
+// --- GIT INTEGRATION ENDPOINTS (SYNC PRESETS WITH GITHUB) ---
+
+// GET /api/git/status (Cek status commit terakhir di repo)
+app.get('/api/git/status', async (req, res) => {
+  try {
+    const { stdout: logOut } = await execAsync('git log -n 1 --pretty=format:"%h - %s (%cr)"', { cwd: PROJECT_ROOT });
+    const { stdout: statusOut } = await execAsync('git status --porcelain server/data/presets.json', { cwd: PROJECT_ROOT });
+    return res.json({
+      success: true,
+      lastCommit: logOut.trim(),
+      hasLocalChanges: Boolean(statusOut.trim())
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: err.message || 'Gagal mengecek status Git'
+    });
+  }
+});
+
+// POST /api/git/pull (Tarik update presets.json dari GitHub)
+app.post('/api/git/pull', async (req, res) => {
+  try {
+    console.log('🔄 [Git] Menarik update dari remote GitHub (git pull origin main)...');
+    const { stdout, stderr } = await execAsync('git pull origin main', { cwd: PROJECT_ROOT });
+    console.log('[Git Pull Stdout]:', stdout);
+
+    const diskPresets = await readPresetsFromDisk();
+    
+    if (diskPresets) {
+      io.emit('PRESETS_UPDATED', diskPresets);
+    }
+
+    return res.json({
+      success: true,
+      message: 'Berhasil menarik pembaruan dari GitHub!',
+      presets: diskPresets || [],
+      details: stdout || stderr
+    });
+  } catch (err) {
+    console.error('❌ [Git Pull Error]:', err);
+    return res.status(500).json({
+      success: false,
+      error: err.message || 'Gagal melakukan git pull dari GitHub'
+    });
+  }
+});
+
+// POST /api/git/push (Simpan presets.json, commit, dan push ke GitHub)
+app.post('/api/git/push', async (req, res) => {
+  try {
+    const { presets, commitMessage } = req.body || {};
+
+    if (Array.isArray(presets)) {
+      await writePresetsToDisk(presets);
+    }
+
+    console.log('🚀 [Git] Menyiapkan push presets.json ke GitHub...');
+    await execAsync('git add server/data/presets.json', { cwd: PROJECT_ROOT });
+
+    // Cek apakah ada perubahan yang staged
+    const { stdout: diffOut } = await execAsync('git diff --cached --name-only server/data/presets.json', { cwd: PROJECT_ROOT });
+    if (!diffOut.trim()) {
+      return res.json({
+        success: true,
+        alreadyUpToDate: true,
+        message: 'Presets sudah sinkron (tidak ada perubahan baru untuk di-push ke GitHub).'
+      });
+    }
+
+    const defaultMsg = `feat: update preset songs and lyrics timing from operator`;
+    const cleanMsg = (commitMessage ? String(commitMessage).replace(/"/g, '\\"') : defaultMsg).trim();
+
+    await execAsync(`git commit -m "${cleanMsg}"`, { cwd: PROJECT_ROOT });
+    const { stdout: pushOut, stderr: pushErr } = await execAsync('git push origin main', { cwd: PROJECT_ROOT });
+
+    console.log('✅ [Git Push Success]:', pushOut || pushErr);
+    return res.json({
+      success: true,
+      message: 'Berhasil melakukan push presets ke GitHub!',
+      details: pushOut || pushErr
+    });
+  } catch (err) {
+    console.error('❌ [Git Push Error]:', err);
+    return res.status(500).json({
+      success: false,
+      error: err.message || 'Gagal melakukan git push ke GitHub'
+    });
   }
 });
 

@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import type { PlayerCommand } from '../../types/karaoke';
+import { WifiOff, AlertTriangle } from 'lucide-react';
 
 interface YouTubePlayerProps {
   youtubeId: string;
@@ -10,6 +11,7 @@ interface YouTubePlayerProps {
   onTimeUpdate?: (currentTime: number, duration: number) => void;
   onEnded?: () => void;
   isStageView?: boolean;
+  onStallChange?: (isStalled: boolean) => void;
 }
 
 export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
@@ -20,11 +22,16 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   playerCommand = null,
   onTimeUpdate,
   onEnded,
-  isStageView = false
+  isStageView = false,
+  onStallChange
 }) => {
   const playerRef = useRef<any>(null);
   const intervalRef = useRef<number | null>(null);
   const lastCommandTimestamp = useRef<number>(0);
+  const bufferTimeoutRef = useRef<any>(null);
+
+  const [isStalled, setIsStalled] = useState<boolean>(false);
+  const [hasPlaybackError, setHasPlaybackError] = useState<boolean>(false);
   
   // Unique DOM ID per instance so multiple players never conflict
   const elementIdRef = useRef<string>(`yt-${youtubeId}-${Math.random().toString(36).substring(2, 9)}`);
@@ -101,10 +108,33 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
                 enforceDisableCaptions(event.target);
               }
 
+              // YT.PlayerState.BUFFERING === 3
+              if (event.data === 3) {
+                if (!bufferTimeoutRef.current) {
+                  bufferTimeoutRef.current = setTimeout(() => {
+                    setIsStalled(true);
+                    onStallChange?.(true);
+                  }, 3500);
+                }
+              } else {
+                if (bufferTimeoutRef.current) {
+                  clearTimeout(bufferTimeoutRef.current);
+                  bufferTimeoutRef.current = null;
+                }
+                setIsStalled(false);
+                onStallChange?.(false);
+              }
+
               // YT.PlayerState.ENDED === 0
               if (event.data === 0 && onEnded) {
                 onEnded();
               }
+            },
+            onError: (event: any) => {
+              console.warn("YouTube Player error:", event.data);
+              setHasPlaybackError(true);
+              setIsStalled(true);
+              onStallChange?.(true);
             }
           }
         });
@@ -220,6 +250,27 @@ export const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
       />
       {isStageView && (
         <div className="absolute inset-0 z-10 pointer-events-none" />
+      )}
+
+      {/* Resilient Network Fallback / Buffering Stall Overlay */}
+      {(isStalled || hasPlaybackError) && (
+        <div className="absolute inset-0 bg-black/85 backdrop-blur-md z-30 flex flex-col items-center justify-center p-6 text-center animate-fadeIn border-2 border-yellow-500/50 rounded-2xl">
+          <div className="w-14 h-14 rounded-full bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center mb-3 text-yellow-400">
+            {hasPlaybackError ? <AlertTriangle className="w-7 h-7" /> : <WifiOff className="w-7 h-7 animate-pulse" />}
+          </div>
+          <h3 className="text-base font-black text-white mb-1">
+            {hasPlaybackError ? 'Gagal Memuat Video YouTube' : 'Koneksi Internet Sedang Menstabilkan Buffer...'}
+          </h3>
+          <p className="text-xs text-gray-300 max-w-sm mb-3">
+            {hasPlaybackError
+              ? 'Sinyal terputus atau video tidak mengizinkan pemutaran eksternal. Silakan beralih ke lagu preset / file lokal.'
+              : 'Kecepatan internet menurun saat memutar YouTube. Musik akan melanjutkan otomatis saat buffer siap.'}
+          </p>
+          <div className="flex items-center gap-2 text-[10px] font-mono text-yellow-400 bg-yellow-950/60 px-3 py-1.5 rounded-xl border border-yellow-500/30">
+            <span className="w-2 h-2 rounded-full bg-yellow-400 animate-ping" />
+            <span>{hasPlaybackError ? 'Rekomendasi: Putar Lagu Lokal' : 'Mencoba Menyambung Ulang...'}</span>
+          </div>
+        </div>
       )}
     </div>
   );
